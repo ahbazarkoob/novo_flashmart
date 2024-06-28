@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "155652134190",
+    "project_id": "novo-flashmart",
+    "storage_bucket": "novo-flashmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155652134190:android:2ef7b2f3978290986b96bf",
+        "android_client_info": {
+          "package_name": "com.novo.flash_mart_user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHjdDOOZSYN6fCvOyoh3RCE_pNW9hHQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155652134190:android:11d3de6ca66cb9e96b96bf",
+        "android_client_info": {
+          "package_name": "com.novo.flashmart_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHjdDOOZSYN6fCvOyoh3RCE_pNW9hHQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155652134190:android:b76b1a02e355c5a16b96bf",
+        "android_client_info": {
+          "package_name": "com.novo.flashmart_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHjdDOOZSYN6fCvOyoh3RCE_pNW9hHQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
