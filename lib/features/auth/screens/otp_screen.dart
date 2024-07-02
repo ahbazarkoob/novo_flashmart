@@ -238,32 +238,45 @@ class _OTPVerifyState extends State<OTPVerify> {
     } else if (int.parse(otp) != generatedOtp) {
       showCustomSnackBar('invalid otp'.tr);
     } else {
-      authController
-          .loginRegisteration(numberWithCountryCode, int.parse(otp))
-          .then((status) {
-        bool loginSuccess = Get.find<AuthController>().loginSuccess;
-        if (status.success == true) {
-          if (loginSuccess == true) {
-            Get.find<CartController>().getCartDataOnline();
-            debugPrint('***************************${AuthHelper.isLoggedIn()}');
-            Get.toNamed(RouteHelper.getInitialRoute(fromSplash: false));
-             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('OTP Verified')));
+      bool loginSuccess = await Get.find<AuthController>().loginSuccess;
+      debugPrint("$loginSuccess");
+      debugPrint('${AuthHelper.isLoggedIn()}');
+      if (loginSuccess == true) {
+        authController
+            .loginRegisteration(numberWithCountryCode, int.parse(otp))
+            .then((status) {
+          bool loginSuccess = Get.find<AuthController>().loginSuccess;
+          if (status.success == true) {
+            if (loginSuccess == true) {
+              Get.find<CartController>().getCartDataOnline();
+              debugPrint(
+                  '${AuthHelper.isLoggedIn()}');
+              Get.toNamed(RouteHelper.getInitialRoute(fromSplash: false));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(const SnackBar(content: Text('OTP Verified')));
+            }
           }
-        } else {
-          Get.toNamed(RouteHelper.getSignUpRoute());
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('OTP Verified')));
-        }
-      });
-      // bool loginSuccess = await Get.find<AuthController>().loginSuccess;
-      // debugPrint("$loginSuccess");
-      // debugPrint('***************************${AuthHelper.isLoggedIn()}');
-      // if (loginSuccess == true) {
-      //   Get.toNamed(RouteHelper.getInitialRoute());
-      //   showCustomSnackBar('OTP verify');
-      // } else {
-      //   Get.toNamed(RouteHelper.getSignUpRoute());
-      //   showCustomSnackBar('OTP verify');
-      // }
+        });
+      } else {
+        Get.toNamed(RouteHelper.getSignUpRoute());
+        // showCustomSnackBar('OTP verify');
+      }
+      // authController
+      //     .loginRegisteration(numberWithCountryCode, int.parse(otp))
+      //     .then((status) {
+      //   bool loginSuccess = Get.find<AuthController>().loginSuccess;
+      //   if (status.success == true) {
+      //     if (loginSuccess == true) {
+      //       Get.find<CartController>().getCartDataOnline();
+      //       debugPrint('***************************${AuthHelper.isLoggedIn()}');
+      //       Get.toNamed(RouteHelper.getInitialRoute(fromSplash: false));
+      //        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('OTP Verified')));
+      //     }
+      //   } else {
+      //     Get.toNamed(RouteHelper.getSignUpRoute());
+      //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('OTP Verified')));
+      //   }
+      // });
     }
   }
 }
