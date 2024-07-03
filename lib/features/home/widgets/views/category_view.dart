@@ -13,6 +13,7 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:get/get.dart';
 
 import '../../../../common/widgets/card_design/item_card.dart';
+import '../../../../common/widgets/item_widget.dart';
 import '../../../item/domain/models/item_model.dart';
 
 class CategoryView extends StatelessWidget {
@@ -107,7 +108,7 @@ class CategoryView extends StatelessWidget {
                                                   width: 80,
                                                   child: Column(children: [
                                                     SizedBox(
-                                                      height: 75,
+                                                      height: 70,
                                                       width: 75,
                                                       child: Stack(children: [
                                                         ClipRRect(
@@ -916,66 +917,42 @@ class PharmacyCategoryShimmer extends StatelessWidget {
 class CategorySection extends StatefulWidget {
   final int index;
   int categoryID;
-  CategorySection({super.key, required this.index, required this.categoryID});
+   CategorySection({super.key, required this.index, required this.categoryID});
 
   @override
   State<CategorySection> createState() => _CategorySectionState();
 }
 
 class _CategorySectionState extends State<CategorySection> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   final categoryController = Get.find<CategoryController>();
-
-  //   if (categoryController.categoryList != null && categoryController.categoryList!.isNotEmpty) {
-  //     String? categoryId = categoryController.categoryList![widget.index].id as String;
-  //     if (categoryId != null) {
-  //       debugPrint("Category ID: $categoryId");
-  //       // Uncomment this if needed
-  //       // categoryController.getSubCategoryList(categoryId);
-  //     } else {
-  //       debugPrint("Category ID is null");
-  //     }
-  //   } else {
-  //     debugPrint("Category List is null or empty");
-  //   }
-  // }
+  @override
+  void initState() {
+    super.initState();
+    Get.find<CategoryController>().getCategoryItemList(
+            "${widget.categoryID}",
+          1,
+          Get.find<CategoryController>().type,
+          true,
+        );
+  }
 
   @override
   Widget build(BuildContext context) {
     ScrollController scrollController = ScrollController();
+    debugPrint("category ID: ${widget.categoryID}");
 
     return GetBuilder<SplashController>(builder: (splashController) {
       return GetBuilder<CategoryController>(builder: (categoryController) {
-        // debugPrint(
-        //     "category id : ${categoryController.categoryList![widget.index].id}");
-        // debugPrint("subcategory List : ${categoryController.subCategoryList![widget.index]}");
-        // Get.find<CategoryController>().getCategoryItemList(
-        //   Get.find<CategoryController>().subCategoryIndex == 0
-        //       ? categoryController.categoryList![widget.index].id as String
-        //       : Get.find<CategoryController>()
-        //           .subCategoryList![
-        //               Get.find<CategoryController>().subCategoryIndex]
-        //           .id
-        //           .toString(),
-        //   Get.find<CategoryController>().offset + 1,
-        //   Get.find<CategoryController>().type,
-        //   false,
-        // );
-        // List<Item>? item;
-        // if (categoryController.categoryItemList != null) {
-        //   item = [];
-        //   if (categoryController.isSearching) {
-        //     item.addAll(categoryController.categoryItemList!);
-        //   }
-        // }
-        // debugPrint("item length ${item![0]}");
+        
+        List<Item>? item;
+        if (categoryController.categoryItemList != null) {
+          item = [];
+            item.addAll(categoryController.categoryItemList!);
+        }
         return
-            // (categoryController.categoryItemList != null &&
-            //         categoryController.categoryItemList!.isEmpty)
-            //     ? const SizedBox()
-            //     :
+            (categoryController.categoryItemList != null &&
+                    categoryController.categoryItemList!.isEmpty)
+                ? const SizedBox()
+                :
             Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -990,13 +967,14 @@ class _CategorySectionState extends State<CategorySection> {
             Row(children: [
               Expanded(
                   child: SizedBox(
-                      height: 168,
+                      height: 300,
                       child:
-                          // categoryController.categoryItemList!=null
-                          //     ?
+                          categoryController.categoryItemList!=null
+                              ?
                           ListView.builder(
                         controller: scrollController,
-                        itemCount: 2,
+                        itemCount: categoryController
+                                          .categoryItemList!.length,
                         padding: const EdgeInsets.only(
                             left: Dimensions.paddingSizeSmall,
                             top: Dimensions.paddingSizeDefault),
@@ -1011,20 +989,21 @@ class _CategorySectionState extends State<CategorySection> {
                                     bottom: Dimensions.paddingSizeDefault,
                                     right: Dimensions.paddingSizeDefault,
                                     top: Dimensions.paddingSizeDefault),
-                                child: Text("$index")),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  bottom: Dimensions.paddingSizeDefault,
-                                  right: Dimensions.paddingSizeDefault,
-                                  top: Dimensions.paddingSizeDefault),
-                              child: Text("data"),
-                            )
+                                child:  
+                                Column(
+                                  children: [
+                                    Text(
+                                          item![index].name!),
+                                  ],
+                                )
+                              ),
                           ]);
                         },
-                      ))
-                  // : CategoryShimmer(
-                  //     categoryController: categoryController),
+                      )
+                  : CategoryShimmer(
+                      categoryController: categoryController),
                   ),
+              )
             ]),
             ResponsiveHelper.isMobile(context)
                 ? const SizedBox()
