@@ -78,7 +78,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
     _screens = [
       const HomeScreen(),
-      const FavouriteScreen(),
+      // const FavouriteScreen(),
       const SizedBox(),
       const OrderScreen(),
       const MenuScreen()
@@ -175,7 +175,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                     ? const SizedBox()
                     : Column(
                         children: [
-                          Expanded(child: SizedBox()),
+                          const Expanded(child: SizedBox()),
                           Container(
                             decoration: BoxDecoration(
                               color: Theme.of(context).cardColor,
@@ -249,7 +249,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                       const SizedBox(
                                                           width: Dimensions
                                                               .paddingSizeDefault),
-                                                      Text('Add items worth '),
+                                                      const Text('Add items worth '),
                                                       Text(
                                                         PriceConverter.convertPrice(
                                                             Get.find<SplashController>()
@@ -278,7 +278,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                     ],
                                                   ),
                                                 )
-                                              : SizedBox(
+                                              : const SizedBox(
                                                   height: 10,
                                                 ),
                                           //  Padding(
@@ -376,17 +376,18 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                             .removeCouponData(
                                                                 false);
 
-                                                        Get.toNamed(RouteHelper.getCartRoute());
+                                                        Get.toNamed(RouteHelper
+                                                            .getCartRoute());
                                                       }
                                                     }),
                                               ),
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 10,
                                           )
                                         ])
-                                      : SizedBox();
+                                      : const SizedBox();
                                 });
                               },
                             ),
@@ -401,9 +402,9 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                               _screens = [
                                 const HomeScreen(),
-                                isParcel
-                                    ? const AddressScreen(fromDashboard: true)
-                                    : const FavouriteScreen(),
+                                // isParcel
+                                //     ? const AddressScreen(fromDashboard: true)
+                                //     : const FavouriteScreen(),
                                 const SizedBox(),
                                 const OrderScreen(),
                                 const MenuScreen()
@@ -572,7 +573,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                             //   onTap: () =>
                                                             //       _setPage(1),
                                                             // ),
-                                                           
+
                                                             // Container(
                                                             //     width: size.width *
                                                             //         0.2),
