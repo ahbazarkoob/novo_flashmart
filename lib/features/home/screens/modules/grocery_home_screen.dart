@@ -52,8 +52,6 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
       const SpecialOfferView(isFood: false, isShop: false),
       const CategoryView(),
       GetBuilder<CategoryController>(builder: (categoryController) {
-        // debugPrint(
-        //     "category Length  ${categoryController.categoryList!.length}");
         return (categoryController.categoryList != null &&
                 categoryController.categoryList!.isEmpty)
             ? const SizedBox()
@@ -64,7 +62,8 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
                       i++)
                     CategorySection(
                       index: i,
-                      categoryID: categoryController.categoryList![i].id ?? 0,
+                      categoryID: 
+                          "${categoryController.categoryList![i].id}",
                     ),
                 ],
               );

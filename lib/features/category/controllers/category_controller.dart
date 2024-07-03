@@ -14,6 +14,9 @@ class CategoryController extends GetxController implements GetxService {
   List<CategoryModel>? _subCategoryList;
   List<CategoryModel>? get subCategoryList => _subCategoryList;
 
+  Map<String, List<Item>> _categoryItemsMap = {};
+  Map<String, List<Item>> get categoryItemsMap => _categoryItemsMap;
+
   List<Item>? _categoryItemList;
   List<Item>? get categoryItemList => _categoryItemList;
 
@@ -120,6 +123,7 @@ class CategoryController extends GetxController implements GetxService {
       if (notify) {
         update();
       }
+      _categoryItemsMap[categoryID!] = [];
       _categoryItemList = null;
     }
     ItemModel? categoryItem = await categoryServiceInterface
@@ -127,7 +131,9 @@ class CategoryController extends GetxController implements GetxService {
     if (categoryItem != null) {
       if (offset == 1) {
         _categoryItemList = [];
+        _categoryItemsMap[categoryID!] = [];
       }
+      _categoryItemsMap[categoryID]!.addAll(categoryItem.items!);
       _categoryItemList!.addAll(categoryItem.items!);
       _pageSize = categoryItem.totalSize;
       _isLoading = false;

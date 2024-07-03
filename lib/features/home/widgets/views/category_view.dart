@@ -916,135 +916,157 @@ class PharmacyCategoryShimmer extends StatelessWidget {
 
 class CategorySection extends StatefulWidget {
   final int index;
-  int categoryID;
-   CategorySection({super.key, required this.index, required this.categoryID});
+  final String categoryID;
+  const CategorySection({super.key, required this.index, required this.categoryID});
 
   @override
   State<CategorySection> createState() => _CategorySectionState();
 }
 
 class _CategorySectionState extends State<CategorySection> {
+  late final ScrollController scrollController;
+
   @override
   void initState() {
     super.initState();
-    Get.find<CategoryController>().getCategoryItemList(
-            "${widget.categoryID}",
-          1,
+    scrollController = ScrollController();
+    Get.find<CategoryController>().getSubCategoryList(widget.categoryID);
+    scrollController.addListener(_scrollListener);
+  }
+
+  void _scrollListener() {
+    if (scrollController.position.pixels ==
+            scrollController.position.maxScrollExtent &&
+            Get.find<CategoryController>().categoryItemsMap[widget.categoryID] != null &&
+        // Get.find<CategoryController>().categoryItemList != null &&
+        !Get.find<CategoryController>().isLoading) {
+      int pageSize = (Get.find<CategoryController>().pageSize! / 10).ceil();
+      if (Get.find<CategoryController>().offset < pageSize) {
+        debugPrint('end of the page');
+        Get.find<CategoryController>().showBottomLoader();
+        Get.find<CategoryController>().getCategoryItemList(
+          widget.categoryID,
+          Get.find<CategoryController>().offset + 1,
           Get.find<CategoryController>().type,
-          true,
+          false,
         );
+      }
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    ScrollController scrollController = ScrollController();
-    debugPrint("category ID: ${widget.categoryID}");
-
     return GetBuilder<SplashController>(builder: (splashController) {
       return GetBuilder<CategoryController>(builder: (categoryController) {
-        
-        List<Item>? item;
-        if (categoryController.categoryItemList != null) {
-          item = [];
-            item.addAll(categoryController.categoryItemList!);
-        }
-        return
-            (categoryController.categoryItemList != null &&
-                    categoryController.categoryItemList!.isEmpty)
-                ? const SizedBox()
-                :
-            Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: Dimensions.paddingSizeDefault),
-              child: Text(
-                "The ${categoryController.categoryList![widget.index].name} Shop",
-                style: figTreeBold,
-              ),
-            ),
-            Row(children: [
-              Expanded(
-                  child: SizedBox(
-                      height: 300,
-                      child:
-                          categoryController.categoryItemList!=null
-                              ?
-                          ListView.builder(
-                        controller: scrollController,
-                        itemCount: categoryController
-                                          .categoryItemList!.length,
-                        padding: const EdgeInsets.only(
-                            left: Dimensions.paddingSizeSmall,
-                            top: Dimensions.paddingSizeDefault),
-                        physics: const BouncingScrollPhysics(),
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          // debugPrint(
-                          //     "${categoryController.categoryItemList!.length}");
-                          return Column(children: [
-                            Padding(
-                                padding: const EdgeInsets.only(
-                                    bottom: Dimensions.paddingSizeDefault,
-                                    right: Dimensions.paddingSizeDefault,
-                                    top: Dimensions.paddingSizeDefault),
-                                child:  
-                                Column(
-                                  children: [
-                                    Text(
-                                          item![index].name!),
-                                  ],
-                                )
-                              ),
-                          ]);
-                        },
-                      )
-                  : CategoryShimmer(
-                      categoryController: categoryController),
+        List<Item> item = categoryController.categoryItemsMap[widget.categoryID] ?? [];
+        // categoryController.categoryItemList!;
+        // List<Item>? item;
+        // item = [];
+        // if (categoryController.categoryItemList != null) {
+        //   item.addAll(categoryController.categoryItemList!);
+        // }
+        return (item.isEmpty)
+        // (categoryController.categoryItemList != null &&
+        //         categoryController.categoryItemList!.isEmpty)
+            ? const SizedBox()
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: Dimensions.paddingSizeDefault),
+                    child: Text(
+                      "The ${categoryController.categoryList![widget.index].name} Shop",
+                      style: figTreeBold,
+                    ),
                   ),
-              )
-            ]),
-            ResponsiveHelper.isMobile(context)
-                ? const SizedBox()
-                : categoryController.categoryList != null
-                    ? Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (con) => Dialog(
-                                      child: SizedBox(
-                                          height: 550,
-                                          width: 600,
-                                          child: CategoryPopUp(
-                                            categoryController:
-                                                categoryController,
-                                          ))));
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  right: Dimensions.paddingSizeSmall),
-                              child: CircleAvatar(
-                                radius: 35,
-                                backgroundColor: Theme.of(context).primaryColor,
-                                child: Text('view_all'.tr,
-                                    style: TextStyle(
-                                        fontSize: Dimensions.paddingSizeDefault,
-                                        color: Theme.of(context).cardColor)),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          )
-                        ],
-                      )
-                    : CategoryShimmer(categoryController: categoryController),
-          ],
-        );
+                  Row(children: [
+                    Expanded(
+                      child: SizedBox(
+                        height: 300,
+                        child: item != null
+                            ? ListView.builder(
+                                controller: scrollController,
+                                itemCount:
+                                    item.length,
+                                padding: const EdgeInsets.only(
+                                    left: Dimensions.paddingSizeSmall,
+                                    top: Dimensions.paddingSizeDefault),
+                                physics: const BouncingScrollPhysics(),
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  debugPrint("category Item:  ${categoryController
+                                            .categoryItemList![index].name}");
+                                  // debugPrint(
+                                  //     "${categoryController.categoryItemList!.length}");
+                                  return Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: Dimensions.paddingSizeSmall,
+                                        top: Dimensions.paddingSizeSmall),
+                                    child: ItemCard(
+                                        item: item[index],
+                                        isPopularItem: false,
+                                        isFood: false,
+                                        isShop: false),
+                                  );
+                                },
+                              )
+                            : CategoryShimmer(
+                                categoryController: categoryController),
+                      ),
+                    )
+                  ]),
+                  ResponsiveHelper.isMobile(context)
+                      ? const SizedBox()
+                      : categoryController.categoryList != null
+                          ? Column(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    showDialog(
+                                        context: context,
+                                        builder: (con) => Dialog(
+                                            child: SizedBox(
+                                                height: 550,
+                                                width: 600,
+                                                child: CategoryPopUp(
+                                                  categoryController:
+                                                      categoryController,
+                                                ))));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: Dimensions.paddingSizeSmall),
+                                    child: CircleAvatar(
+                                      radius: 35,
+                                      backgroundColor:
+                                          Theme.of(context).primaryColor,
+                                      child: Text('view_all'.tr,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  Dimensions.paddingSizeDefault,
+                                              color:
+                                                  Theme.of(context).cardColor)),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                )
+                              ],
+                            )
+                          : CategoryShimmer(
+                              categoryController: categoryController),
+                ],
+              );
       });
     });
+  }
+
+  @override
+  void dispose() {
+    scrollController.removeListener(_scrollListener);
+    scrollController.dispose();
+    super.dispose();
   }
 }
