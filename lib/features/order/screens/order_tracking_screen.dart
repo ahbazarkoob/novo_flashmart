@@ -259,7 +259,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
         takeAway ? Images.myLocationMarker : Images.userMarker,
         width: takeAway ? 50 : 100,
       );
-      print("Order Status == $orderStatus");
+      debugPrint("Order Status == $orderStatus");
 
       // Animate to coordinate
       LatLngBounds? bounds;
@@ -379,7 +379,8 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
           orderStatus == 'confirmed' ||
           orderStatus == 'processing') {
         if (store != null && addressModel != null) {
-          print('before await');
+          debugPrint('before store await');
+          debugPrint("Store   lat: ${store.latitude} long: ${store.longitude}");
           await _addPolylineUsingOSRM(
               LatLng(double.parse(store.latitude!),
                   double.parse(store.longitude!)),
@@ -387,7 +388,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
                   double.parse(addressModel.longitude!)),
               Colors.blue,
               "storeToUserPolyline");
-          print('after await');
+          debugPrint('after store await');
         }
         // store != null && addressModel != null
         //     ? _polyline.add(Polyline(
@@ -403,22 +404,25 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
         //         width: 1,
         //         patterns: [PatternItem.dash(15), PatternItem.gap(10)]))
         //     : const SizedBox();
-      } else if (orderStatus == 'handover' ||
+      } else if (orderStatus == 'accepted' ||
+          orderStatus == 'confirmed' ||
+          orderStatus == 'processing' ||
+          orderStatus == 'handover' ||
           orderStatus == 'picked_up' ||
           orderStatus == 'delivered') {
         if (deliveryMan != null && addressModel != null) {
-          print('before await');
-          Timer(Duration(seconds: 30), () async{
-            await _addPolylineUsingOSRM(
-              LatLng(double.parse(deliveryMan.lat!),
-                  double.parse(deliveryMan.lng!)),
-              LatLng(double.parse(addressModel.latitude!),
-                  double.parse(addressModel.longitude!)),
-              Colors.red,
-              'deliverPersonToUserPolyline',
-            );
-          });
-          print('after await');
+          debugPrint('before  deliveryMan await');
+          debugPrint(
+              "DeliveryMan   lat: ${deliveryMan.lat} long: ${deliveryMan.lng}");
+          await _addPolylineUsingOSRM(
+            LatLng(
+                double.parse(deliveryMan.lat!), double.parse(deliveryMan.lng!)),
+            LatLng(double.parse(addressModel.latitude!),
+                double.parse(addressModel.longitude!)),
+            Colors.red,
+            'deliverPersonToUserPolyline',
+          );
+          debugPrint('after deliveryMan await');
         }
       }
 
@@ -432,7 +436,9 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
         ),
         child: GetPlatform.isWeb ? const Icon(Icons.location_on, size: 18) : _customMarker('${Get.find<SplashController>().configModel!.baseUrls!.deliveryManImageUrl}/${deliveryMan.image}'),
       )) : const SizedBox();*/
-    } catch (_) {}
+    } catch (e) {
+      debugPrint("Error in setMarker: $e");
+    }
     setState(() {});
   }
 
@@ -442,35 +448,29 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
       Uri.parse(
           '${AppConstants.polyLineUri}${start.longitude},${start.latitude};${end.longitude},${end.latitude}?alternatives=3&overview=full'),
     );
-    print('polyLine Response   ${response.body}');
+    debugPrint('polyLine Response   ${response.body}');
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
-      final polyline = data['routes'][0]['geometry'];
-      print('polyline $polyline');
-      final decodedPolyline = _decodePolyline(polyline);
-      print('decoded Polyline $decodedPolyline');
-      _polyline.add(Polyline(
-        polylineId: PolylineId(polylineId),
-        visible: true,
-        points: decodedPolyline,
-        color: color,
-        width: 1,
-      ));
-
-      setState(() {
-        print('updated');
-        // _polyline.add(
-        //   Polyline(
-        //     polylineId: PolylineId(polylineId),
-        //     visible: true,
-        //     points: decodedPolyline,
-        //     color: color,
-        //     width: 5,
-        //   ),
-        // );
-      });
+      if (data['routes'] != null && data['routes'].isNotEmpty) {
+        final polyline = data['routes'][0]['geometry'];
+        debugPrint('polyline $polyline');
+        final decodedPolyline = _decodePolyline(polyline);
+        debugPrint('decoded Polyline $decodedPolyline');
+        setState(() {
+          _polyline.add(Polyline(
+            polylineId: PolylineId(polylineId),
+            visible: true,
+            points: decodedPolyline,
+            color: color,
+            width: 4,
+          ));
+        });
+      } else {
+        debugPrint('No routes found in OSRM Response');
+      }
     } else {
+      debugPrint("Failed to load route : ${response.statusCode}");
       throw Exception('Failed to load route');
     }
   }
