@@ -35,7 +35,7 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    bool isLoggedIn = AuthHelper.isLoggedIn();
+    // bool isLoggedIn = AuthHelper.isLoggedIn();
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Container(
         width: MediaQuery.of(context).size.width,
@@ -58,7 +58,7 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
             : Column(
                 children: [
                   for (int i = 0;
-                      i < categoryController.categoryList!.length;
+                      i < (categoryController.categoryList!.length);
                       i++)
                     CategorySection(
                       index: i,

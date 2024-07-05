@@ -980,12 +980,11 @@ class _CategorySectionState extends State<CategorySection> {
                       style: figTreeBold,
                     ),
                   ),
-                  Row(children: [
+                  (item!=null)? Row(children: [
                     Expanded(
                       child: SizedBox(
                         height: 300,
-                        child: item != null
-                            ? ListView.builder(
+                        child:ListView.builder(
                                 controller: scrollController,
                                 itemCount:
                                     item.length,
@@ -997,8 +996,6 @@ class _CategorySectionState extends State<CategorySection> {
                                 itemBuilder: (context, index) {
                                   debugPrint("category Item:  ${categoryController
                                             .categoryItemList![index].name}");
-                                  // debugPrint(
-                                  //     "${categoryController.categoryItemList!.length}");
                                   return Padding(
                                     padding: const EdgeInsets.only(
                                         right: Dimensions.paddingSizeSmall,
@@ -1011,11 +1008,10 @@ class _CategorySectionState extends State<CategorySection> {
                                   );
                                 },
                               )
-                            : CategoryShimmer(
-                                categoryController: categoryController),
                       ),
                     )
-                  ]),
+                  ]) : CategoryShimmer(
+                                categoryController: categoryController),
                   ResponsiveHelper.isMobile(context)
                       ? const SizedBox()
                       : categoryController.categoryList != null

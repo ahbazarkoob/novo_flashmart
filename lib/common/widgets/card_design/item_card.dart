@@ -280,16 +280,12 @@ class ItemCard extends StatelessWidget {
                               ),
                                 ],
                               ),
-                              Expanded(child: SizedBox()),
+                              const Expanded(child: SizedBox()),
                               isShop
                       ? const SizedBox()
-                      : Positioned(
-                          bottom: 10,
-                          right: 20,
-                          child: CartCountView(
+                      : CartCountView(
                             item: item,
-                          ),
-                        ),
+                          )
                          ],
                           ),
 
@@ -297,11 +293,7 @@ class ItemCard extends StatelessWidget {
                               height: Dimensions.paddingSizeExtraSmall),
                         ]),
                     isShop
-                        ? Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: 
-                            CartCountView(
+                        ? CartCountView(
                               item: item,
                               child: Container(
                                 height: 35,
@@ -322,8 +314,7 @@ class ItemCard extends StatelessWidget {
                                     color: Theme.of(context).cardColor,
                                     size: 20),
                               ),
-                            ),
-                          )
+                            )
                         : const SizedBox(),
                   ]),
                 ),
