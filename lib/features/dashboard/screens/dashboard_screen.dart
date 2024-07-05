@@ -78,7 +78,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
     _screens = [
       const HomeScreen(),
-      // const FavouriteScreen(),
+      const FavouriteScreen(),
       const SizedBox(),
       const OrderScreen(),
       const MenuScreen()
@@ -369,7 +369,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                               .setModule(Get.find<
                                                                       SplashController>()
                                                                   .moduleList![i]);
-                                                          // HomeScreen.loadData(true);
+                                                          HomeScreen.loadData(true);
                                                         }
                                                         Get.find<
                                                                 CouponController>()
@@ -402,9 +402,9 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                               _screens = [
                                 const HomeScreen(),
-                                // isParcel
-                                //     ? const AddressScreen(fromDashboard: true)
-                                //     : const FavouriteScreen(),
+                                isParcel
+                                    ? const AddressScreen(fromDashboard: true)
+                                    : const FavouriteScreen(),
                                 const SizedBox(),
                                 const OrderScreen(),
                                 const MenuScreen()
