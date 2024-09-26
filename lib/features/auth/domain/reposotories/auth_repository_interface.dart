@@ -1,7 +1,4 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
 import 'package:novo_flashMart/interfaces/repository_interface.dart';
 
 abstract class AuthRepositoryInterface extends RepositoryInterface {

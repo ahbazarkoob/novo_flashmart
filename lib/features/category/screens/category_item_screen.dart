@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:novo_flashMart/features/category/controllers/category_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
 // import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
@@ -124,6 +123,7 @@ class CategoryItemScreenState extends State<CategoryItemScreen>
 
       return PopScope(
         canPop: true,
+        // ignore: deprecated_member_use
         onPopInvoked: (didPop) async {
           if (catController.isSearching) {
             catController.toggleSearch();

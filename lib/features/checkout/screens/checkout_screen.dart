@@ -831,7 +831,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
 
                       if (
                           // !isGuestLogIn &&
-                          finalAddress!.contactPersonNumber == 'null') {
+                          finalAddress.contactPersonNumber == 'null') {
                         finalAddress.contactPersonNumber =
                             Get.find<ProfileController>().userInfoModel!.phone;
                       }

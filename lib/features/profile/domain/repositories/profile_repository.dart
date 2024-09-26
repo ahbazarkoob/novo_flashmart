@@ -26,6 +26,7 @@ class ProfileRepository implements ProfileRepositoryInterface {
     ResponseModel responseModel;
     Map<String, String> body = {
       'name': userInfoModel.name!,
+      'phone': userInfoModel.phone!,
       'gender': userInfoModel.gender!,
     };
 
@@ -44,7 +45,7 @@ class ProfileRepository implements ProfileRepositoryInterface {
   Future<ResponseModel> changePassword(UserInfoModel userInfoModel) async {
     ResponseModel responseModel;
     Map<String, dynamic> body = {
-      'name': userInfoModel.name,
+      'f_name': userInfoModel.name,
       'gender': userInfoModel.gender,
       // 'email': userInfoModel.email,
       // 'password': userInfoModel.password,

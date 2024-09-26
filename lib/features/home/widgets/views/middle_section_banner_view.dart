@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class MiddleSectionBannerView extends StatefulWidget {
 }
 
 class _MiddleSectionBannerViewState extends State<MiddleSectionBannerView> {
-  final CarouselController carouselController = CarouselController();
+  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
 
   @override
   Widget build(BuildContext context) {

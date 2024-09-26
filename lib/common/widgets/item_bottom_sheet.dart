@@ -3,12 +3,10 @@ import 'package:novo_flashMart/common/widgets/custom_tool_tip_widget.dart';
 import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
 import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
 import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
 import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
 import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
 import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/date_converter.dart';
 import 'package:novo_flashMart/helper/price_converter.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
@@ -27,9 +25,6 @@ import 'package:novo_flashMart/features/checkout/screens/checkout_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../features/cart/widgets/cart_item_widget.dart';
-import '../../features/coupon/controllers/coupon_controller.dart';
-import 'cart_snackbar.dart';
 
 class ItemBottomSheet extends StatefulWidget {
   final Item? item;

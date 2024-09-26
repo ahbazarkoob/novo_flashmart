@@ -1,6 +1,4 @@
 import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
 
 abstract class AuthServiceInterface {
   bool isSharedPrefNotificationActive();

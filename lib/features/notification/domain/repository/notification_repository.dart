@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,7 +18,7 @@ class NotificationRepository implements NotificationRepositoryInterface {
   @override
   Future<List<NotificationModel>?> getList({int? offset}) async {
     List<NotificationModel>? notificationList;
-    print(
+    debugPrint(
         "before sending notification  Zone ID ${Get.find<LocationController>().zoneID}    ");
     Response response =
         await apiClient.getData("${AppConstants.notificationUri}?'zoneID':${Get.find<LocationController>().zoneID}");

@@ -1,7 +1,4 @@
-import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/cart/widgets/cart_item_widget.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
 import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
@@ -17,31 +14,11 @@ import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/helper/route_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/common/widgets/cart_snackbar.dart';
 import 'package:novo_flashMart/common/widgets/confirmation_dialog.dart';
 import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
 import 'package:novo_flashMart/common/widgets/item_bottom_sheet.dart';
 import 'package:novo_flashMart/features/item/screens/item_details_screen.dart';
 import 'package:novo_flashMart/features/item/domain/services/item_service_interface.dart';
-
-import '../../../common/widgets/cart_floating.dart';
-import '../../../common/widgets/custom_button.dart';
-import '../../../common/widgets/footer_view.dart';
-import '../../../common/widgets/item_widget.dart';
-import '../../../common/widgets/no_data_screen.dart';
-import '../../../common/widgets/web_constrained_box.dart';
-import '../../../common/widgets/web_page_title_widget.dart';
-import '../../../util/dimensions.dart';
-import '../../../util/styles.dart';
-import '../../cart/screens/cart_screen.dart';
-import '../../cart/widgets/extra_packaging_widget.dart';
-import '../../cart/widgets/not_available_bottom_sheet_widget.dart';
-import '../../cart/widgets/web_cart_items_widget.dart';
-import '../../cart/widgets/web_suggested_item_view_widget.dart';
-import '../../coupon/controllers/coupon_controller.dart';
-import '../../coupon/domain/models/coupon_model.dart';
-import '../../store/controllers/store_controller.dart';
-import '../../store/screens/store_screen.dart';
 
 class ItemController extends GetxController implements GetxService {
   final ItemServiceInterface itemServiceInterface;

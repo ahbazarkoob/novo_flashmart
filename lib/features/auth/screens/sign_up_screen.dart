@@ -1,13 +1,7 @@
-import 'dart:convert';
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
 import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/features/auth/screens/sign_in_screen.dart';
-import 'package:novo_flashMart/features/auth/widgets/condition_check_box_widget.dart';
-import 'package:novo_flashMart/helper/custom_validator.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/helper/route_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
@@ -158,9 +152,9 @@ class SignUpScreenState extends State<SignUpScreen> {
                                         // color: grey
                                         ))),
                             menuStyle: MenuStyle(
-                                backgroundColor: MaterialStatePropertyAll(
+                                backgroundColor: WidgetStatePropertyAll(
                                     Theme.of(context).cardColor),
-                                shape: MaterialStatePropertyAll(
+                                shape: WidgetStatePropertyAll(
                                     RoundedRectangleBorder(
                                         side: const BorderSide(),
                                         borderRadius:
@@ -433,7 +427,7 @@ class SignUpScreenState extends State<SignUpScreen> {
     String gender = dropdownValue;
     String phone = Get.find<AuthController>().getUserNumber();
     String countryDialCode =
-        await authController.getUserCountryCode().toString();
+        authController.getUserCountryCode().toString();
     debugPrint(countryDialCode);
     String numberWithCountryCode = countryDialCode + phone;
     int otp = Get.find<AuthController>().getUserOtp();

@@ -7,7 +7,6 @@ import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
 import 'package:novo_flashMart/features/cart/domain/models/online_cart_model.dart';
 import 'package:novo_flashMart/features/cart/domain/repositories/cart_repository_interface.dart';
 import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/module_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 
@@ -50,7 +49,7 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
   Future<List<OnlineCartModel>?> _addToCartOnline(OnlineCart cart) async {
     List<OnlineCartModel>? onlineCartList;
     Response response = await apiClient.postData(
-        '${AppConstants.addCartUri}',
+        AppConstants.addCartUri,
         cart.toJson());
     if (response.statusCode == 200) {
       onlineCartList = [];
@@ -77,7 +76,7 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
 
   Future<bool> _clearCartOnline() async {
     Response response = await apiClient.deleteData(
-        '${AppConstants.removeAllCartUri}');
+        AppConstants.removeAllCartUri);
     return (response.statusCode == 200);
   }
 
@@ -102,7 +101,7 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
     };
 
     Response response = await apiClient.getData(
-      '${AppConstants.getCartListUri}',
+      AppConstants.getCartListUri,
       headers: ModuleHelper.getModule()?.id == null ? header : null,
     );
     if (response.statusCode == 200) {
@@ -127,7 +126,7 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
       Map<String, dynamic> body) async {
     List<OnlineCartModel>? onlineCartList;
     Response response = await apiClient.postData(
-        '${AppConstants.updateCartUri}',
+        AppConstants.updateCartUri,
         body);
     if (response.statusCode == 200) {
       onlineCartList = [];
@@ -145,7 +144,7 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
       "quantity": quantity,
     };
     Response response = await apiClient.postData(
-        '${AppConstants.updateCartUri}',
+        AppConstants.updateCartUri,
         data);
     return (response.statusCode == 200);
   }

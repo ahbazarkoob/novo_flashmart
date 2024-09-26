@@ -4,7 +4,6 @@ import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
 import 'package:novo_flashMart/common/models/config_model.dart';
 import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/styles.dart';
@@ -34,7 +33,7 @@ class TimeSlotSection extends StatelessWidget {
     // bool isGuestLoggedIn = AuthHelper.isGuestLoggedIn();
     return Column(children: [
       // !isGuestLoggedIn &&
-              storeId == null &&
+      storeId == null &&
               checkoutController.store!.scheduleOrder! &&
               cartList!.isNotEmpty &&
               cartList![0]!.item!.availableDateStarts == null
@@ -137,14 +136,14 @@ class TimeSlotSection extends StatelessWidget {
             )
           : const SizedBox(),
       SizedBox(
-          height: 
-          // !isGuestLoggedIn &&
-                  storeId == null &&
-                  checkoutController.store!.scheduleOrder! &&
-                  cartList!.isNotEmpty &&
-                  cartList![0]!.item!.availableDateStarts == null
-              ? Dimensions.paddingSizeSmall
-              : 0),
+          height:
+              // !isGuestLoggedIn &&
+              storeId == null &&
+                      checkoutController.store!.scheduleOrder! &&
+                      cartList!.isNotEmpty &&
+                      cartList![0]!.item!.availableDateStarts == null
+                  ? Dimensions.paddingSizeSmall
+                  : 0),
     ]);
   }
 }

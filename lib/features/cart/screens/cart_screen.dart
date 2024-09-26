@@ -32,7 +32,6 @@ import 'package:get/get.dart';
 import 'package:novo_flashMart/features/cart/widgets/web_cart_items_widget.dart';
 import 'package:novo_flashMart/features/cart/widgets/web_suggested_item_view_widget.dart';
 import 'package:novo_flashMart/features/home/screens/home_screen.dart';
-import 'package:novo_flashMart/features/store/screens/store_screen.dart';
 
 class CartScreen extends StatefulWidget {
   final bool fromNav;
@@ -168,53 +167,86 @@ class _CartScreenState extends State<CartScreen> {
                                                                 height: 5),
                                                             Padding(
                                                               padding: const EdgeInsets
-                                                                  .only(
-                                                                  left: Dimensions
+                                                                  .all(Dimensions
                                                                       .paddingSizeExtraSmall),
-                                                              child: TextButton
-                                                                  .icon(
-                                                                onPressed: () {
-                                                                  cartController.forcefullySetModule(
-                                                                      cartController
-                                                                          .cartList[
-                                                                              0]
-                                                                          .item!
-                                                                          .moduleId!);
-                                                                  Get.toNamed(
-                                                                    RouteHelper.getStoreRoute(
-                                                                        id: cartController
-                                                                            .cartList[
-                                                                                0]
-                                                                            .item!
-                                                                            .storeId,
-                                                                        page:
-                                                                            'item'),
-                                                                    arguments: StoreScreen(
-                                                                        store: Store(
-                                                                            id: cartController
-                                                                                .cartList[
-                                                                                    0]
-                                                                                .item!
-                                                                                .storeId),
-                                                                        fromModule:
-                                                                            false),
-                                                                  );
-                                                                },
-                                                                icon: Icon(
-                                                                    Icons
-                                                                        .add_circle_outline_sharp,
-                                                                    color: Theme.of(
-                                                                            context)
-                                                                        .primaryColor),
-                                                                label: Text(
-                                                                    'add_more_items'
-                                                                        .tr,
+                                                              child: Row(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: [
+                                                                Image.asset(Images.edit, height: 18,),
+                                                                const SizedBox(
+                                                                  width: Dimensions.paddingSizeDefault,
+                                                                ),
+                                                                const Text('Missed Something? '),
+                                                                InkWell(
+                                                                  onTap: () => Get.toNamed(
+                                                                    RouteHelper.getSearchRoute()),
+                                                                    child:  Text('Search', 
                                                                     style: figTreeMedium.copyWith(
-                                                                        color: Theme.of(context)
+                                                                      decoration: TextDecoration.underline,
+                                                                      decorationColor: Theme.of(context)
                                                                             .primaryColor,
-                                                                        fontSize:
-                                                                            Dimensions.fontSizeDefault)),
-                                                              ),
+                                                                      color: Theme.of(context)
+                                                                            .primaryColor,
+                                                                    ))
+                                                                            ),
+                                                                  const Text('  or  '),
+                                                                  InkWell(
+                                                                  onTap: () => Get.toNamed(RouteHelper
+                                                        .getCategoryRoute()),
+                                                                    child:  Text('Browse Categories', style: figTreeMedium.copyWith(
+                                                                      decoration: TextDecoration.underline,
+                                                                      decorationColor: Theme.of(context)
+                                                                            .primaryColor,
+                                                                      color: Theme.of(context)
+                                                                            .primaryColor,
+                                                                    ))
+                                                                            ),
+                                                              ],)
+                                                              // TextButton
+                                                              //     .icon(
+                                                              //   onPressed: () {
+                                                              //     cartController.forcefullySetModule(
+                                                              //         cartController
+                                                              //             .cartList[
+                                                              //                 0]
+                                                              //             .item!
+                                                              //             .moduleId!);
+                                                              //     Get.toNamed(
+                                                              //       RouteHelper.getStoreRoute(
+                                                              //           id: cartController
+                                                              //               .cartList[
+                                                              //                   0]
+                                                              //               .item!
+                                                              //               .storeId,
+                                                              //           page:
+                                                              //               'item'),
+                                                              //       arguments: StoreScreen(
+                                                              //           store: Store(
+                                                              //               id: cartController
+                                                              //                   .cartList[
+                                                              //                       0]
+                                                              //                   .item!
+                                                              //                   .storeId),
+                                                              //           fromModule:
+                                                              //               false),
+                                                              //     );
+                                                              //   },
+                                                              //   icon: Icon(
+                                                              //       Icons
+                                                              //           .add_circle_outline_sharp,
+                                                              //       color: Theme.of(
+                                                              //               context)
+                                                              //           .primaryColor),
+                                                              //   label: Text(
+                                                              //       'add_more_items'
+                                                              //           .tr,
+                                                              //       style: figTreeMedium.copyWith(
+                                                              //           color: Theme.of(context)
+                                                              //               .primaryColor,
+                                                              //           fontSize:
+                                                              //               Dimensions.fontSizeDefault)),
+                                                              // ),
+                                                            
                                                             ),
                                                             ExtraPackagingWidget(
                                                                 cartController:

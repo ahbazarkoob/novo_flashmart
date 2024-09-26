@@ -4,19 +4,12 @@ import 'package:novo_flashMart/features/flash_sale/widgets/flash_sale_view_widge
 import 'package:novo_flashMart/features/home/widgets/bad_weather_widget.dart';
 import 'package:novo_flashMart/features/home/widgets/views/banner_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/best_reviewed_item_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/best_store_nearby_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/category_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/promo_code_banner_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/item_that_you_love_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/just_for_you_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/most_popular_item_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/new_on_mart_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/middle_section_banner_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/special_offer_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/promotional_banner_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/visit_again_view.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-
 import '../../../category/controllers/category_controller.dart';
 
 class GroceryHomeScreen extends StatefulWidget {
@@ -27,11 +20,6 @@ class GroceryHomeScreen extends StatefulWidget {
 }
 
 class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Get.find<CategoryController>;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +39,42 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
       const PromotionalBannerView(),
       const SpecialOfferView(isFood: false, isShop: false),
       const CategoryView(),
-      GetBuilder<CategoryController>(builder: (categoryController) {
+      const CategorySectionView(),
+      const BannerView(isFeatured: false),
+      // isLoggedIn ? const VisitAgainView() : const SizedBox(),
+      // const SpecialOfferView(isFood: false, isShop: false),
+      const FlashSaleViewWidget(),
+      // const BestStoreNearbyView(),
+      const MostPopularItemView(isFood: false, isShop: false),
+      const MiddleSectionBannerView(),
+      const BestReviewItemView(),
+      const JustForYouView(),
+      // const ItemThatYouLoveView(forShop: false),
+      // const PromoCodeBannerView(),
+      // const NewOnMartView(isPharmacy: false, isShop: false),
+      // const PromotionalBannerView(),
+    ]);
+  }
+}
+
+
+class CategorySectionView extends StatefulWidget {
+  const CategorySectionView({super.key});
+
+  @override
+  State<CategorySectionView> createState() => _CategorySectionViewState();
+}
+
+class _CategorySectionViewState extends State<CategorySectionView> {
+   @override
+  void initState() {
+    super.initState();
+    Get.find<CategoryController>;
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<CategoryController>(builder: (categoryController) {
         return (categoryController.categoryList != null &&
                 categoryController.categoryList!.isEmpty)
             ? const SizedBox()
@@ -67,21 +90,6 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
                     ),
                 ],
               );
-      }),
-
-      const BannerView(isFeatured: false),
-      // isLoggedIn ? const VisitAgainView() : const SizedBox(),
-      // const SpecialOfferView(isFood: false, isShop: false),
-      const FlashSaleViewWidget(),
-      // const BestStoreNearbyView(),
-      const MostPopularItemView(isFood: false, isShop: false),
-      const MiddleSectionBannerView(),
-      const BestReviewItemView(),
-      const JustForYouView(),
-      const ItemThatYouLoveView(forShop: false),
-      const PromoCodeBannerView(),
-      // const NewOnMartView(isPharmacy: false, isShop: false),
-      // const PromotionalBannerView(),
-    ]);
+      });
   }
 }

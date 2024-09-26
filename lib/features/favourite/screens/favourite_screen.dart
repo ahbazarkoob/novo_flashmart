@@ -1,8 +1,5 @@
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
 import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
 import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
 import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
 import 'package:novo_flashMart/common/widgets/not_logged_in_screen.dart';

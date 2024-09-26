@@ -58,7 +58,7 @@ class CheckoutRepository implements CheckoutRepositoryInterface {
   @override
   Future<Response> placeOrder(PlaceOrderBodyModel orderBody,
       List<MultipartBody>? orderAttachment) async {
-    return await apiClient.postMultipartData(
+    return await apiClient.postMultipartDataCheckOut(
         AppConstants.placeOrderUri, orderBody.toJson(), orderAttachment ?? [],
         handleError: false);
   }

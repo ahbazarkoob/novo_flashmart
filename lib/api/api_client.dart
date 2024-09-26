@@ -131,6 +131,45 @@ class ApiClient extends GetxService {
     }
   }
 
+  Future<Response> postMultipartDataCheckOut(
+      String uri, Map<String, String> body, List<MultipartBody> multipartBody,
+      {Map<String, String>? headers, bool handleError = true}) async {
+    // AddressModel? addressModel;
+    try {
+      if (kDebugMode) {
+        print('====> API Call: $uri\nHeader: $_mainHeaders');
+        print('====> API Body: $body with ${multipartBody.length} picture');
+      }
+      http.MultipartRequest request =
+          http.MultipartRequest('POST', Uri.parse(appBaseUrl + uri));
+      request.headers.addAll({
+        'Content-Type': 'application/json; charset=UTF-8',
+        AppConstants.zoneId: '2',
+        AppConstants.moduleId:
+            '${ModuleModel.fromJson(jsonDecode(sharedPreferences.getString(AppConstants.cacheModuleId)!)).id}',
+        AppConstants.localizationKey:AppConstants.languages[0].languageCode!,
+      'Authorization': 'Bearer $token'
+      });
+      for (MultipartBody multipart in multipartBody) {
+        if (multipart.file != null) {
+          Uint8List list = await multipart.file!.readAsBytes();
+          request.files.add(http.MultipartFile(
+            multipart.key,
+            multipart.file!.readAsBytes().asStream(),
+            list.length,
+            filename: '${DateTime.now().toString()}.png',
+          ));
+        }
+      }
+      request.fields.addAll(body);
+      http.Response response =
+          await http.Response.fromStream(await request.send());
+      return handleResponse(response, uri, handleError);
+    } catch (e) {
+      return Response(statusCode: 1, statusText: noInternetMessage);
+    }
+  }
+
   Future<Response> postMultipartData(
       String uri, Map<String, String> body, List<MultipartBody> multipartBody,
       {Map<String, String>? headers, bool handleError = true}) async {

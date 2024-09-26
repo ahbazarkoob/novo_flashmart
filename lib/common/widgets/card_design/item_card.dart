@@ -9,7 +9,6 @@ import 'package:novo_flashMart/helper/price_converter.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/images.dart';
 import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/add_favourite_view.dart';
 import 'package:novo_flashMart/common/widgets/cart_count_view.dart';
 import 'package:novo_flashMart/common/widgets/custom_image.dart';
 import 'package:novo_flashMart/common/widgets/discount_tag.dart';

@@ -42,7 +42,7 @@ class CategoryView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: Dimensions.paddingSizeDefault),
                             child: Text(
                               "SHOP BY CATEGORY",

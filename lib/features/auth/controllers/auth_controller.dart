@@ -3,9 +3,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
 import 'package:novo_flashMart/features/auth/domain/services/auth_service_interface.dart';
 
 import '../../profile/controllers/profile_controller.dart';

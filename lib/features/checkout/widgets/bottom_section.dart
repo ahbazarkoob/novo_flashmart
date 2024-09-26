@@ -7,7 +7,6 @@ import 'package:novo_flashMart/features/splash/controllers/splash_controller.dar
 import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
 import 'package:novo_flashMart/common/models/config_model.dart';
 import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/price_converter.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
@@ -88,7 +87,7 @@ class BottomSection extends StatelessWidget {
 
         /// Coupon
         isDesktop
-        //  && !isGuestLoggedIn
+            //  && !isGuestLoggedIn
             ? CouponSection(
                 storeId: storeId,
                 checkoutController: checkoutController,
@@ -118,8 +117,8 @@ class BottomSection extends StatelessWidget {
             NoteAndPrescriptionSection(
                 checkoutController: checkoutController, storeId: storeId),
 
-            isDesktop 
-            // && !isGuestLoggedIn
+            isDesktop
+                // && !isGuestLoggedIn
                 ? PartialPayView(
                     totalPrice: total, isPrescription: storeId != null)
                 : const SizedBox(),

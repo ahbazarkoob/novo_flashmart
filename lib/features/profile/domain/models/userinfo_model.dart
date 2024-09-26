@@ -46,6 +46,7 @@ class UserInfoModel {
   UserInfoModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
+    gender = json['gender'];
     image = json['image'];
     phone = json['phone'];
     createdAt = json['created_at'];

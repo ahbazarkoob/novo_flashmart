@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart' as carousel_slider;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class PromoCodeBannerView extends StatefulWidget {
 }
 
 class _PromoCodeBannerViewState extends State<PromoCodeBannerView> {
-  final CarouselController carouselController = CarouselController();
+  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CouponController>(builder: (couponController) {

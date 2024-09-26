@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/cart/widgets/cart_item_widget.dart';
 import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
@@ -13,7 +12,6 @@ import 'package:novo_flashMart/helper/route_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/images.dart';
 import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/cart_snackbar.dart';
 import 'package:novo_flashMart/common/widgets/confirmation_dialog.dart';
 import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
 import 'package:novo_flashMart/common/widgets/custom_button.dart';

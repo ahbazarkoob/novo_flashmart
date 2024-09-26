@@ -268,7 +268,7 @@ class CarFilterWidget extends StatelessWidget {
                   //               height: 52,
                   //               decoration: BoxDecoration(
                   //                 borderRadius: BorderRadius.all(Radius.circular(5)),
-                  //                 color: index != 0 ? Theme.of(context).textTheme.bodyText1.color.withOpacity(.06) :
+                  //                 color: index != 0 ? Theme.of(context).textTheme.bodyMedium.color.withOpacity(.06) :
                   //                 Theme.of(context).primaryColor.withOpacity(.1),
                   //                 border: Border.all(color:index != 0 ? Theme.of(context).textTheme.bodyText1.color.withOpacity(.06) : Theme.of(context).primaryColor )
                   //               ),

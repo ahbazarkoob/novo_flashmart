@@ -18,11 +18,7 @@ import 'package:novo_flashMart/features/store/controllers/store_controller.dart'
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
 import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/features/home/screens/modules/food_home_screen.dart';
 import 'package:novo_flashMart/features/home/screens/modules/grocery_home_screen.dart';
-import 'package:novo_flashMart/features/home/screens/modules/pharmacy_home_screen.dart';
-import 'package:novo_flashMart/features/home/screens/modules/shop_home_screen.dart';
-import 'package:novo_flashMart/features/parcel/controllers/parcel_controller.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
 import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
@@ -31,12 +27,9 @@ import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/images.dart';
 import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/item_view.dart';
 import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/paginated_list_view.dart';
 import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
 import 'package:novo_flashMart/features/home/screens/web_new_home_screen.dart';
-import 'package:novo_flashMart/features/home/widgets/filter_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/home/widgets/module_view.dart';
@@ -212,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ResponsiveHelper.isDesktop(context) ? const WebMenuBar() : null,
           endDrawer: const MenuDrawer(),
           endDrawerEnableOpenDragGesture: false,
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           body: isParcel
               ? const ParcelCategoryScreen()
               : SafeArea(
@@ -288,13 +281,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 elevation: 0,
                                 automaticallyImplyLeading: false,
                                 surfaceTintColor:
-                                    Theme.of(context).colorScheme.background,
+                                    Theme.of(context).colorScheme.surface,
                                 backgroundColor:
                                     ResponsiveHelper.isDesktop(context)
                                         ? Colors.transparent
                                         : Theme.of(context)
                                             .colorScheme
-                                            .background,
+                                            .surface,
                                 title: Center(
                                     child: Container(
                                   width: Dimensions.webMaxWidth,
@@ -303,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ? 60
                                           : 70,
                                   color:
-                                      Theme.of(context).colorScheme.background,
+                                      Theme.of(context).colorScheme.surface,
                                   child: Row(children: [
                                     Container(
                                         height: 50,

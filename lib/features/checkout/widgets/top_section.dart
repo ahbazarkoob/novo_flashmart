@@ -449,7 +449,7 @@ class TopSection extends StatelessWidget {
               checkoutController: checkoutController,
               isOfflinePaymentActive: isOfflinePaymentActive,
             ),
-            SizedBox(height: 
+            const SizedBox(height: 
             // isGuestLoggedIn ? 0 : 
             Dimensions.paddingSizeLarge),
             !isDesktop 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
 import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
 import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';

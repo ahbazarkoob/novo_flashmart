@@ -6,10 +6,7 @@ import 'package:get/get_connect/connect.dart';
 import 'package:get/get_utils/src/platform/platform.dart';
 import 'package:novo_flashMart/api/api_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
 import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
 import 'package:novo_flashMart/features/auth/domain/reposotories/auth_repository_interface.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
 import 'package:novo_flashMart/helper/module_helper.dart';
@@ -35,6 +32,7 @@ class AuthRepository implements AuthRepositoryInterface {
     return response;
   }
 
+  @override
   Future<Response> registeration(
       {String? phone, int? otp, String? name, String? gender}) async {
     Response response = await apiClient.postData(
@@ -62,6 +60,7 @@ class AuthRepository implements AuthRepositoryInterface {
   //   }
   // }
 
+  @override
   Future<Response> generateOtp({String? phone}) async {
     Response response = await apiClient.postData(
       AppConstants.generateOtpUri,
@@ -72,6 +71,7 @@ class AuthRepository implements AuthRepositoryInterface {
     return response;
   }
 
+  @override
   Future<Response> verifyOtp({String? phone, String? otp}) async {
     Response response = await apiClient
         .postData(AppConstants.generateOtpUri, {"phone": phone, "otp": otp});

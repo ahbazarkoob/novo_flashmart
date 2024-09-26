@@ -1,13 +1,10 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
 import 'package:novo_flashMart/features/auth/domain/reposotories/auth_repository_interface.dart';
 import 'package:novo_flashMart/features/auth/domain/services/auth_service_interface.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
 
 class AuthService implements AuthServiceInterface {
   final AuthRepositoryInterface authRepositoryInterface;
@@ -27,14 +24,14 @@ class AuthService implements AuthServiceInterface {
       if (response.statusCode == 200) {
         final body = response.body;
         RegisterModel registerModel = RegisterModel.fromJson(body);
-        print('Token:::   ${registerModel.token}');
+        debugPrint('Token:::   ${registerModel.token}');
         authRepositoryInterface.saveUserToken("${registerModel.token}");
         return registerModel;
       } else {
         throw Exception('Failed to register user: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error while registering user: $e');
+      debugPrint('Error while registering user: $e');
       rethrow;
     }
   }
@@ -49,16 +46,16 @@ class AuthService implements AuthServiceInterface {
         final body = response.body;
         LoginRegisterModel loginRegisterModel =
             LoginRegisterModel.fromJson(body);
-        print('Token:::   ${loginRegisterModel.token}');
-        print('Success:::   ${loginRegisterModel.success}');
+        debugPrint('Token:::   ${loginRegisterModel.token}');
+        debugPrint('Success:::   ${loginRegisterModel.success}');
         authRepositoryInterface.saveUserToken("${loginRegisterModel.token}");
-        print("Tokennn${authRepositoryInterface.getUserToken()}");
+        debugPrint("Tokennn${authRepositoryInterface.getUserToken()}");
         return loginRegisterModel;
       } else {
         throw Exception('Failed to login user: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error while logging in: $e');
+      debugPrint('Error while logging in: $e');
       rethrow;
     }
   }
@@ -87,14 +84,14 @@ class AuthService implements AuthServiceInterface {
         final decodedResponse = response.body;
         OtpResponseModel otpResponseModel =
             OtpResponseModel.fromJson(decodedResponse);
-        print('OTP:::   ${otpResponseModel.otp}');
-        print('OTP:::   ${otpResponseModel.registeredUser}');
+        debugPrint('OTP:::   ${otpResponseModel.otp}');
+        debugPrint('OTP:::   ${otpResponseModel.registeredUser}');
         return otpResponseModel;
       } else {
         throw Exception('Failed to generate OTP: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error generating OTP: $e');
+      debugPrint('Error generating OTP: $e');
       rethrow;
     }
   }
@@ -250,8 +247,8 @@ class AuthService implements AuthServiceInterface {
 
   @override
   String getUserNumber() {
-    print("auth_service.dart");
-    print(authRepositoryInterface.getUserNumber());
+    debugPrint("auth_service.dart");
+    debugPrint(authRepositoryInterface.getUserNumber());
     return authRepositoryInterface.getUserNumber();
   }
 

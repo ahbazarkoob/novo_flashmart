@@ -28,13 +28,16 @@ class UpdateProfileScreen extends StatefulWidget {
 
 class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   final FocusNode _firstNameFocus = FocusNode();
-  final FocusNode _lastNameFocus = FocusNode();
-  final FocusNode _emailFocus = FocusNode();
+  // final FocusNode _lastNameFocus = FocusNode();
+  // final FocusNode _emailFocus = FocusNode();
   final FocusNode _phoneFocus = FocusNode();
   final TextEditingController _firstNameController = TextEditingController();
-  final TextEditingController _lastNameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _lastNameController = TextEditingController();
+  // final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _gender = TextEditingController();
+  List<String> gender = <String>["Male", "Female", "Other"];
+  String dropdownValue ="";
 
   @override
   void initState() {
@@ -67,6 +70,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
           // _lastNameController.text =
           //     profileController.userInfoModel!.lName ?? '';
           _phoneController.text = profileController.userInfoModel!.phone ?? '';
+          _gender.text = profileController.userInfoModel!.gender ?? '';
           // _emailController.text = profileController.userInfoModel!.email ?? '';
         }
 
@@ -109,7 +113,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                       hintText: 'first_name'.tr,
                                       controller: _firstNameController,
                                       focusNode: _firstNameFocus,
-                                      nextFocus: _lastNameFocus,
+                                      // nextFocus: _lastNameFocus,
                                       inputType: TextInputType.name,
                                       capitalization: TextCapitalization.words,
                                     ),
@@ -156,7 +160,58 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                     // ),
                                     // const SizedBox(
                                     //     height: Dimensions.paddingSizeLarge),
-
+                                    Align(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Select Gender'.tr,
+                                          style: figTreeRegular.copyWith(
+                                              fontSize:
+                                                  Dimensions.fontSizeDefault)),
+                                    ),
+                                    const SizedBox(
+                                        height: Dimensions.paddingSizeDefault),
+                                    DropdownMenu<String>(
+                                      initialSelection: _gender.text,
+                                      inputDecorationTheme:
+                                          InputDecorationTheme(
+                                              border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(12),
+                                                  borderSide: const BorderSide(
+                                                      // color: grey
+                                                      ))),
+                                      menuStyle: MenuStyle(
+                                          backgroundColor:
+                                              MaterialStatePropertyAll(
+                                                  Theme.of(context).cardColor),
+                                          shape: MaterialStatePropertyAll(
+                                              RoundedRectangleBorder(
+                                                  side: const BorderSide(),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          12)))),
+                                      trailingIcon: const Icon(
+                                        Icons.expand_more,
+                                        size: 24,
+                                      ),
+                                      hintText: _gender.text,
+                                      textStyle: figTreeRegular.copyWith(
+                                          fontSize: Dimensions.fontSizeDefault),
+                                      width: MediaQuery.sizeOf(context).width *
+                                          0.9,
+                                      onSelected: (String? value) async {
+                                        setState(() {
+                                          dropdownValue = value!;
+                                          _gender.text = dropdownValue;
+                                          debugPrint("Gender $dropdownValue");
+                                        });
+                                      },
+                                      dropdownMenuEntries: gender
+                                          .map<DropdownMenuEntry<String>>(
+                                              (String value) {
+                                        return DropdownMenuEntry<String>(
+                                            value: value, label: value);
+                                      }).toList(),
+                                    ),
                                     Row(children: [
                                       Text(
                                         'phone'.tr,
@@ -187,8 +242,6 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                       inputType: TextInputType.phone,
                                       isEnabled: false,
                                     ),
-
-                                    //
                                     ResponsiveHelper.isDesktop(context)
                                         ? Padding(
                                             padding: const EdgeInsets.only(
@@ -234,6 +287,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     // String lastName = _lastNameController.text.trim();
     // String email = _emailController.text.trim();
     String phoneNumber = _phoneController.text.trim();
+    String gender = _gender.text.trim();
     if (profileController.userInfoModel!.name == firstName &&
         // profileController.userInfoModel!.lName == lastName &&
         profileController.userInfoModel!.phone == phoneNumber &&
@@ -242,10 +296,9 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
       showCustomSnackBar('change_something_to_update'.tr);
     } else if (firstName.isEmpty) {
       showCustomSnackBar('enter_your_first_name'.tr);
+    } else if (gender.isEmpty) {
+      showCustomSnackBar('Select your gender'.tr);
     }
-    // else if (lastName.isEmpty) {
-    //   showCustomSnackBar('enter_your_last_name'.tr);
-    // }
     // else if (email.isEmpty) {
     //   showCustomSnackBar('enter_email_address'.tr);
     // }
@@ -257,10 +310,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     } else if (phoneNumber.length < 6) {
       showCustomSnackBar('enter_a_valid_phone_number'.tr);
     } else {
-      UserInfoModel updatedUser = UserInfoModel(
-          name: firstName,
-          // lName: lastName, email: email,
-          phone: phoneNumber);
+      UserInfoModel updatedUser =
+          UserInfoModel(name: firstName, gender: gender, phone: phoneNumber);
       ResponseModel responseModel = await profileController.updateUserInfo(
           updatedUser, Get.find<AuthController>().getUserToken());
       if (responseModel.isSuccess) {
