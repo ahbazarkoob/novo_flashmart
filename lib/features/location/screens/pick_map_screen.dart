@@ -1,8 +1,6 @@
 import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
 import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
 import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';

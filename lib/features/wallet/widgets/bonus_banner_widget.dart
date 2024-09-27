@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
@@ -24,19 +23,19 @@ class BonusBannerWidget extends StatelessWidget {
               children: [
                 SizedBox(
                   height: ResponsiveHelper.isDesktop(context) ? 110 : 105,
-                  child: CarouselSlider.builder(
-                    options: CarouselOptions(
-                      autoPlay: true,
-                      enlargeCenterPage: true,
-                      disableCenter: true,
-                      viewportFraction: 0.8,
-                      autoPlayInterval: const Duration(seconds: 7),
-                      onPageChanged: (index, reason) {
-                        walletController.setCurrentIndex(index, true);
-                      },
-                    ),
+                  child: PageView.builder(
+                    // options: CarouselOptions(
+                    //   autoPlay: true,
+                    //   enlargeCenterPage: true,
+                    //   disableCenter: true,
+                    //   viewportFraction: 0.8,
+                    //   autoPlayInterval: const Duration(seconds: 7),
+                    //   onPageChanged: (index, reason) {
+                    //     walletController.setCurrentIndex(index, true);
+                    //   },
+                    // ),
                     itemCount: walletController.fundBonusList!.length,
-                    itemBuilder: (context, index, _) {
+                    itemBuilder: (context, index) {
                       return Container(
                         decoration: BoxDecoration(
                           borderRadius:
@@ -97,7 +96,7 @@ class BonusBannerWidget extends StatelessWidget {
                       backgroundColor: index == walletController.currentIndex
                           ? Theme.of(context).primaryColor
                           : Theme.of(context).primaryColor.withOpacity(0.5),
-                      borderColor: Theme.of(context).colorScheme.background,
+                      borderColor: Theme.of(context).colorScheme.surface,
                       size: index == walletController.currentIndex ? 10 : 7,
                     );
                   }).toList(),

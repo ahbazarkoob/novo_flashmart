@@ -181,9 +181,9 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                                       ))),
                                       menuStyle: MenuStyle(
                                           backgroundColor:
-                                              MaterialStatePropertyAll(
+                                              WidgetStatePropertyAll(
                                                   Theme.of(context).cardColor),
-                                          shape: MaterialStatePropertyAll(
+                                          shape: WidgetStatePropertyAll(
                                               RoundedRectangleBorder(
                                                   side: const BorderSide(),
                                                   borderRadius:

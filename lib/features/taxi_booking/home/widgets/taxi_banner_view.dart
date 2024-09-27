@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
 import 'package:novo_flashMart/features/item/domain/models/basic_campaign_model.dart';
@@ -28,18 +27,18 @@ class TaxiBannerView extends StatelessWidget {
                         SizedBox(
                           height: 110,
                           width: context.width,
-                          child: CarouselSlider.builder(
-                            options: CarouselOptions(
-                              autoPlay: true,
-                              viewportFraction: 1,
-                              autoPlayInterval: const Duration(seconds: 7),
-                              onPageChanged: (index, reason) {
-                                bannerController.setCurrentIndex(index, true);
-                              },
-                            ),
+                          child: PageView.builder(
+                            // options: CarouselOptions(
+                            //   autoPlay: true,
+                            //   viewportFraction: 1,
+                            //   autoPlayInterval: const Duration(seconds: 7),
+                            //   onPageChanged: (index, reason) {
+                            //     bannerController.setCurrentIndex(index, true);
+                            //   },
+                            // ),
                             itemCount:
                                 bannerList.isEmpty ? 1 : bannerList.length,
-                            itemBuilder: (context, index, _) {
+                            itemBuilder: (context, index) {
                               String? baseUrl =
                                   bannerDataList![index] is BasicCampaignModel
                                       ? Get.find<SplashController>()
@@ -98,7 +97,7 @@ class TaxiBannerView extends StatelessWidget {
                                             .primaryColor
                                             .withOpacity(0.5),
                                 borderColor:
-                                    Theme.of(context).colorScheme.background,
+                                    Theme.of(context).colorScheme.surface,
                                 size: index == bannerController.currentIndex
                                     ? 10
                                     : 7,

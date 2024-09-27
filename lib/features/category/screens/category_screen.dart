@@ -32,7 +32,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: CustomAppBar(title: 'categories'.tr),
       endDrawer: const MenuDrawer(),
       endDrawerEnableOpenDragGesture: false,

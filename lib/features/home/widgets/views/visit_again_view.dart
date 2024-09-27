@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -53,15 +52,15 @@ class _VisitAgainViewState extends State<VisitAgainView> {
                               fontSize: Dimensions.fontSizeSmall),
                         ),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
-                        CarouselSlider.builder(
+                        PageView.builder(
                           itemCount: stores.length,
-                          options: CarouselOptions(
-                            aspectRatio: 2.0,
-                            enlargeCenterPage: true,
-                            disableCenter: true,
-                          ),
+                          // options: carousel_slider.CarouselOptions(
+                          //   aspectRatio: 2.0,
+                          //   enlargeCenterPage: true,
+                          //   disableCenter: true,
+                          // ),
                           itemBuilder:
-                              (BuildContext context, int index, int realIndex) {
+                              (BuildContext context, int index,) {
                             return VisitAgainCard(
                                 store: stores[index],
                                 fromFood: widget.fromFood!);
@@ -118,14 +117,14 @@ class VisitAgainShimmerView extends StatelessWidget {
                 color: Colors.grey[300],
               ),
               const SizedBox(height: Dimensions.paddingSizeSmall),
-              CarouselSlider.builder(
+              PageView.builder(
                 itemCount: 5,
-                options: CarouselOptions(
-                  aspectRatio: 2.2,
-                  enlargeCenterPage: true,
-                  disableCenter: true,
-                ),
-                itemBuilder: (BuildContext context, int index, int realIndex) {
+                // options: carousel_slider.CarouselOptions(
+                //   aspectRatio: 2.2,
+                //   enlargeCenterPage: true,
+                //   disableCenter: true,
+                // ),
+                itemBuilder: (BuildContext context, int index) {
                   return Container(
                     decoration: BoxDecoration(
                       borderRadius:

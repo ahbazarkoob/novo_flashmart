@@ -14,7 +14,6 @@ import 'package:novo_flashMart/helper/route_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/images.dart';
 import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
 import 'package:novo_flashMart/common/widgets/organic_tag.dart';
 import 'package:novo_flashMart/common/widgets/rating_bar.dart';
 
@@ -283,7 +282,7 @@ class ItemTitleViewWidget extends StatelessWidget {
                             ? const SizedBox()
                             : GetBuilder<FavouriteController>(
                                 builder: (favouriteController) {
-                                return Row(
+                                return const Row(
                                   children: [
                                     // Text(
                                     //   favouriteController.localWishes.contains(item.id) ? (item.wishlistCount+1).toString() : favouriteController.localRemovedWishes

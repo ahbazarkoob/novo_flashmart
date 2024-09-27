@@ -8,7 +8,6 @@ import 'package:novo_flashMart/features/address/domain/models/address_model.dart
 import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
 import 'package:novo_flashMart/common/models/config_model.dart';
 import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/price_converter.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/util/dimensions.dart';

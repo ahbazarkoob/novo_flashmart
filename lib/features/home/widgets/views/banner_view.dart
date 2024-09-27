@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
 import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
@@ -45,20 +44,20 @@ class BannerView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Expanded(
-                          child: CarouselSlider.builder(
-                            options: CarouselOptions(
-                              autoPlay: true,
-                              enlargeCenterPage: true,
-                              disableCenter: true,
-                              viewportFraction: 0.95,
-                              autoPlayInterval: const Duration(seconds: 7),
-                              onPageChanged: (index, reason) {
-                                bannerController.setCurrentIndex(index, true);
-                              },
-                            ),
+                          child: PageView.builder(
+                            // options: carousel_slider.CarouselOptions(
+                            //   autoPlay: true,
+                            //   enlargeCenterPage: true,
+                            //   disableCenter: true,
+                            //   viewportFraction: 0.95,
+                            //   autoPlayInterval: const Duration(seconds: 7),
+                            //   onPageChanged: (index, reason) {
+                            //     bannerController.setCurrentIndex(index, true);
+                            //   },
+                            // ),
                             itemCount:
                                 bannerList.isEmpty ? 1 : bannerList.length,
-                            itemBuilder: (context, index, _) {
+                            itemBuilder: (context, index) {
                               String? baseUrl =
                                   bannerDataList![index] is BasicCampaignModel
                                       ? Get.find<SplashController>()

@@ -5,7 +5,6 @@ import 'package:novo_flashMart/features/splash/controllers/splash_controller.dar
 import 'package:novo_flashMart/api/api_client.dart';
 import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
 import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -56,13 +55,13 @@ class CartRepo {
 
   Future<Response> addToCartOnline(OnlineCart cart) async {
     return apiClient.postData(
-        '${AppConstants.addCartUri}',
+        AppConstants.addCartUri,
         cart.toJson());
   }
 
   Future<Response> updateCartOnline(OnlineCart cart) async {
     return apiClient.postData(
-        '${AppConstants.updateCartUri}',
+        AppConstants.updateCartUri,
         cart.toJson());
   }
 
@@ -74,7 +73,7 @@ class CartRepo {
       "quantity": quantity,
     };
     return apiClient.postData(
-        '${AppConstants.updateCartUri}',
+        AppConstants.updateCartUri,
         data);
   }
 
@@ -88,7 +87,7 @@ class CartRepo {
     };
 
     return apiClient.getData(
-      '${AppConstants.getCartListUri}',
+      AppConstants.getCartListUri,
       headers: Get.find<SplashController>().module?.id == null ? header : null,
     );
   }
@@ -100,6 +99,6 @@ class CartRepo {
 
   Future<Response> clearCartOnline() async {
     return apiClient.deleteData(
-        '${AppConstants.removeAllCartUri}');
+        AppConstants.removeAllCartUri);
   }
 }

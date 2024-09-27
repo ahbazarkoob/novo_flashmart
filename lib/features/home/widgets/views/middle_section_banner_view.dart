@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -19,7 +17,7 @@ class MiddleSectionBannerView extends StatefulWidget {
 }
 
 class _MiddleSectionBannerViewState extends State<MiddleSectionBannerView> {
-  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,49 +33,51 @@ class _MiddleSectionBannerViewState extends State<MiddleSectionBannerView> {
                       vertical: Dimensions.paddingSizeDefault,
                       horizontal: Dimensions.paddingSizeSmall),
                   child: Column(children: [
-                    CarouselSlider.builder(
-                      carouselController: carouselController,
-                      itemCount: campaignController.basicCampaignList!.length,
-                      options: CarouselOptions(
-                        height: isPharmacy ? 187 : 135,
-                        //autoPlay: true,
-                        enlargeCenterPage: true,
-                        disableCenter: true,
-                        viewportFraction: 0.95,
-                        onPageChanged: (index, reason) {
-                          campaignController.setCurrentIndex(index, true);
-                        },
-                      ),
-                      itemBuilder: (BuildContext context, int itemIndex,
-                          int pageViewIndex) {
-                        return InkWell(
-                          onTap: () =>
-                              Get.toNamed(RouteHelper.getBasicCampaignRoute(
-                            campaignController.basicCampaignList![itemIndex],
-                          )),
-                          child: Container(
-                            height: isPharmacy ? 187 : 135,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Theme.of(context).cardColor,
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.radiusLarge),
-                            ),
-                            child: ClipRRect(
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.radiusLarge),
-                              child: CustomImage(
-                                image:
-                                    '${Get.find<SplashController>().configModel!.baseUrls!.campaignImageUrl}'
-                                    '/${campaignController.basicCampaignList![itemIndex].image}',
-                                fit: BoxFit.cover,
-                                height: 80,
-                                width: double.infinity,
+                    SizedBox(
+                      height: isPharmacy ? 187 : 135,
+                      child: PageView.builder(
+                        controller: _pageController,
+                        itemCount: campaignController.basicCampaignList!.length,
+                        // options: carousel_slider.CarouselOptions(
+                        //   height: isPharmacy ? 187 : 135,
+                        //   //autoPlay: true,
+                        //   enlargeCenterPage: true,
+                        //   disableCenter: true,
+                        //   viewportFraction: 0.95,
+                        //   onPageChanged: (index, reason) {
+                        //     campaignController.setCurrentIndex(index, true);
+                        //   },
+                        // ),
+                        itemBuilder: (BuildContext context, int itemIndex) {
+                          return InkWell(
+                            onTap: () =>
+                                Get.toNamed(RouteHelper.getBasicCampaignRoute(
+                              campaignController.basicCampaignList![itemIndex],
+                            )),
+                            child: Container(
+                              height: isPharmacy ? 187 : 135,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).cardColor,
+                                borderRadius: BorderRadius.circular(
+                                    Dimensions.radiusLarge),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                    Dimensions.radiusLarge),
+                                child: CustomImage(
+                                  image:
+                                      '${Get.find<SplashController>().configModel!.baseUrls!.campaignImageUrl}'
+                                      '/${campaignController.basicCampaignList![itemIndex].image}',
+                                  fit: BoxFit.cover,
+                                  height: 80,
+                                  width: double.infinity,
+                                ),
                               ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                     Row(
@@ -130,18 +130,18 @@ class MiddleSectionBannerShimmerView extends StatelessWidget {
       duration: const Duration(seconds: 2),
       enabled: true,
       child: Column(children: [
-        Stack(
-          children: [
-            CarouselSlider.builder(
+        SizedBox(
+          height: isPharmacy ? 187 : 135,
+          child: PageView.builder(
               itemCount: 3,
-              options: CarouselOptions(
-                height: isPharmacy ? 187 : 135,
-                enlargeCenterPage: true,
-                disableCenter: true,
-                viewportFraction: 0.95,
-              ),
+              // options: carousel_slider.CarouselOptions(
+              //   height: isPharmacy ? 187 : 135,
+              //   enlargeCenterPage: true,
+              //   disableCenter: true,
+              //   viewportFraction: 0.95,
+              // ),
               itemBuilder:
-                  (BuildContext context, int itemIndex, int pageViewIndex) {
+                  (BuildContext context, int itemIndex) {
                 return Container(
                   height: isPharmacy ? 187 : 135,
                   width: double.infinity,
@@ -152,7 +152,6 @@ class MiddleSectionBannerShimmerView extends StatelessWidget {
                 );
               },
             ),
-          ],
         ),
       ]),
     );

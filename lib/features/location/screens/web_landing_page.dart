@@ -6,12 +6,10 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
 import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
 import 'package:novo_flashMart/common/models/config_model.dart';
 import 'package:novo_flashMart/features/location/domain/models/prediction_model.dart';
 import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
 import 'package:novo_flashMart/features/location/widgets/web_landing_page_shimmer_widget.dart';
 import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
@@ -336,8 +334,8 @@ class _WebLandingPageState extends State<WebLandingPage> {
                                             );
                                             if (response.isSuccess) {
                                               if (
-                                                // !AuthHelper
-                                                //       .isGuestLoggedIn() &&
+                                                  // !AuthHelper
+                                                  //       .isGuestLoggedIn() &&
                                                   !AuthHelper.isLoggedIn()) {
                                                 // Get.find<AuthController>()
                                                 //     .guestLogin()
@@ -359,7 +357,6 @@ class _WebLandingPageState extends State<WebLandingPage> {
                                                 //     );
                                                 //   }
                                                 // });
-                                             
                                               } else {
                                                 Get.find<LocationController>()
                                                     .saveAddressAndNavigate(
@@ -527,7 +524,7 @@ class _WebLandingPageState extends State<WebLandingPage> {
                                                               .description ??
                                                           '',
                                                       shrinkWrap: true,
-                                                      onLinkTap: (url, context,
+                                                      onLinkTap: (url,
                                                           attributes, element) {
                                                         if (url!.startsWith(
                                                             'www.')) {

@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:novo_flashMart/util/dimensions.dart';
 import 'package:novo_flashMart/util/styles.dart';
@@ -19,51 +18,61 @@ class MinMaxTimePickerWidget extends StatefulWidget {
 
 class _MinMaxTimePickerWidgetState extends State<MinMaxTimePickerWidget> {
   int selectedIndex = 10;
+  late final PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(
+      viewportFraction: 0.3,
+      initialPage: widget.initialPosition,
+    );
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
-      height: 100,
-      decoration: BoxDecoration(
-        border: Border.all(color: Theme.of(context).disabledColor, width: 0.5),
-        borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-      ),
-      child: CarouselSlider.builder(
-        options: CarouselOptions(
-          autoPlay: false,
-          enlargeCenterPage: true,
-          disableCenter: true,
-          viewportFraction: 0.3,
-          initialPage: widget.initialPosition,
-          autoPlayInterval: const Duration(seconds: 7),
-          onPageChanged: (index, reason) {
+        width: 70,
+        height: 100,
+        decoration: BoxDecoration(
+          border:
+              Border.all(color: Theme.of(context).disabledColor, width: 0.5),
+          borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
+        ),
+        child: PageView.builder(
+          controller: _pageController,
+          scrollDirection: Axis.vertical,
+          itemCount: widget.times.length,
+          onPageChanged: (index) {
             setState(() {
               selectedIndex = index;
             });
             widget.onChanged(index);
           },
-          scrollDirection: Axis.vertical,
-        ),
-        itemCount: widget.times.length,
-        itemBuilder: (context, index, _) {
-          return Container(
-            decoration: BoxDecoration(
-              color: selectedIndex == index
-                  ? Theme.of(context).primaryColor.withOpacity(0.1)
-                  : Colors.transparent,
-            ),
-            child: Center(
-                child: Text(
-              widget.times[index].toString(),
-              style: selectedIndex == index
-                  ? figTreeBold.copyWith(
-                      fontSize: Dimensions.fontSizeExtraLarge)
-                  : figTreeRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
-            )),
-          );
-        },
-      ),
-    );
+          itemBuilder: (context, index) {
+            return Container(
+              decoration: BoxDecoration(
+                color: selectedIndex == index
+                    ? Theme.of(context).primaryColor.withOpacity(0.1)
+                    : Colors.transparent,
+              ),
+              child: Center(
+                  child: Text(
+                widget.times[index].toString(),
+                style: selectedIndex == index
+                    ? figTreeBold.copyWith(
+                        fontSize: Dimensions.fontSizeExtraLarge)
+                    : figTreeRegular.copyWith(
+                        fontSize: Dimensions.fontSizeSmall),
+              )),
+            );
+          },
+        ));
   }
 }

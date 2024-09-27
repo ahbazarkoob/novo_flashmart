@@ -220,13 +220,13 @@ class _OTPVerifyState extends State<OTPVerify> {
 
   void _verifyOtp(AuthController authController) async {
     String otp = _otpController.text.trim();
-    String phone = await authController.getUserNumber().toString();
+    String phone = authController.getUserNumber().toString();
     String countryDialCode =
-        await authController.getUserCountryCode().toString();
+        authController.getUserCountryCode().toString();
     debugPrint(countryDialCode);
     String numberWithCountryCode = countryDialCode + phone;
     debugPrint(numberWithCountryCode);
-    String recievedOtp = await Get.find<AuthController>().recievedOtp;
+    String recievedOtp = Get.find<AuthController>().recievedOtp;
     debugPrint("recievedOtp = $recievedOtp");
     int generatedOtp = int.parse(recievedOtp);
     debugPrint("otp $otp");
@@ -238,7 +238,7 @@ class _OTPVerifyState extends State<OTPVerify> {
     } else if (int.parse(otp) != generatedOtp) {
       showCustomSnackBar('invalid otp'.tr);
     } else {
-      bool loginSuccess = await Get.find<AuthController>().loginSuccess;
+      bool loginSuccess = Get.find<AuthController>().loginSuccess;
       debugPrint("$loginSuccess");
       debugPrint('${AuthHelper.isLoggedIn()}');
       if (loginSuccess == true) {

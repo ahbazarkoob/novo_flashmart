@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
@@ -20,16 +19,16 @@ class StoreBannerWidget extends StatelessWidget {
             height: context.width * 0.3,
             width: double.infinity,
             margin: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
-            child: CarouselSlider.builder(
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                disableCenter: true,
-                viewportFraction: 1,
-                autoPlayInterval: const Duration(seconds: 4),
-              ),
+            child: PageView.builder(
+              // options: carousel_slider.CarouselOptions(
+              //   autoPlay: true,
+              //   enlargeCenterPage: true,
+              //   disableCenter: true,
+              //   viewportFraction: 1,
+              //   autoPlayInterval: const Duration(seconds: 4),
+              // ),
               itemCount: storeController.storeBanners!.length,
-              itemBuilder: (context, index, _) {
+              itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () async {
                     String url =

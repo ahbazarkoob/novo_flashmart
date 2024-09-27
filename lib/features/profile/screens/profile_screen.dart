@@ -51,7 +51,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: ResponsiveHelper.isDesktop(context) ? const WebMenuBar() : null,
       endDrawer: const MenuDrawer(),
       endDrawerEnableOpenDragGesture: false,
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       key: UniqueKey(),
       body: GetBuilder<ProfileController>(builder: (profileController) {
         bool isLoggedIn = AuthHelper.isLoggedIn();

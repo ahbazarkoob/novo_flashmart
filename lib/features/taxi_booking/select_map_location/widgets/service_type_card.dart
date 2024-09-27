@@ -23,7 +23,7 @@ class ServiceTypeCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: isSelected
               ? Theme.of(context).primaryColor.withOpacity(0.1)
-              : Theme.of(context).colorScheme.background.withOpacity(.5),
+              : Theme.of(context).colorScheme.surface.withOpacity(.5),
           borderRadius: const BorderRadius.all(
               Radius.circular(Dimensions.paddingSizeExtraSmall)),
           border: isSelected

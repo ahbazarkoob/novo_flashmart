@@ -91,11 +91,11 @@ class _HtmlViewerScreenState extends State<HtmlViewerScreen> {
                                                 LaunchMode.externalApplication);
                                       },
                                     )
-                                  : SelectableHtml(
+                                  : Html(
                                       data: htmlController.htmlText,
                                       shrinkWrap: true,
                                       onLinkTap: (String? url,
-                                          RenderContext context,
+                                          // RenderContext context,
                                           Map<String, String> attributes,
                                           element) {
                                         if (url!.startsWith('www.')) {

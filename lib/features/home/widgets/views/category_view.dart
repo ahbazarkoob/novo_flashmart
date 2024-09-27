@@ -13,7 +13,6 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:get/get.dart';
 
 import '../../../../common/widgets/card_design/item_card.dart';
-import '../../../../common/widgets/item_widget.dart';
 import '../../../item/domain/models/item_model.dart';
 
 class CategoryView extends StatelessWidget {

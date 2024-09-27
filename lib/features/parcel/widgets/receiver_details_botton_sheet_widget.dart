@@ -60,7 +60,7 @@ class _ReceiverDetailsBottomSheetWidgetState
       width: 550,
       padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
         borderRadius: ResponsiveHelper.isDesktop(context)
             ? const BorderRadius.all(
                 Radius.circular(Dimensions.radiusExtraLarge))

@@ -14,7 +14,7 @@ class CategoryController extends GetxController implements GetxService {
   List<CategoryModel>? _subCategoryList;
   List<CategoryModel>? get subCategoryList => _subCategoryList;
 
-  Map<String, List<Item>> _categoryItemsMap = {};
+  final Map<String, List<Item>> _categoryItemsMap = {};
   Map<String, List<Item>> get categoryItemsMap => _categoryItemsMap;
 
   List<Item>? _categoryItemList;

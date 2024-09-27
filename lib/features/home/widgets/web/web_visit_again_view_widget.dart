@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -20,7 +18,7 @@ class WebVisitAgainView extends StatefulWidget {
 }
 
 class _WebVisitAgainViewState extends State<WebVisitAgainView> {
-  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
+  final PageController _pageController = PageController(viewportFraction: 0.25);
 
   @override
   Widget build(BuildContext context) {
@@ -55,23 +53,16 @@ class _WebVisitAgainViewState extends State<WebVisitAgainView> {
                                 color: Theme.of(context).cardColor,
                                 fontSize: Dimensions.fontSizeSmall)),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
-                        CarouselSlider.builder(
-                          carouselController: carouselController,
-                          itemCount: stores.length,
-                          options: CarouselOptions(
-                            aspectRatio: 6,
-                            enlargeCenterPage: true,
-                            disableCenter: true,
-                            viewportFraction: .25,
-                            enlargeFactor: 0.2,
-                            onPageChanged: (index, reason) {},
-                          ),
-                          itemBuilder:
-                              (BuildContext context, int index, int realIndex) {
-                            return VisitAgainCard(
-                                store: stores[index],
-                                fromFood: widget.fromFood);
-                          },
+                        SizedBox(
+                          height: 150,
+                          child: PageView.builder(
+                              controller: _pageController,
+                              itemCount: stores.length,
+                              itemBuilder: (context, index) {
+                                return VisitAgainCard(
+                                    store: stores[index],
+                                    fromFood: widget.fromFood);
+                              }),
                         ),
                       ]),
                     ),
@@ -89,14 +80,22 @@ class _WebVisitAgainViewState extends State<WebVisitAgainView> {
                       top: 130,
                       right: 0,
                       child: ArrowIconButton(
-                        onTap: () => carouselController.nextPage(),
-                      ),
+                          onTap: () => _pageController.nextPage(
+                                duration: const Duration(
+                                    milliseconds:
+                                        300), // Adjust duration as needed
+                                curve: Curves.ease, // Adjust curve as needed
+                              )),
                     ),
                     Positioned(
                       top: 130,
                       left: 0,
                       child: ArrowIconButton(
-                        onTap: () => carouselController.previousPage(),
+                        onTap: () => _pageController.previousPage(
+                          duration: const Duration(
+                              milliseconds: 300), // Adjust duration as needed
+                          curve: Curves.ease, // Adjust curve as needed
+                        ),
                         isRight: false,
                       ),
                     ),
@@ -144,30 +143,25 @@ class WebVisitAgainShimmerView extends StatelessWidget {
                 color: Colors.grey[300],
               ),
               const SizedBox(height: Dimensions.paddingSizeSmall),
-              CarouselSlider.builder(
-                itemCount: 5,
-                options: CarouselOptions(
-                  aspectRatio: 6,
-                  enlargeCenterPage: true,
-                  disableCenter: true,
-                  viewportFraction: .25,
-                  enlargeFactor: 0.2,
-                  onPageChanged: (index, reason) {},
-                ),
-                itemBuilder: (BuildContext context, int index, int realIndex) {
-                  return Container(
-                    height: 150,
-                    width: double.infinity,
-                    margin:
-                        const EdgeInsets.only(top: Dimensions.paddingSizeLarge),
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(Dimensions.radiusDefault),
-                      color: Colors.grey[300],
-                      border: Border.all(color: Colors.grey[300]!, width: 2),
-                    ),
-                  );
-                },
+              SizedBox(
+                height: 150,
+                child: PageView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 150,
+                        width: double.infinity,
+                        margin: const EdgeInsets.only(
+                            top: Dimensions.paddingSizeLarge),
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.radiusDefault),
+                          color: Colors.grey[300],
+                          border:
+                              Border.all(color: Colors.grey[300]!, width: 2),
+                        ),
+                      );
+                    }),
               ),
             ]),
           ),

@@ -1,10 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:meta_seo/meta_seo.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
 import 'package:novo_flashMart/features/brands/screens/brands_product_screen.dart';
 import 'package:novo_flashMart/features/brands/screens/brands_screen.dart';
-import 'package:novo_flashMart/features/home/screens/modules/grocery_home_screen.dart';
 import 'package:novo_flashMart/features/loyalty/screens/loyalty_screen.dart';
 import 'package:novo_flashMart/features/refer_and_earn/screens/refer_and_earn_screen.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
@@ -30,7 +28,6 @@ import 'package:novo_flashMart/features/category/screens/category_screen.dart';
 import 'package:novo_flashMart/features/location/screens/map_screen.dart';
 import 'package:novo_flashMart/features/store/screens/campaign_screen.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/util/html_type.dart';
 import 'package:novo_flashMart/common/widgets/image_viewer_screen.dart';
@@ -41,7 +38,6 @@ import 'package:novo_flashMart/features/chat/screens/chat_screen.dart';
 import 'package:novo_flashMart/features/chat/screens/conversation_screen.dart';
 import 'package:novo_flashMart/features/checkout/screens/checkout_screen.dart';
 import 'package:novo_flashMart/features/payment/screens/offline_payment_screen.dart';
-import 'package:novo_flashMart/features/checkout/screens/order_successful_screen.dart';
 import 'package:novo_flashMart/features/payment/screens/payment_screen.dart';
 import 'package:novo_flashMart/features/payment/screens/payment_webview_screen.dart';
 import 'package:novo_flashMart/features/coupon/screens/coupon_screen.dart';
@@ -51,9 +47,7 @@ import 'package:novo_flashMart/features/flash_sale/screens/flash_sale_details_sc
 import 'package:novo_flashMart/features/item/screens/item_campaign_screen.dart';
 import 'package:novo_flashMart/features/item/screens/item_details_screen.dart';
 import 'package:novo_flashMart/features/item/screens/popular_item_screen.dart';
-import 'package:novo_flashMart/features/verification/screens/forget_pass_screen.dart';
 import 'package:novo_flashMart/features/verification/screens/new_pass_screen.dart';
-import 'package:novo_flashMart/features/verification/screens/verification_screen.dart';
 import 'package:novo_flashMart/features/html/screens/html_viewer_screen.dart';
 import 'package:novo_flashMart/features/interest/screens/interest_screen.dart';
 import 'package:novo_flashMart/features/language/screens/language_screen.dart';
@@ -448,7 +442,7 @@ class RouteHelper {
               backFromThis: Get.parameters['page'] != splash &&
                   Get.parameters['page'] != onBoarding,
             )),
-    GetPage(name: otp, page:()=>  OTPVerify(
+    GetPage(name: otp, page:()=>  const OTPVerify(
 
     )),
     GetPage(name: signUp, page: () => const SignUpScreen()),

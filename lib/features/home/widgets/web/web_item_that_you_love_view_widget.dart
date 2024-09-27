@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -26,7 +25,8 @@ class WebItemThatYouLoveViewWidget extends StatefulWidget {
 
 class _WebItemThatYouLoveViewWidgetState
     extends State<WebItemThatYouLoveViewWidget> {
-  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
+  final PageController _pageController =
+  PageController(viewportFraction: 0.25, initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -48,27 +48,31 @@ class _WebItemThatYouLoveViewWidgetState
                               fontSize: Dimensions.fontSizeLarge)),
                     ),
                     !isShop
-                        ? carousel_slider.CarouselSlider.builder(
-                            itemCount: recommendItems.length,
-                            carouselController: carouselController,
-                            options: carousel_slider.CarouselOptions(
-                              height: 400,
-                              enlargeCenterPage: true,
-                              disableCenter: true,
-                              viewportFraction: .25,
-                              enlargeFactor: 0.2,
-                              onPageChanged: (index, reason) {},
-                            ),
-                            itemBuilder: (BuildContext context, int index,
-                                int realIndex) {
-                              return Padding(
-                                padding: const EdgeInsets.only(
-                                    bottom: Dimensions.paddingSizeDefault),
-                                child: ItemThatYouLoveCard(
-                                    item: recommendItems[index]),
-                              );
-                            },
-                          )
+                        ?
+                    SizedBox(
+                      height: 400,
+                      child: PageView.builder(
+                        itemCount: recommendItems.length,
+                        controller: _pageController,
+                        // carouselController: carouselController,
+                        // options: carousel_slider.CarouselOptions(
+                        //   height: 400,
+                        //   enlargeCenterPage: true,
+                        //   disableCenter: true,
+                        //   viewportFraction: .25,
+                        //   enlargeFactor: 0.2,
+                        //   onPageChanged: (index, reason) {},
+                        // ),
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                                bottom: Dimensions.paddingSizeDefault),
+                            child: ItemThatYouLoveCard(
+                                item: recommendItems[index]),
+                          );
+                        },
+                      ),
+                    )
                         : SizedBox(
                             height: 285,
                             child: ListView.builder(
@@ -304,14 +308,29 @@ class _WebItemThatYouLoveViewWidgetState
                     top: 220,
                     right: 0,
                     child: ArrowIconButton(
-                      onTap: () => carouselController.nextPage(),
+                      onTap: () {
+                        if (_pageController.page! <
+                            recommendItems.length - 1) {
+                          _pageController.nextPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                        }
+                      },
                     ),
                   ),
                   Positioned(
                     top: 220,
                     left: 0,
                     child: ArrowIconButton(
-                      onTap: () => carouselController.previousPage(),
+                      onTap: () {
+                        if (_pageController.page! > 0) {
+                          _pageController.previousPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                        }
+                      },
                       isRight: false,
                     ),
                   ),
@@ -801,16 +820,16 @@ class WebItemThatYouLoveShimmerView extends StatelessWidget {
           child: Text('item_that_you_love'.tr,
               style: figTreeBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
         ),
-        carousel_slider.CarouselSlider.builder(
+        PageView.builder(
           itemCount: 5,
-          options: carousel_slider.CarouselOptions(
-            height: 400,
-            enlargeCenterPage: true,
-            disableCenter: true,
-            viewportFraction: .25,
-            enlargeFactor: 0.2,
-          ),
-          itemBuilder: (BuildContext context, int index, int realIndex) {
+          // options: carousel_slider.CarouselOptions(
+          //   height: 400,
+          //   enlargeCenterPage: true,
+          //   disableCenter: true,
+          //   viewportFraction: .25,
+          //   enlargeFactor: 0.2,
+          // ),
+          itemBuilder: ( context,  index) {
             return Padding(
               padding:
                   const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),

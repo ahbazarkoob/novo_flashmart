@@ -6,7 +6,6 @@ import 'package:novo_flashMart/features/order/domain/models/order_details_model.
 import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
 import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/price_converter.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/helper/route_helper.dart';
@@ -117,7 +116,7 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
             }),
         endDrawer: const MenuDrawer(),
         endDrawerEnableOpenDragGesture: false,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: SafeArea(
             child: GetBuilder<OrderController>(builder: (orderController) {
           double deliveryCharge = 0;

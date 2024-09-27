@@ -294,7 +294,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text('Order Total : '),
+                                                  const Text('Order Total : '),
                                                   PriceConverter.convertAnimationPrice(
                                                       cartController.subTotal,
                                                       textStyle: figTreeRegular

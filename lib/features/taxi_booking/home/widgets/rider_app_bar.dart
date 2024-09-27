@@ -21,7 +21,7 @@ class RiderAppBar extends StatelessWidget implements PreferredSizeWidget {
         : Container(
             width: Dimensions.webMaxWidth,
             height: 70,
-            color: Theme.of(context).colorScheme.background,
+            color: Theme.of(context).colorScheme.surface,
             padding: const EdgeInsets.symmetric(
                 horizontal: Dimensions.paddingSizeSmall),
             child: GetBuilder<SplashController>(builder: (splashController) {

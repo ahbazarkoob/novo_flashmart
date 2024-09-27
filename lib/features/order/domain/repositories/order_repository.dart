@@ -6,7 +6,6 @@ import 'package:novo_flashMart/features/order/domain/models/order_details_model.
 import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
 import 'package:novo_flashMart/features/order/domain/models/refund_model.dart';
 import 'package:novo_flashMart/features/order/domain/repositories/order_repository_interface.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
 

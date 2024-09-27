@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
 import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
 import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
@@ -47,127 +46,28 @@ class BannerView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Expanded(
-                          child: CarouselSlider.builder(
-                            options: CarouselOptions(
-                              autoPlay: true,
-                              enlargeCenterPage: true,
-                              disableCenter: true,
-                              viewportFraction: 0.8,
-                              autoPlayInterval: const Duration(seconds: 7),
-                              onPageChanged: (index, reason) {
+                            child: PageView.builder(
+                              controller: PageController(
+                                viewportFraction: 0.8,
+                                initialPage: bannerController.currentIndex
+                              ),
+                                itemCount: bannerList.isEmpty? 1: bannerList.length,
+                                onPageChanged: (index) {
                                 bannerController.setCurrentIndex(index, true);
-                              },
-                            ),
-                            itemCount:
-                                bannerList.isEmpty ? 1 : bannerList.length,
-                            itemBuilder: (context, index, _) {
-                              String? baseUrl =
-                                  bannerDataList![index] is BasicCampaignModel
-                                      ? Get.find<SplashController>()
-                                          .configModel!
-                                          .baseUrls!
-                                          .campaignImageUrl
-                                      : Get.find<SplashController>()
-                                          .configModel!
-                                          .baseUrls!
-                                          .bannerImageUrl;
-                              return InkWell(
-                                onTap: () async {
-                                  if (bannerDataList[index] is Item) {
-                                    Item? item = bannerDataList[index];
-                                    Get.find<ItemController>()
-                                        .navigateToItemPage(item, context);
-                                  } else if (bannerDataList[index] is Store) {
-                                    Store? store = bannerDataList[index];
-                                    if (isFeatured &&
-                                        (AddressHelper.getUserAddressFromSharedPref()!
-                                                    .zoneData !=
-                                                null &&
-                                            AddressHelper
-                                                    .getUserAddressFromSharedPref()!
-                                                .zoneData!
-                                                .isNotEmpty)) {
-                                      for (ModuleModel module
-                                          in Get.find<SplashController>()
-                                              .moduleList!) {
-                                        if (module.id == store!.moduleId) {
-                                          Get.find<SplashController>()
-                                              .setModule(module);
-                                          break;
-                                        }
-                                      }
-                                      ZoneData zoneData = AddressHelper
-                                              .getUserAddressFromSharedPref()!
-                                          .zoneData!
-                                          .firstWhere((data) =>
-                                              data.id == store!.zoneId);
-
-                                      Modules module = zoneData.modules!
-                                          .firstWhere((module) =>
-                                              module.id == store!.moduleId);
-                                      Get.find<SplashController>().setModule(
-                                          ModuleModel(
-                                              id: module.id,
-                                              moduleName: module.moduleName,
-                                              moduleType: module.moduleType,
-                                              themeId: module.themeId,
-                                              storesCount: module.storesCount));
-                                    }
-                                    Get.toNamed(
-                                      RouteHelper.getStoreRoute(
-                                          id: store!.id,
-                                          page:
-                                              isFeatured ? 'module' : 'banner'),
-                                      arguments: StoreScreen(
-                                          store: store, fromModule: isFeatured),
-                                    );
-                                  } else if (bannerDataList[index]
-                                      is BasicCampaignModel) {
-                                    BasicCampaignModel campaign =
-                                        bannerDataList[index];
-                                    Get.toNamed(
-                                        RouteHelper.getBasicCampaignRoute(
-                                            campaign));
-                                  } else {
-                                    String url = bannerDataList[index];
-                                    if (await canLaunchUrlString(url)) {
-                                      await launchUrlString(url,
-                                          mode: LaunchMode.externalApplication);
-                                    } else {
-                                      showCustomSnackBar(
-                                          'unable_to_found_url'.tr);
-                                    }
-                                  }
                                 },
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context).cardColor,
-                                    borderRadius: BorderRadius.circular(
-                                        Dimensions.radiusDefault),
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.grey[
-                                              Get.isDarkMode ? 800 : 200]!,
-                                          spreadRadius: 1,
-                                          blurRadius: 5)
-                                    ],
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(
-                                        Dimensions.radiusDefault),
-                                    child: GetBuilder<SplashController>(
-                                        builder: (splashController) {
-                                      return CustomImage(
-                                        image: '$baseUrl/${bannerList[index]}',
-                                        fit: BoxFit.cover,
-                                      );
-                                    }),
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
+                                itemBuilder: (context, index) {
+                                  return _buildBannerItem(
+                                      context,
+                                      bannerController,
+                                      bannerList,
+                                      bannerDataList,
+                                      index,
+                                      isFeatured);
+                                }
+                                )
                         ),
+
+
                         const SizedBox(
                             height: Dimensions.paddingSizeExtraSmall),
                         Row(
@@ -220,5 +120,113 @@ class BannerView extends StatelessWidget {
                     ),
             );
     });
+  }
+  Widget _buildBannerItem(
+      BuildContext context,
+      BannerController bannerController,
+      List<String?> bannerList,
+      List<dynamic>? bannerDataList,
+      int index,
+      bool isFeatured) {
+    String? baseUrl = bannerDataList![index] is BasicCampaignModel
+        ? Get.find<SplashController>()
+        .configModel!
+        .baseUrls!
+        .campaignImageUrl
+        : Get.find<SplashController>().configModel!.baseUrls!.bannerImageUrl;
+    return InkWell(
+      onTap: () async {
+        if (bannerDataList[index] is Item) {
+          Item? item = bannerDataList[index];
+          Get.find<ItemController>()
+              .navigateToItemPage(item, context);
+        } else if (bannerDataList[index] is Store) {
+          Store? store = bannerDataList[index];
+          if (isFeatured &&
+              (AddressHelper.getUserAddressFromSharedPref()!
+                  .zoneData !=
+                  null &&
+                  AddressHelper
+                      .getUserAddressFromSharedPref()!
+                      .zoneData!
+                      .isNotEmpty)) {
+            for (ModuleModel module
+            in Get.find<SplashController>()
+                .moduleList!) {
+              if (module.id == store!.moduleId) {
+                Get.find<SplashController>()
+                    .setModule(module);
+                break;
+              }
+            }
+            ZoneData zoneData = AddressHelper
+                .getUserAddressFromSharedPref()!
+                .zoneData!
+                .firstWhere((data) =>
+            data.id == store!.zoneId);
+
+            Modules module = zoneData.modules!
+                .firstWhere((module) =>
+            module.id == store!.moduleId);
+            Get.find<SplashController>().setModule(
+                ModuleModel(
+                    id: module.id,
+                    moduleName: module.moduleName,
+                    moduleType: module.moduleType,
+                    themeId: module.themeId,
+                    storesCount: module.storesCount));
+          }
+          Get.toNamed(
+            RouteHelper.getStoreRoute(
+                id: store!.id,
+                page:
+                isFeatured ? 'module' : 'banner'),
+            arguments: StoreScreen(
+                store: store, fromModule: isFeatured),
+          );
+        } else if (bannerDataList[index]
+        is BasicCampaignModel) {
+          BasicCampaignModel campaign =
+          bannerDataList[index];
+          Get.toNamed(
+              RouteHelper.getBasicCampaignRoute(
+                  campaign));
+        } else {
+          String url = bannerDataList[index];
+          if (await canLaunchUrlString(url)) {
+            await launchUrlString(url,
+                mode: LaunchMode.externalApplication);
+          } else {
+            showCustomSnackBar(
+                'unable_to_found_url'.tr);
+          }
+        }
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          borderRadius: BorderRadius.circular(
+              Dimensions.radiusDefault),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey[
+                Get.isDarkMode ? 800 : 200]!,
+                spreadRadius: 1,
+                blurRadius: 5)
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(
+              Dimensions.radiusDefault),
+          child: GetBuilder<SplashController>(
+              builder: (splashController) {
+                return CustomImage(
+                  image: '$baseUrl/${bannerList[index]}',
+                  fit: BoxFit.cover,
+                );
+              }),
+        ),
+      ),
+    );
   }
 }

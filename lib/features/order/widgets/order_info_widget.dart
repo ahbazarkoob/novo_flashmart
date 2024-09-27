@@ -7,7 +7,6 @@ import 'package:novo_flashMart/features/chat/domain/models/conversation_model.da
 import 'package:novo_flashMart/features/order/controllers/order_controller.dart';
 import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
 import 'package:novo_flashMart/features/review/domain/models/review_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/date_converter.dart';
 import 'package:novo_flashMart/helper/responsive_helper.dart';
 import 'package:novo_flashMart/helper/route_helper.dart';

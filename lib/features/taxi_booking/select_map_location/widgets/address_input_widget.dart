@@ -46,7 +46,7 @@ class AddressInputWidget extends StatelessWidget {
                   horizontal: Dimensions.paddingSizeSmall),
               decoration: BoxDecoration(
                 color:
-                    Theme.of(context).colorScheme.background.withOpacity(0.5),
+                    Theme.of(context).colorScheme.surface.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                 // boxShadow: [BoxShadow(color: Col ors.grey[Get.isDarkMode ? 800 : 200], spreadRadius: 1, blurRadius: 5)],
               ),

@@ -358,13 +358,13 @@ class RiderController extends GetxController implements GetxService {
       markerId: _fromMarkerId,
       position: from,
       visible: true,
-      icon: BitmapDescriptor.fromBytes(fromMarkerIcon),
+      icon: BitmapDescriptor.bytes(fromMarkerIcon),
     );
     _markers[_fromMarkerId] = fromMarker;
     Marker toMarker = Marker(
       markerId: _toMarkerId,
       position: to,
-      icon: BitmapDescriptor.fromBytes(toMarkerIcon),
+      icon: BitmapDescriptor.bytes(toMarkerIcon),
     );
     _markers[_toMarkerId] = toMarker;
     _mapController?.animateCamera(

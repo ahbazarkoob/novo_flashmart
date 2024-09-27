@@ -1,5 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,7 +19,8 @@ class WebCouponBannerViewWidget extends StatefulWidget {
 }
 
 class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
-  final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
+  final PageController _pageController = PageController(viewportFraction: 1);
+  // final carousel_slider.CarouselController carouselController = carousel_slider.CarouselController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,20 +31,19 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                   padding: const EdgeInsets.symmetric(
                       vertical: Dimensions.paddingSizeExtraLarge),
                   child: Column(children: [
-                    CarouselSlider.builder(
-                      carouselController: carouselController,
+                    PageView.builder(
+                      controller: _pageController,
+                      // carouselController: carouselController,
                       itemCount: couponController.couponList!.length,
-                      options: CarouselOptions(
-                        height: 135,
-                        enlargeCenterPage: true,
-                        disableCenter: true,
-                        viewportFraction: 1,
-                        onPageChanged: (index, reason) {
+                      // options: carousel_slider.CarouselOptions(
+                      //   height: 135,
+                      //   enlargeCenterPage: true,
+                      //   disableCenter: true,
+                      //   viewportFraction: 1,
+                        onPageChanged: (index) {
                           couponController.setCurrentIndex(index, true);
                         },
-                      ),
-                      itemBuilder: (BuildContext context, int itemIndex,
-                          int pageViewIndex) {
+                      itemBuilder: ( context, index) {
                         return Container(
                           height: 135,
                           width: double.infinity,
@@ -78,7 +76,7 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                                     children: [
                                       Text(
                                         couponController
-                                                .couponList![itemIndex].title ??
+                                                .couponList![index].title ??
                                             '',
                                         style: figTreeBold.copyWith(
                                             fontSize:
@@ -111,7 +109,7 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                                           Text(
                                             PriceConverter.convertPrice(
                                                 couponController
-                                                    .couponList![itemIndex]
+                                                    .couponList![index]
                                                     .minPurchase),
                                             style: figTreeBold.copyWith(
                                                 fontSize: Dimensions
@@ -143,11 +141,11 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                               child: InkWell(
                                 onTap: () {
                                   if (couponController
-                                          .couponList![itemIndex].code !=
+                                          .couponList![index].code !=
                                       null) {
                                     Clipboard.setData(ClipboardData(
                                         text: couponController
-                                                .couponList![itemIndex].code ??
+                                                .couponList![index].code ??
                                             ''));
                                     showCustomSnackBar('coupon_code_copied'.tr,
                                         isError: false);
@@ -174,7 +172,7 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                                                 .paddingSizeExtraSmall),
                                         Text(
                                             couponController
-                                                    .couponList![itemIndex]
+                                                    .couponList![index]
                                                     .code ??
                                                 '',
                                             style: figTreeMedium.copyWith(

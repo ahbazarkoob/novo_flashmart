@@ -41,7 +41,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
   GoogleMapController? _controller;
   bool _isLoading = true;
   Set<Marker> _markers = HashSet<Marker>();
-  Set<Polyline> _polyline = Set<Polyline>();
+  final Set<Polyline> _polyline = <Polyline>{};
   // List<MarkerData> _customMarkers = [];
   Timer? _timer;
 

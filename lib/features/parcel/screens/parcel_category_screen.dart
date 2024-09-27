@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -78,29 +77,29 @@ class _ParcelCategoryScreenState extends State<ParcelCategoryScreen> {
                               bannerController.parcelOtherBannerModel != null
                                   ? bannerController.parcelOtherBannerModel!
                                           .banners!.isNotEmpty
-                                      ? CarouselSlider.builder(
+                                      ? PageView.builder(
                                           itemCount: bannerController
                                               .parcelOtherBannerModel!
                                               .banners!
                                               .length,
-                                          options: CarouselOptions(
-                                            autoPlay: true,
-                                            height: ResponsiveHelper.isDesktop(
-                                                    context)
-                                                ? 395
-                                                : 150,
-                                            enlargeCenterPage: true,
-                                            disableCenter: true,
-                                            viewportFraction: 1,
-                                            autoPlayInterval:
-                                                const Duration(seconds: 5),
-                                            onPageChanged: (index, reason) {
-                                              bannerController.setCurrentIndex(
-                                                  index, false);
-                                            },
-                                          ),
+                                          // options: carousel_slider.CarouselOptions(
+                                          //   autoPlay: true,
+                                          //   height: ResponsiveHelper.isDesktop(
+                                          //           context)
+                                          //       ? 395
+                                          //       : 150,
+                                          //   enlargeCenterPage: true,
+                                          //   disableCenter: true,
+                                          //   viewportFraction: 1,
+                                          //   autoPlayInterval:
+                                          //       const Duration(seconds: 5),
+                                          //   onPageChanged: (index, reason) {
+                                          //     bannerController.setCurrentIndex(
+                                          //         index, false);
+                                          //   },
+                                          // ),
                                           itemBuilder:
-                                              (context, index, realIndex) {
+                                              (context, index) {
                                             return ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(

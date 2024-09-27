@@ -41,7 +41,7 @@ class OrderScreenState extends State<OrderScreen>
   Widget build(BuildContext context) {
     _isLoggedIn = AuthHelper.isLoggedIn();
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: CustomAppBar(
           title: 'my_orders'.tr,
           backButton: ResponsiveHelper.isDesktop(context)),

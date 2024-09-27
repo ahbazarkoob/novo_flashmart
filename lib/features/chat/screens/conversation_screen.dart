@@ -317,7 +317,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                                                         highlightColor:
                                                             Theme.of(context)
                                                                 .colorScheme
-                                                                .background
+                                                                .surface
                                                                 .withOpacity(
                                                                     0.1),
                                                         radius: Dimensions

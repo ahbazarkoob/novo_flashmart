@@ -5,7 +5,6 @@ import 'package:novo_flashMart/features/order/domain/models/order_cancellation_b
 import 'package:novo_flashMart/features/order/domain/models/order_details_model.dart';
 import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
 import 'package:novo_flashMart/features/order/domain/services/order_service_interface.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 
 class OrderController extends GetxController implements GetxService {
   final OrderServiceInterface orderServiceInterface;

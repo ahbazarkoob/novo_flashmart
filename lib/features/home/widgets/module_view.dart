@@ -17,7 +17,6 @@ import 'package:novo_flashMart/common/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:novo_flashMart/features/home/widgets/banner_view.dart';
-import 'package:novo_flashMart/features/home/widgets/popular_store_view.dart';
 
 class ModuleView extends StatelessWidget {
   final SplashController splashController;

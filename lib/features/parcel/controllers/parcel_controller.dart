@@ -16,7 +16,6 @@ import 'package:novo_flashMart/features/parcel/domain/models/why_choose_model.da
 import 'package:novo_flashMart/features/parcel/domain/services/parcel_service_interface.dart';
 import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
 import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
 import 'package:novo_flashMart/helper/route_helper.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';

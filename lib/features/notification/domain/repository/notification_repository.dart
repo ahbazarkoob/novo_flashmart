@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:novo_flashMart/api/api_client.dart';
 import 'package:novo_flashMart/features/notification/domain/models/notification_model.dart';

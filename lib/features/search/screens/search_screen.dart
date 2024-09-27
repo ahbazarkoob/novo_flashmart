@@ -114,7 +114,7 @@ class SearchScreenState extends State<SearchScreen>
                                           Theme.of(context).disabledColor,
                                       filledColor: Theme.of(context)
                                           .colorScheme
-                                          .background,
+                                          .surface,
                                       iconPressed: () {
                                         if (searchController
                                             .searchHomeText!.isNotEmpty) {
