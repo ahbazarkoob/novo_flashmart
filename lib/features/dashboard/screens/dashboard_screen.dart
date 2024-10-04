@@ -115,7 +115,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     return GetBuilder<SplashController>(builder: (splashController) {
       return PopScope(
         canPop: Navigator.canPop(context),
-        onPopInvoked: (value) async {
+        onPopInvokedWithResult: (value, res) async {
           if (_pageIndex != 0) {
             _setPage(0);
           } else {
@@ -191,12 +191,18 @@ class DashboardScreenState extends State<DashboardScreen> {
                             child: GetBuilder<StoreController>(
                               builder: (storeController) {
                                 double percentage = 0;
+                                double freeDeliveryOver =
+                                    Get.find<SplashController>()
+                                            .configModel
+                                            ?.freeDeliveryOver ??
+                                        0;
                                 return GetBuilder<CartController>(
                                     builder: (cartController) {
                                   percentage = cartController.subTotal /
-                                      Get.find<SplashController>()
-                                          .configModel!
-                                          .freeDeliveryOver!;
+                                      // Get.find<SplashController>()
+                                      //     .configModel!
+                                      //     .freeDeliveryOver!;
+                                      freeDeliveryOver;
                                   return (cartController.subTotal > 0)
                                       ? Column(children: [
                                           (Get.find<SplashController>()
@@ -249,7 +255,8 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                       const SizedBox(
                                                           width: Dimensions
                                                               .paddingSizeDefault),
-                                                      const Text('Add items worth '),
+                                                      const Text(
+                                                          'Add items worth '),
                                                       Text(
                                                         PriceConverter.convertPrice(
                                                             Get.find<SplashController>()
@@ -369,7 +376,8 @@ class DashboardScreenState extends State<DashboardScreen> {
                                                               .setModule(Get.find<
                                                                       SplashController>()
                                                                   .moduleList![i]);
-                                                          HomeScreen.loadData(true);
+                                                          HomeScreen.loadData(
+                                                              true);
                                                         }
                                                         Get.find<
                                                                 CouponController>()

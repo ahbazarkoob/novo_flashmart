@@ -309,7 +309,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
               ),
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(destinationImageData),
+                  : BitmapDescriptor.bytes(destinationImageData),
             ))
           : const SizedBox();
       /*addressModel != null ? _customMarkers.add(MarkerData(
@@ -343,7 +343,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
               ),
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(restaurantImageData),
+                  : BitmapDescriptor.bytes(restaurantImageData),
             ))
           : const SizedBox();
 
@@ -370,7 +370,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> {
               rotation: 0,
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(deliveryBoyImageData),
+                  : BitmapDescriptor.bytes(deliveryBoyImageData),
             ))
           : const SizedBox();
 

@@ -59,7 +59,7 @@ class SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: Navigator.canPop(context),
-      onPopInvoked: (value) async {
+      onPopInvokedWithResult: (value, res) async {
         if (widget.exitFromApp) {
           if (_canExit) {
             if (GetPlatform.isAndroid) {

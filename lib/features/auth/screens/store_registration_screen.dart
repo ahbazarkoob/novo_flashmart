@@ -98,7 +98,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen>
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) {
+      onPopInvokedWithResult: (didPop, res) {
         if (Get.find<StoreRegistrationController>().storeStatus != 0.4 &&
             !didPop) {
           Get.find<StoreRegistrationController>().storeStatusChange(0.4);

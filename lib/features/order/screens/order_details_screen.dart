@@ -97,7 +97,7 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: Navigator.canPop(context),
-      onPopInvoked: (value) async {
+      onPopInvokedWithResult: (value, res) async {
         if (widget.fromNotification || widget.fromOfflinePayment) {
           Get.offAllNamed(RouteHelper.getInitialRoute());
         } else {

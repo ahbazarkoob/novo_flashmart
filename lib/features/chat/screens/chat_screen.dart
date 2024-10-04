@@ -92,7 +92,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
       return PopScope(
         canPop: true,
-        onPopInvoked: (didPop) async {
+        onPopInvokedWithResult: (didPop, res) async {
           if (widget.fromNotification) {
             Get.offAllNamed(RouteHelper.getInitialRoute());
           } else {

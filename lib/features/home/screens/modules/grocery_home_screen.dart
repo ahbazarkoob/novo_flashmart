@@ -75,7 +75,7 @@ class _CategorySectionViewState extends State<CategorySectionView> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CategoryController>(builder: (categoryController) {
-        return (categoryController.categoryList != null &&
+        return (categoryController.categoryList == null ||
                 categoryController.categoryList!.isEmpty)
             ? const SizedBox()
             : Column(

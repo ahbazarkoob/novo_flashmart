@@ -234,7 +234,7 @@ class RiderController extends GetxController implements GetxService {
       Marker marker = Marker(
         markerId: _myMarkerId,
         position: _initialPosition,
-        icon: BitmapDescriptor.fromBytes(liveMarkerIcon),
+        icon: BitmapDescriptor.bytes(liveMarkerIcon),
       );
       _markers[_myMarkerId] = marker;
       update();
@@ -330,7 +330,7 @@ class RiderController extends GetxController implements GetxService {
       markerId: _fromMarkerId,
       position: from,
       visible: true,
-      icon: BitmapDescriptor.fromBytes(fromMarkerIcon),
+      icon: BitmapDescriptor.bytes(fromMarkerIcon),
     );
     _markers[_fromMarkerId] = fromMarker;
     update();
