@@ -178,6 +178,7 @@ class AppConstants {
   /// Shared Key
   static const String theme = '6ammart_theme';
   static const String token = '6ammart_token';
+  static const String fcmToken = '6ammart_fcm_token';
   static const String countryCode = '6ammart_country_code';
   static const String languageCode = '6ammart_language_code';
   static const String cartList = '6ammart_cart_list';

@@ -6,7 +6,8 @@ abstract class AuthRepositoryInterface extends RepositoryInterface {
   // Future<ResponseModel> registration(SignUpBodyModel signUpBody);
   Future<Response> loginRegistration({String? phone, int? otp});
   Future<Response> registeration({String? phone, int? otp,  String? name, String? gender});
-  Future<Response> generateOtp({String? phone});
+  Future<Response> generateOtp({String? phone,String fcm
+  });
   Future<Response> verifyOtp({String? phone, String? otp});
   // Future<Response> login({String? phone, String? password});
   Future<bool> saveUserToken(String token);
@@ -42,4 +43,5 @@ abstract class AuthRepositoryInterface extends RepositoryInterface {
   Future<bool> saveEarningPoint(String point);
   String getEarningPint();
   void setNotificationActive(bool isActive);
+  String? getSavedDeviceToken();
 }

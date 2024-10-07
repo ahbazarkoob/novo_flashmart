@@ -139,6 +139,7 @@ class _OTPVerifyState extends State<OTPVerify> {
                               const SizedBox(
                                   height: Dimensions.paddingSizeDefault),
                               Pinput(
+                                length: 6,
                                 controller: _otpController,
                               ),
                               const SizedBox(
