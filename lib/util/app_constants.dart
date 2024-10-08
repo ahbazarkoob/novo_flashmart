@@ -4,7 +4,7 @@ import 'package:novo_flashMart/features/language/domain/models/language_model.da
 import 'package:novo_flashMart/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Novo FlashMart';
+  static const String appName = 'Novo Instamart';
   static const double appVersion = 2.7;
 
   static const String fontFamily = 'Figtree';
@@ -14,7 +14,8 @@ class AppConstants {
 
   static const String baseUrl =
       'http://novo-flashmart-admin.ap-south-1.elasticbeanstalk.com';
-  static const String polyLineUri = 'https://osrm.novocabs.com/route/v1/driving/';
+  static const String polyLineUri =
+      'https://osrm.novocabs.com/route/v1/driving/';
   static const String categoryUri = '/api/v1/categories';
   static const String bannerUri = '/api/v1/banners';
   static const String storeItemUri = '/api/v1/items/latest';
