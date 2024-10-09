@@ -198,10 +198,10 @@ class AuthRepository implements AuthRepositoryInterface {
       } catch (_) {}
     }
     if (deviceToken != null) {
-      if (kDebugMode) {
-        print('--------Device Token---------- $deviceToken');
-        await sharedPreferences.setString(AppConstants.fcmToken, deviceToken);
-      }
+      // if (kDebugMode) {
+      print('--------Device Token---------- $deviceToken');
+      await sharedPreferences.setString(AppConstants.fcmToken, deviceToken);
+      // }
     }
     return deviceToken;
   }
