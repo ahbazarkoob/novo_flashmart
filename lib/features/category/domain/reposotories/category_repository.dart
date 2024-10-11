@@ -6,10 +6,21 @@ import 'package:novo_flashMart/features/language/controllers/language_controller
 import 'package:novo_flashMart/api/api_client.dart';
 import 'package:novo_flashMart/util/app_constants.dart';
 import 'package:novo_flashMart/features/category/domain/reposotories/category_repository_interface.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CategoryRepository implements CategoryRepositoryInterface {
   final ApiClient apiClient;
-  CategoryRepository({required this.apiClient});
+  final SharedPreferences sharedPreferences;
+  CategoryRepository({required this.apiClient,required this.sharedPreferences});
+
+    @override
+  bool? showFirstTime() {
+    return sharedPreferences.getBool(AppConstants.firstTime);
+  }
+  @override
+  void disableFirstTime() {
+    sharedPreferences.setBool(AppConstants.firstTime, false);
+  }
 
   @override
   Future getList(

@@ -205,11 +205,14 @@ class DashboardScreenState extends State<DashboardScreen> {
                                       freeDeliveryOver;
                                   return (cartController.subTotal > 0)
                                       ? Column(children: [
-                                          (Get.find<SplashController>()
-                                                          .configModel!
-                                                          .freeDeliveryOver! -
-                                                      cartController.subTotal >
-                                                  1)
+                                          (
+                                                  // Get.find<SplashController>()
+                                                  //               .configModel!
+                                                  //               .freeDeliveryOver!
+                                                  freeDeliveryOver -
+                                                          cartController
+                                                              .subTotal >
+                                                      1)
                                               ? Padding(
                                                   padding: const EdgeInsets
                                                       .symmetric(

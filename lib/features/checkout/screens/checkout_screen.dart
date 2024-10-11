@@ -231,10 +231,10 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                       price: price,
                       addOns: addOns,
                     );
-                    double couponDiscount =
-                        PriceConverter.toFixed(couponController.discount!);
+                    double couponDiscount = PriceConverter.toFixed(
+                        couponController.discount ?? 0.0);
                     bool taxIncluded =
-                        Get.find<SplashController>().configModel!.taxIncluded ==
+                        Get.find<SplashController>().configModel?.taxIncluded ==
                             1;
 
                     double subTotal = _calculateSubTotal(
@@ -262,12 +262,15 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                       taxPercent: _taxPercent,
                     );
                     double additionalCharge = Get.find<SplashController>()
-                            .configModel!
-                            .additionalChargeStatus!
+                                .configModel
+                                ?.additionalChargeStatus ==
+                            true
                         ? Get.find<SplashController>()
-                            .configModel!
-                            .additionCharge!
+                                .configModel
+                                ?.additionCharge ??
+                            0
                         : 0;
+
                     double originalCharge = _calculateOriginalDeliveryCharge(
                       store: checkoutController.store,
                       address: AddressHelper.getUserAddressFromSharedPref()!,
@@ -279,7 +282,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                       address: AddressHelper.getUserAddressFromSharedPref()!,
                       distance: checkoutController.distance,
                       extraCharge: checkoutController.extraCharge,
-                      orderType: checkoutController.orderType!,
+                      orderType: checkoutController.orderType ?? '',
                       orderAmount: orderAmount,
                     );
 
@@ -293,7 +296,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                       couponDiscount: couponDiscount,
                       taxIncluded: taxIncluded,
                       tax: tax,
-                      orderType: checkoutController.orderType!,
+                      orderType: checkoutController.orderType ?? '',
                       tips: checkoutController.tips,
                       additionalCharge: additionalCharge,
                       extraPackagingCharge: extraPackagingCharge,
@@ -310,12 +313,16 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                     if (widget.storeId != null) {
                       checkoutController.setPaymentMethod(0, isUpdate: false);
                     }
-                    checkoutController.setTotalAmount(total -
-                        (checkoutController.isPartialPay
-                            ? Get.find<ProfileController>()
-                                .userInfoModel!
-                                .walletBalance!
-                            : 0));
+
+                    checkoutController.setTotalAmount(
+                      total -
+                          (checkoutController.isPartialPay
+                              ? (Get.find<ProfileController>()
+                                      .userInfoModel
+                                      ?.walletBalance ??
+                                  0)
+                              : 0),
+                    );
 
                     if (_payableAmount != checkoutController.viewTotalPrice &&
                         checkoutController.distance != null &&
@@ -978,7 +985,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                               ? ''
                               : checkoutController.tipController.text.trim(),
                           cutlery:
-                              // Get.find<CartController>().addCutlery ? 1 : 
+                              // Get.find<CartController>().addCutlery ? 1 :
                               0,
                           unavailableItemNote:
                               Get.find<CartController>().notAvailableIndex != -1
@@ -993,7 +1000,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                                   : '',
                           partialPayment:
                               // checkoutController.isPartialPay ? 1 :
-                               0,
+                              0,
                           // guestId: isGuestLogIn
                           //     ? int.parse(AuthHelper.getGuestId())
                           //     : 0,
@@ -1026,7 +1033,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                               checkoutController.pickedPrescriptions);
                           // checkoutController.isLoading;
                         }
-                      } 
+                      }
                       // else {
                       //   checkoutController.placePrescriptionOrder(
                       //       widget.storeId,
@@ -1498,9 +1505,9 @@ class CheckoutScreenState extends State<CheckoutScreen> {
 
     if (store != null &&
         store.selfDeliverySystem == 0 &&
-        zoneData!.increaseDeliveryFeeStatus == 1) {
+        zoneData?.increaseDeliveryFeeStatus == 1) {
       deliveryCharge = deliveryCharge +
-          (deliveryCharge * (zoneData.increaseDeliveryFee! / 100));
+          (deliveryCharge * (zoneData?.increaseDeliveryFee ?? 0 / 100));
     }
 
     return deliveryCharge;

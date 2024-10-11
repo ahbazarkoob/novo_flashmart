@@ -191,6 +191,8 @@ class AppConstants {
   static const String notification = '6ammart_notification';
   static const String searchHistory = '6ammart_search_history';
   static const String intro = '6ammart_intro';
+  static const String firstTime = '6ammart_firstTime';
+
   static const String notificationCount = '6ammart_notification_count';
   static const String dmTipIndex = '6ammart_dm_tip_index';
   static const String earnPoint = '6ammart_earn_point';

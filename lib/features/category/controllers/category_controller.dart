@@ -58,6 +58,13 @@ class CategoryController extends GetxController implements GetxService {
 
   int _offset = 1;
   int get offset => _offset;
+ bool? showFirstTime() {
+    return categoryServiceInterface.showFirstTime();
+  }
+
+ void disableFirstTime() {
+    categoryServiceInterface.disableFirstTime();
+  }
 
   Future<void> getCategoryList(bool reload, {bool allCategory = false}) async {
     if (_categoryList == null || reload) {
