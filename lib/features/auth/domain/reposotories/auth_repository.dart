@@ -61,10 +61,10 @@ class AuthRepository implements AuthRepositoryInterface {
   // }
 
   @override
-  Future<Response> generateOtp({String? phone}) async {
+  Future<Response> generateOtp({String? phone, String? fcm}) async {
     Response response = await apiClient.postData(
       AppConstants.generateOtpUri,
-      {'phone': phone},
+      {'phone': phone, 'token': fcm},
       handleError: false,
     );
 
@@ -198,11 +198,17 @@ class AuthRepository implements AuthRepositoryInterface {
       } catch (_) {}
     }
     if (deviceToken != null) {
-      if (kDebugMode) {
-        print('--------Device Token---------- $deviceToken');
-      }
+      // if (kDebugMode) {
+      print('--------Device Token---------- $deviceToken');
+      await sharedPreferences.setString(AppConstants.fcmToken, deviceToken);
+      // }
     }
     return deviceToken;
+  }
+
+  @override
+  String? getSavedDeviceToken() {
+    return sharedPreferences.getString(AppConstants.fcmToken);
   }
 
   @override

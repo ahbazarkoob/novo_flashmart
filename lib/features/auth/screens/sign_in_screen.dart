@@ -59,7 +59,7 @@ class SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: Navigator.canPop(context),
-      onPopInvoked: (value) async {
+      onPopInvokedWithResult: (value, res) async {
         if (widget.exitFromApp) {
           if (_canExit) {
             if (GetPlatform.isAndroid) {
@@ -179,7 +179,6 @@ class SignInScreenState extends State<SignInScreen> {
                               ),
                               const SizedBox(
                                   height: Dimensions.paddingSizeDefault),
-
                               CustomTextField(
                                 titleText: ResponsiveHelper.isDesktop(context)
                                     ? 'phone'.tr
@@ -201,16 +200,13 @@ class SignInScreenState extends State<SignInScreen> {
                               ),
                               const SizedBox(
                                   height: Dimensions.paddingSizeLarge),
-
                               const Align(
                                 alignment: Alignment.center,
                                 child: ConditionCheckBoxWidget(
                                     forDeliveryMan: false),
                               ),
-
                               const SizedBox(
                                   height: Dimensions.paddingSizeDefault),
-
                               CustomButton(
                                 height: ResponsiveHelper.isDesktop(context)
                                     ? 45
@@ -218,7 +214,7 @@ class SignInScreenState extends State<SignInScreen> {
                                 width: ResponsiveHelper.isDesktop(context)
                                     ? 180
                                     : null,
-                                buttonText: 'Send Otp'.tr,
+                                buttonText: 'Get Started'.tr,
                                 onPressed: () => _generteOtp(
                                     authController, _countryDialCode!),
                                 isLoading: authController.isLoading,
@@ -294,7 +290,8 @@ class SignInScreenState extends State<SignInScreen> {
       authController.generateOtp(numberWithCountryCode).then((status) async {
         authController.saveUserNumberSharedPref(phone, countryDialCode);
         Get.toNamed(RouteHelper.getOtpVerifyRoute());
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('OTP Send')));
+        ScaffoldMessenger.of(context)
+            .showSnackBar(const SnackBar(content: Text('OTP Send')));
       });
     }
   }

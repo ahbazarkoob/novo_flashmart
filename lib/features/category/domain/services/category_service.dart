@@ -8,7 +8,14 @@ import 'package:novo_flashMart/features/category/domain/services/category_servic
 class CategoryService implements CategoryServiceInterface {
   final CategoryRepositoryInterface categoryRepositoryInterface;
   CategoryService({required this.categoryRepositoryInterface});
-
+  @override
+  bool? showFirstTime() {
+    return categoryRepositoryInterface.showFirstTime();
+  }
+  @override
+  void disableFirstTime() {
+    categoryRepositoryInterface.disableFirstTime();
+  }
   @override
   Future<List<CategoryModel>?> getCategoryList(bool allCategory) async {
     return await categoryRepositoryInterface.getList(

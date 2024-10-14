@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_flashMart/features/flash_sale/controllers/flash_sale_controller.dart';
 import 'package:novo_flashMart/features/flash_sale/widgets/flash_sale_view_widget.dart';
 import 'package:novo_flashMart/features/home/widgets/bad_weather_widget.dart';
 import 'package:novo_flashMart/features/home/widgets/views/banner_view.dart';
@@ -10,6 +12,11 @@ import 'package:novo_flashMart/features/home/widgets/views/most_popular_item_vie
 import 'package:novo_flashMart/features/home/widgets/views/middle_section_banner_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/special_offer_view.dart';
 import 'package:novo_flashMart/features/home/widgets/views/promotional_banner_view.dart';
+import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
+import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
+import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../category/controllers/category_controller.dart';
 
 class GroceryHomeScreen extends StatefulWidget {
@@ -20,6 +27,54 @@ class GroceryHomeScreen extends StatefulWidget {
 }
 
 class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
+  late SharedPreferences sharedPreferences;
+  @override
+  void initState() {
+    super.initState();
+    // _checkFirstTimeScreenLoad();
+    Get.find<CategoryController>;
+   bool? isFirstTime = Get.find<CategoryController>().showFirstTime();
+    // bool isFirstTime =
+    //     sharedPreferences.getBool(AppConstants.firstTime) ?? true;
+    debugPrint('________________________________________________');
+    debugPrint("$isFirstTime");
+    if (isFirstTime==true || isFirstTime==null) {
+      Get.find<FlashSaleController>().getFlashSale(true, true);
+      Get.find<BannerController>().getPromotionalBannerList(true);
+      Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
+      Get.find<CategoryController>().getCategoryList(true);
+      Get.find<StoreController>().getPopularStoreList(true, 'all', false);
+      Get.find<CampaignController>().getItemCampaignList(true);
+      Get.find<CampaignController>().getBasicCampaignList(true);
+      Get.find<ItemController>().getPopularItemList(true, 'all', false);
+      Get.find<StoreController>().getLatestStoreList(true, 'all', false);
+      Get.find<ItemController>().getReviewedItemList(true, 'all', false);
+      Get.find<StoreController>().getStoreList(1, true);
+    }
+   
+     Get.find<CategoryController>().disableFirstTime();
+  }
+
+  // _checkFirstTimeScreenLoad() {
+  //   bool isFirstTime =
+  //       sharedPreferences.getBool(AppConstants.firstTime) ?? true;
+  //   debugPrint('________________________________________________');
+  //   debugPrint("$isFirstTime");
+  //   if (isFirstTime) {
+  //     Get.find<FlashSaleController>().getFlashSale(true, true);
+  //     Get.find<BannerController>().getPromotionalBannerList(true);
+  //     Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
+  //     Get.find<CategoryController>().getCategoryList(true);
+  //     Get.find<StoreController>().getPopularStoreList(true, 'all', false);
+  //     Get.find<CampaignController>().getItemCampaignList(true);
+  //     Get.find<CampaignController>().getBasicCampaignList(true);
+  //     Get.find<ItemController>().getPopularItemList(true, 'all', false);
+  //     Get.find<StoreController>().getLatestStoreList(true, 'all', false);
+  //     Get.find<ItemController>().getReviewedItemList(true, 'all', false);
+  //     Get.find<StoreController>().getStoreList(1, true);
+  //   }
+  //   sharedPreferences.setBool(AppConstants.firstTime, false);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +112,6 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
   }
 }
 
-
 class CategorySectionView extends StatefulWidget {
   const CategorySectionView({super.key});
 
@@ -66,30 +120,29 @@ class CategorySectionView extends StatefulWidget {
 }
 
 class _CategorySectionViewState extends State<CategorySectionView> {
-   @override
+  @override
   void initState() {
     super.initState();
     Get.find<CategoryController>;
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CategoryController>(builder: (categoryController) {
-        return (categoryController.categoryList != null &&
-                categoryController.categoryList!.isEmpty)
-            ? const SizedBox()
-            : Column(
-                children: [
-                  for (int i = 0;
-                      i < (categoryController.categoryList!.length);
-                      i++)
-                    CategorySection(
-                      index: i,
-                      categoryID: 
-                          "${categoryController.categoryList![i].id}",
-                    ),
-                ],
-              );
-      });
+      return (categoryController.categoryList == null ||
+              categoryController.categoryList!.isEmpty)
+          ? const SizedBox()
+          : Column(
+              children: [
+                for (int i = 0;
+                    i < (categoryController.categoryList!.length);
+                    i++)
+                  CategorySection(
+                    index: i,
+                    categoryID: "${categoryController.categoryList![i].id}",
+                  ),
+              ],
+            );
+    });
   }
 }

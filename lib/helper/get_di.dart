@@ -298,7 +298,7 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => itemRepositoryInterface);
 
   CategoryRepositoryInterface categoryRepositoryInterface =
-      CategoryRepository(apiClient: Get.find());
+      CategoryRepository(sharedPreferences: Get.find(), apiClient: Get.find());
   Get.lazyPut(() => categoryRepositoryInterface);
 
   LoyaltyRepositoryInterface loyaltyRepositoryInterface =

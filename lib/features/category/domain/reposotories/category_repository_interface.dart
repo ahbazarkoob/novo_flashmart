@@ -14,4 +14,6 @@ abstract class CategoryRepositoryInterface implements RepositoryInterface {
   Future<dynamic> getSearchData(
       String? query, String? categoryID, bool isStore, String type);
   Future<dynamic> saveUserInterests(List<int?> interests);
+  void disableFirstTime();
+  bool? showFirstTime();
 }

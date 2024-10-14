@@ -43,9 +43,11 @@ class ApiClient extends GetxService {
     updateHeader(
         token,
         addressModel?.zoneIds,
+        // [1],
         addressModel?.areaIds,
         sharedPreferences.getString(AppConstants.languageCode),
         moduleID,
+        // 1,
         addressModel?.latitude,
         addressModel?.longitude);
   }
@@ -70,7 +72,8 @@ class ApiClient extends GetxService {
     }
     header.addAll({
       'Content-Type': 'application/json; charset=UTF-8',
-      AppConstants.zoneId: zoneIDs != null ? jsonEncode(zoneIDs) : '',
+      // AppConstants.zoneId: zoneIDs != null ? jsonEncode(zoneIDs) : '',
+      AppConstants.zoneId: "[1]",
 
       ///this will add in ride module
       // AppConstants.operationAreaId: operationIds != null ? jsonEncode(operationIds) : '',
@@ -147,8 +150,8 @@ class ApiClient extends GetxService {
         AppConstants.zoneId: '2',
         AppConstants.moduleId:
             '${ModuleModel.fromJson(jsonDecode(sharedPreferences.getString(AppConstants.cacheModuleId)!)).id}',
-        AppConstants.localizationKey:AppConstants.languages[0].languageCode!,
-      'Authorization': 'Bearer $token'
+        AppConstants.localizationKey: AppConstants.languages[0].languageCode!,
+        'Authorization': 'Bearer $token'
       });
       for (MultipartBody multipart in multipartBody) {
         if (multipart.file != null) {

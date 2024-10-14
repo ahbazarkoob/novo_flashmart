@@ -5,7 +5,7 @@ import 'package:novo_flashMart/util/app_constants.dart';
 ThemeData dark({Color color = const Color(0xFF6048E4)}) => ThemeData(
       fontFamily: AppConstants.fontFamily,
       primaryColor: color,
-      secondaryHeaderColor: Color.fromARGB(255, 30, 82, 215),
+      secondaryHeaderColor: const Color.fromARGB(255, 30, 82, 215),
       disabledColor: const Color(0xffa2a7ad),
       brightness: Brightness.dark,
       hintColor: const Color(0xFFbebebe),
@@ -13,7 +13,7 @@ ThemeData dark({Color color = const Color(0xFF6048E4)}) => ThemeData(
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(foregroundColor: color)),
       colorScheme: ColorScheme.dark(primary: color, secondary: color)
-          .copyWith(background: const Color(0xFF191A26))
+          .copyWith(surface: const Color(0xFF191A26))
           .copyWith(error: const Color(0xFFdd3135)),
       popupMenuTheme: const PopupMenuThemeData(
           color: Color(0xFF29292D), surfaceTintColor: Color(0xFF29292D)),

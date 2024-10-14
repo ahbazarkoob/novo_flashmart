@@ -4,7 +4,7 @@ import 'package:novo_flashMart/features/language/domain/models/language_model.da
 import 'package:novo_flashMart/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Novo FlashMart';
+  static const String appName = 'Novo Instamart';
   static const double appVersion = 2.7;
 
   static const String fontFamily = 'Figtree';
@@ -14,7 +14,8 @@ class AppConstants {
 
   static const String baseUrl =
       'http://novo-flashmart-admin.ap-south-1.elasticbeanstalk.com';
-  static const String polyLineUri = 'https://osrm.novocabs.com/route/v1/driving/';
+  static const String polyLineUri =
+      'https://osrm.novocabs.com/route/v1/driving/';
   static const String categoryUri = '/api/v1/categories';
   static const String bannerUri = '/api/v1/banners';
   static const String storeItemUri = '/api/v1/items/latest';
@@ -178,6 +179,7 @@ class AppConstants {
   /// Shared Key
   static const String theme = '6ammart_theme';
   static const String token = '6ammart_token';
+  static const String fcmToken = '6ammart_fcm_token';
   static const String countryCode = '6ammart_country_code';
   static const String languageCode = '6ammart_language_code';
   static const String cartList = '6ammart_cart_list';
@@ -189,6 +191,8 @@ class AppConstants {
   static const String notification = '6ammart_notification';
   static const String searchHistory = '6ammart_search_history';
   static const String intro = '6ammart_intro';
+  static const String firstTime = '6ammart_firstTime';
+
   static const String notificationCount = '6ammart_notification_count';
   static const String dmTipIndex = '6ammart_dm_tip_index';
   static const String earnPoint = '6ammart_earn_point';

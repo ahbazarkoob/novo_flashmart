@@ -55,7 +55,7 @@ class SearchScreenState extends State<SearchScreen>
   Widget build(BuildContext context) {
     return PopScope(
       canPop: true,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, res) async {
         if (Get.find<search.SearchController>().isSearchMode) {
           return;
         } else {

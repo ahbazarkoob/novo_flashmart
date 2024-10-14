@@ -29,6 +29,7 @@
 .packages
 .pub-cache/
 .pub/
+pubspec.lock
 /build/
 .firebaserc
 firebase.json
@@ -50,3 +51,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+#keystore
+*.jks

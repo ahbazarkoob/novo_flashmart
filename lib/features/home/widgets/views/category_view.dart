@@ -916,7 +916,8 @@ class PharmacyCategoryShimmer extends StatelessWidget {
 class CategorySection extends StatefulWidget {
   final int index;
   final String categoryID;
-  const CategorySection({super.key, required this.index, required this.categoryID});
+  const CategorySection(
+      {super.key, required this.index, required this.categoryID});
 
   @override
   State<CategorySection> createState() => _CategorySectionState();
@@ -936,7 +937,8 @@ class _CategorySectionState extends State<CategorySection> {
   void _scrollListener() {
     if (scrollController.position.pixels ==
             scrollController.position.maxScrollExtent &&
-            Get.find<CategoryController>().categoryItemsMap[widget.categoryID] != null &&
+        Get.find<CategoryController>().categoryItemsMap[widget.categoryID] !=
+            null &&
         // Get.find<CategoryController>().categoryItemList != null &&
         !Get.find<CategoryController>().isLoading) {
       int pageSize = (Get.find<CategoryController>().pageSize! / 10).ceil();
@@ -957,7 +959,8 @@ class _CategorySectionState extends State<CategorySection> {
   Widget build(BuildContext context) {
     return GetBuilder<SplashController>(builder: (splashController) {
       return GetBuilder<CategoryController>(builder: (categoryController) {
-        List<Item> item = categoryController.categoryItemsMap[widget.categoryID] ?? [];
+        List<Item> item =
+            categoryController.categoryItemsMap[widget.categoryID] ?? [];
         // categoryController.categoryItemList!;
         // List<Item>? item;
         // item = [];
@@ -965,8 +968,8 @@ class _CategorySectionState extends State<CategorySection> {
         //   item.addAll(categoryController.categoryItemList!);
         // }
         return (item.isEmpty)
-        // (categoryController.categoryItemList != null &&
-        //         categoryController.categoryItemList!.isEmpty)
+            // (categoryController.categoryItemList != null &&
+            //         categoryController.categoryItemList!.isEmpty)
             ? const SizedBox()
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -979,38 +982,40 @@ class _CategorySectionState extends State<CategorySection> {
                       style: figTreeBold,
                     ),
                   ),
-                  (item!=null)? Row(children: [
-                    Expanded(
-                      child: SizedBox(
-                        height: 300,
-                        child:ListView.builder(
-                                controller: scrollController,
-                                itemCount:
-                                    item.length,
-                                padding: const EdgeInsets.only(
-                                    left: Dimensions.paddingSizeSmall,
-                                    top: Dimensions.paddingSizeDefault),
-                                physics: const BouncingScrollPhysics(),
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  debugPrint("category Item:  ${categoryController
-                                            .categoryItemList![index].name}");
-                                  return Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: Dimensions.paddingSizeSmall,
-                                        top: Dimensions.paddingSizeSmall),
-                                    child: ItemCard(
-                                        item: item[index],
-                                        isPopularItem: false,
-                                        isFood: false,
-                                        isShop: false),
-                                  );
-                                },
-                              )
-                      ),
-                    )
-                  ]) : CategoryShimmer(
-                                categoryController: categoryController),
+                  (item != null)
+                      ? Row(children: [
+                          Expanded(
+                            child: SizedBox(
+                                height: 300,
+                                child: ListView.builder(
+                                  controller: scrollController,
+                                  itemCount: item.length,
+                                  padding: const EdgeInsets.only(
+                                      left: Dimensions.paddingSizeSmall,
+                                      top: Dimensions.paddingSizeDefault),
+                                  physics: const BouncingScrollPhysics(),
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    // debugPrint(
+                                    //     "category Item:  ${categoryController.categoryItemList![index].name}");
+                                    // debugPrint("${item.length}");
+                                    // debugPrint("${item}");
+
+                                    return Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: Dimensions.paddingSizeSmall,
+                                          top: Dimensions.paddingSizeSmall),
+                                      child: ItemCard(
+                                          item: item[index],
+                                          isPopularItem: false,
+                                          isFood: false,
+                                          isShop: false),
+                                    );
+                                  },
+                                )),
+                          )
+                        ])
+                      : CategoryShimmer(categoryController: categoryController),
                   ResponsiveHelper.isMobile(context)
                       ? const SizedBox()
                       : categoryController.categoryList != null

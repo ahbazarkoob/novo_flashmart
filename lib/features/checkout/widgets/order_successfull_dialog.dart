@@ -33,7 +33,7 @@ class _OrderSuccessfulDialogState extends State<OrderSuccessfulDialog> {
   Widget build(BuildContext context) {
     return PopScope(
         canPop: false,
-        onPopInvoked: (value) async {
+        onPopInvokedWithResult: (value, res) async {
           await Get.offAllNamed(RouteHelper.getInitialRoute());
         },
         child: GetBuilder<OrderController>(builder: (orderController) {

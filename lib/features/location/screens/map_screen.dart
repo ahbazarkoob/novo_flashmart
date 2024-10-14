@@ -157,7 +157,7 @@ class MapScreenState extends State<MapScreen> {
     _markers.add(Marker(
       markerId: const MarkerId('marker'),
       position: _latLng,
-      icon: BitmapDescriptor.fromBytes(destinationImageData),
+      icon: BitmapDescriptor.bytes(destinationImageData),
     ));
 
     setState(() {});

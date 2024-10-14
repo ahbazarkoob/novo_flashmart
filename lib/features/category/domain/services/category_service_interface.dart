@@ -4,6 +4,8 @@ import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
 import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
 
 abstract class CategoryServiceInterface {
+   bool? showFirstTime();
+  void disableFirstTime();
   Future<List<CategoryModel>?> getCategoryList(bool allCategory);
   Future<List<CategoryModel>?> getSubCategoryList(String? parentID);
   Future<ItemModel?> getCategoryItemList(

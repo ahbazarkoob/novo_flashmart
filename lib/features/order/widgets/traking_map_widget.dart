@@ -197,7 +197,7 @@ class _TrackingMapWidgetState extends State<TrackingMapWidget> {
               ),
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(destinationImageData),
+                  : BitmapDescriptor.bytes(destinationImageData),
             ))
           : const SizedBox();
 
@@ -221,7 +221,7 @@ class _TrackingMapWidgetState extends State<TrackingMapWidget> {
               ),
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(restaurantImageData),
+                  : BitmapDescriptor.bytes(restaurantImageData),
             ))
           : const SizedBox();
 
@@ -237,7 +237,7 @@ class _TrackingMapWidgetState extends State<TrackingMapWidget> {
               rotation: rotation,
               icon: GetPlatform.isWeb
                   ? BitmapDescriptor.defaultMarker
-                  : BitmapDescriptor.fromBytes(deliveryBoyImageData),
+                  : BitmapDescriptor.bytes(deliveryBoyImageData),
             ))
           : const SizedBox();
     } catch (_) {}

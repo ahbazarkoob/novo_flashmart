@@ -78,8 +78,11 @@ class AuthService implements AuthServiceInterface {
   @override
   Future<OtpResponseModel> generateOtp({String? phone}) async {
     try {
+      String fcm = authRepositoryInterface.getSavedDeviceToken() ?? '';
+      print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
+      print(fcm);
       Response response =
-          await authRepositoryInterface.generateOtp(phone: phone);
+          await authRepositoryInterface.generateOtp(phone: phone, fcm: fcm);
       if (response.statusCode == 200) {
         final decodedResponse = response.body;
         OtpResponseModel otpResponseModel =
