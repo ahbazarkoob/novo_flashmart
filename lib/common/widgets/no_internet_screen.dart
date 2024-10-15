@@ -1,7 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

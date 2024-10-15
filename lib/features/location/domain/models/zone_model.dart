@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
 
 class ZoneModel {
   List<int>? zoneIds;

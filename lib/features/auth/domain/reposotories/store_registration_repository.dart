@@ -1,9 +1,9 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/auth/domain/models/store_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/store_registration_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/auth/domain/models/store_body_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/store_registration_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class StoreRegistrationRepository
     implements StoreRegistrationRepositoryInterface {

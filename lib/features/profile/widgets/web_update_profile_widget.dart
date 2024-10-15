@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_text_field.dart';
-import 'package:novo_flashMart/common/widgets/image_picker_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_text_field.dart';
+import 'package:novo_instamart/common/widgets/image_picker_widget.dart';
 
 class WebUpdateProfileWidget extends StatefulWidget {
   const WebUpdateProfileWidget({super.key});

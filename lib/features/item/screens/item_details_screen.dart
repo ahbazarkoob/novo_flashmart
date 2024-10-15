@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/confirmation_dialog.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/features/checkout/screens/checkout_screen.dart';
-import 'package:novo_flashMart/features/item/widgets/details_app_bar_widget.dart';
-import 'package:novo_flashMart/features/item/widgets/details_web_view_widget.dart';
-import 'package:novo_flashMart/features/item/widgets/item_image_view_widget.dart';
-import 'package:novo_flashMart/features/item/widgets/item_title_view_widget.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/confirmation_dialog.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/checkout/screens/checkout_screen.dart';
+import 'package:novo_instamart/features/item/widgets/details_app_bar_widget.dart';
+import 'package:novo_instamart/features/item/widgets/details_web_view_widget.dart';
+import 'package:novo_instamart/features/item/widgets/item_image_view_widget.dart';
+import 'package:novo_instamart/features/item/widgets/item_title_view_widget.dart';
 
 class ItemDetailsScreen extends StatefulWidget {
   final Item? item;
@@ -670,7 +670,6 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                                     widget
                                                                         .item);
                                                             // showCartSnackBar();
-                                                        
                                                           }
                                                         });
                                                       },
@@ -687,8 +686,6 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                           .setExistInCart(
                                                               widget.item);
                                                       // showCartSnackBar();
-
-                                                  
 
                                                       _key.currentState!
                                                           .shake();

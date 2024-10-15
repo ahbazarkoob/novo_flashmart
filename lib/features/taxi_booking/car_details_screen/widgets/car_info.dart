@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/ripple_button.dart';
-import 'package:novo_flashMart/features/taxi_booking/widgets/cost_variations_dialog.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/ripple_button.dart';
+import 'package:novo_instamart/features/taxi_booking/widgets/cost_variations_dialog.dart';
 
 class CarInfo extends StatelessWidget {
   final Vehicles vehicle;

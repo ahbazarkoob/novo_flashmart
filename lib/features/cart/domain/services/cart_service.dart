@@ -1,15 +1,15 @@
 import 'package:get/get_utils/get_utils.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/online_cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/repositories/cart_repository_interface.dart';
-import 'package:novo_flashMart/features/cart/domain/services/cart_service_interface.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/helper/module_helper.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart'
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/online_cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/repositories/cart_repository_interface.dart';
+import 'package:novo_instamart/features/cart/domain/services/cart_service_interface.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/helper/module_helper.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart'
     as item_variation;
 
 class CartService implements CartServiceInterface {

@@ -3,14 +3,14 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
-import 'package:novo_flashMart/common/widgets/custom_tool_tip_widget.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/features/checkout/widgets/prescription_view_dialog_widget.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/store/widgets/camera_button_sheet_widget.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_tool_tip_widget.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/features/checkout/widgets/prescription_view_dialog_widget.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/store/widgets/camera_button_sheet_widget.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class PrescriptionImagePickerWidget extends StatelessWidget {
   final CheckoutController checkoutController;

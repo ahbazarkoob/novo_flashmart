@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/category/domain/models/category_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/category/domain/reposotories/category_repository_interface.dart';
-import 'package:novo_flashMart/features/category/domain/services/category_service_interface.dart';
+import 'package:novo_instamart/features/category/domain/models/category_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/category/domain/reposotories/category_repository_interface.dart';
+import 'package:novo_instamart/features/category/domain/services/category_service_interface.dart';
 
 class CategoryService implements CategoryServiceInterface {
   final CategoryRepositoryInterface categoryRepositoryInterface;
@@ -12,10 +12,12 @@ class CategoryService implements CategoryServiceInterface {
   bool? showFirstTime() {
     return categoryRepositoryInterface.showFirstTime();
   }
+
   @override
   void disableFirstTime() {
     categoryRepositoryInterface.disableFirstTime();
   }
+
   @override
   Future<List<CategoryModel>?> getCategoryList(bool allCategory) async {
     return await categoryRepositoryInterface.getList(

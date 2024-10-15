@@ -1,6 +1,6 @@
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

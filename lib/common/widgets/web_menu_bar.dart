@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
-import 'package:novo_flashMart/common/widgets/hover/text_hover.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/common/controllers/theme_controller.dart';
-import 'package:novo_flashMart/features/auth/screens/sign_in_screen.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/hover/text_hover.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/common/controllers/theme_controller.dart';
+import 'package:novo_instamart/features/auth/screens/sign_in_screen.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_dropdown.dart';
+import 'package:novo_instamart/common/widgets/custom_dropdown.dart';
 
 class WebMenuBar extends StatelessWidget implements PreferredSizeWidget {
   const WebMenuBar({super.key});

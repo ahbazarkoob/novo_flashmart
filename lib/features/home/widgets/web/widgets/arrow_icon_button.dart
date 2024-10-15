@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
 
 class ArrowIconButton extends StatelessWidget {
   final bool isRight;

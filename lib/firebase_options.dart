@@ -24,10 +24,10 @@ class DefaultFirebaseOptions {
         return android;
       case TargetPlatform.iOS:
         return ios;
-      case TargetPlatform.macOS:
-        return macos;
-      case TargetPlatform.windows:
-        return windows;
+      // case TargetPlatform.macOS:
+      //   return macos;
+      // case TargetPlatform.windows:
+      //   return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,49 +41,53 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC1EVwE4R9LLmSV5n3JCNRpSNMjDnzT5gw',
-    appId: '1:155652134190:web:66931d96299d09ae6b96bf',
-    messagingSenderId: '155652134190',
-    projectId: 'novo-flashmart',
-    authDomain: 'novo-flashmart.firebaseapp.com',
-    storageBucket: 'novo-flashmart.appspot.com',
-    measurementId: 'G-R767W7WVQP',
+    apiKey: 'AIzaSyDxLliLKbo_Bxv-mshuEqU90Y9PesmWDAw',
+    appId: '1:751256638769:web:ceb567f89449a68ff80c10',
+    messagingSenderId: '751256638769',
+    projectId: 'brella-88d35',
+    authDomain: 'brella-88d35.firebaseapp.com',
+    databaseURL: 'https://brella-88d35.firebaseio.com',
+    storageBucket: 'brella-88d35.appspot.com',
+    measurementId: 'G-G9L15HRCQ7',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAFHjdDOOZSYN6fCvOyoh3RCE_pNW9hHQo',
-    appId: '1:155652134190:android:2ef7b2f3978290986b96bf',
-    messagingSenderId: '155652134190',
-    projectId: 'novo-flashmart',
-    storageBucket: 'novo-flashmart.appspot.com',
+    apiKey: 'AIzaSyC0WNc3mpitb25cDTiqVA4aMwr1eEJk2Xc',
+    appId: '1:751256638769:android:82581c5054877b75f80c10',
+    messagingSenderId: '751256638769',
+    projectId: 'brella-88d35',
+    databaseURL: 'https://brella-88d35.firebaseio.com',
+    storageBucket: 'brella-88d35.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC36hBzoQ1Av6rI1fm6qIqvLdEih5dbvrw',
-    appId: '1:155652134190:ios:7b93a47faac5b0d16b96bf',
-    messagingSenderId: '155652134190',
-    projectId: 'novo-flashmart',
-    storageBucket: 'novo-flashmart.appspot.com',
-    iosBundleId: 'com.novo.novoFlashMart',
+    apiKey: 'AIzaSyCJR7-tZrsn3elHbrwp2-IOcyMvNKAWMsE',
+    appId: '1:751256638769:ios:9b54a8ce93cd5832f80c10',
+    messagingSenderId: '751256638769',
+    projectId: 'brella-88d35',
+    databaseURL: 'https://brella-88d35.firebaseio.com',
+    storageBucket: 'brella-88d35.appspot.com',
+    androidClientId:
+        '751256638769-10meost1ngcfdcc5vbrdng47ojfv2j2e.apps.googleusercontent.com',
+    iosBundleId: 'com.novo.instamartuser',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyC36hBzoQ1Av6rI1fm6qIqvLdEih5dbvrw',
-    appId: '1:155652134190:ios:c2d42c0707f98ed46b96bf',
-    messagingSenderId: '155652134190',
-    projectId: 'novo-flashmart',
-    storageBucket: 'novo-flashmart.appspot.com',
-    iosBundleId: 'com.novo.mart',
-  );
+  // static const FirebaseOptions macos = FirebaseOptions(
+  //   apiKey: 'AIzaSyC36hBzoQ1Av6rI1fm6qIqvLdEih5dbvrw',
+  //   appId: '1:155652134190:ios:c2d42c0707f98ed46b96bf',
+  //   messagingSenderId: '155652134190',
+  //   projectId: 'novo-flashmart',
+  //   storageBucket: 'novo-flashmart.appspot.com',
+  //   iosBundleId: 'com.novo.mart',
+  // );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC1EVwE4R9LLmSV5n3JCNRpSNMjDnzT5gw',
-    appId: '1:155652134190:web:a817cd99f1f95a846b96bf',
-    messagingSenderId: '155652134190',
-    projectId: 'novo-flashmart',
-    authDomain: 'novo-flashmart.firebaseapp.com',
-    storageBucket: 'novo-flashmart.appspot.com',
-    measurementId: 'G-B5L8S8D6BL',
-  );
-
+  // static const FirebaseOptions windows = FirebaseOptions(
+  //   apiKey: 'AIzaSyC1EVwE4R9LLmSV5n3JCNRpSNMjDnzT5gw',
+  //   appId: '1:155652134190:web:a817cd99f1f95a846b96bf',
+  //   messagingSenderId: '155652134190',
+  //   projectId: 'novo-flashmart',
+  //   authDomain: 'novo-flashmart.firebaseapp.com',
+  //   storageBucket: 'novo-flashmart.appspot.com',
+  //   measurementId: 'G-B5L8S8D6BL',
+  // );
 }

@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/home/widgets/web/module_widget.dart';
-import 'package:novo_flashMart/features/parcel/controllers/parcel_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/features/home/widgets/bad_weather_widget.dart';
-import 'package:novo_flashMart/features/parcel/widgets/parcel_app_bar_widget.dart';
-import 'package:novo_flashMart/features/parcel/widgets/deliver_item_card_widget.dart';
-import 'package:novo_flashMart/features/parcel/widgets/get_service_video_widget.dart';
-import 'package:novo_flashMart/features/parcel/widgets/sevice_info_list_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/home/widgets/web/module_widget.dart';
+import 'package:novo_instamart/features/parcel/controllers/parcel_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/features/home/widgets/bad_weather_widget.dart';
+import 'package:novo_instamart/features/parcel/widgets/parcel_app_bar_widget.dart';
+import 'package:novo_instamart/features/parcel/widgets/deliver_item_card_widget.dart';
+import 'package:novo_instamart/features/parcel/widgets/get_service_video_widget.dart';
+import 'package:novo_instamart/features/parcel/widgets/sevice_info_list_widget.dart';
 
 class ParcelCategoryScreen extends StatefulWidget {
   const ParcelCategoryScreen({super.key});
@@ -98,8 +98,7 @@ class _ParcelCategoryScreenState extends State<ParcelCategoryScreen> {
                                           //         index, false);
                                           //   },
                                           // ),
-                                          itemBuilder:
-                                              (context, index) {
+                                          itemBuilder: (context, index) {
                                             return ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(

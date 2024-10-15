@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/notification/domain/models/notification_model.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_model.dart';
 
 abstract class NotificationServiceInterface {
   Future<List<NotificationModel>?> getNotificationList();

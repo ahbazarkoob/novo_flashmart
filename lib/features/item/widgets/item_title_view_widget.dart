@@ -1,21 +1,21 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_asset_image_widget.dart';
-import 'package:novo_flashMart/common/widgets/custom_tool_tip_widget.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/organic_tag.dart';
-import 'package:novo_flashMart/common/widgets/rating_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_asset_image_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_tool_tip_widget.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/organic_tag.dart';
+import 'package:novo_instamart/common/widgets/rating_bar.dart';
 
 class ItemTitleViewWidget extends StatelessWidget {
   final Item? item;
@@ -170,7 +170,6 @@ class ItemTitleViewWidget extends StatelessWidget {
                   //           );
                   //         }),
                   //       ),
-
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeSmall),
                 Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -322,7 +321,6 @@ class ItemTitleViewWidget extends StatelessWidget {
                                     //         : Theme.of(context).disabledColor,
                                     //   ),
                                     // ),
-                                  
                                   ],
                                 );
                               }),

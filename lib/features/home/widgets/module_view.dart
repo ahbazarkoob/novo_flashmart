@@ -1,22 +1,22 @@
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/common/widgets/address_widget.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/custom_loader.dart';
-import 'package:novo_flashMart/common/widgets/title_widget.dart';
+import 'package:novo_instamart/common/widgets/address_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/address/controllers/address_controller.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_loader.dart';
+import 'package:novo_instamart/common/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/home/widgets/banner_view.dart';
+import 'package:novo_instamart/features/home/widgets/banner_view.dart';
 
 class ModuleView extends StatelessWidget {
   final SplashController splashController;

@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_checker.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/features/taxi_booking/repo/rider_repo.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/api/api_checker.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/features/taxi_booking/repo/rider_repo.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 enum PageState { orderDetails, payment, complete }
 

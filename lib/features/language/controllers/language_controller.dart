@@ -1,11 +1,11 @@
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/language/domain/models/language_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/features/home/screens/home_screen.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/language/domain/models/language_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/features/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/language/domain/service/language_service_interface.dart';
+import 'package:novo_instamart/features/language/domain/service/language_service_interface.dart';
 
 class LocalizationController extends GetxController implements GetxService {
   final LanguageServiceInterface languageServiceInterface;

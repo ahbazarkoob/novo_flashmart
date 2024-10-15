@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
 
 class MiddleSectionBannerView extends StatefulWidget {
   const MiddleSectionBannerView({super.key});
@@ -133,25 +133,24 @@ class MiddleSectionBannerShimmerView extends StatelessWidget {
         SizedBox(
           height: isPharmacy ? 187 : 135,
           child: PageView.builder(
-              itemCount: 3,
-              // options: carousel_slider.CarouselOptions(
-              //   height: isPharmacy ? 187 : 135,
-              //   enlargeCenterPage: true,
-              //   disableCenter: true,
-              //   viewportFraction: 0.95,
-              // ),
-              itemBuilder:
-                  (BuildContext context, int itemIndex) {
-                return Container(
-                  height: isPharmacy ? 187 : 135,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(Dimensions.radiusLarge),
-                  ),
-                );
-              },
-            ),
+            itemCount: 3,
+            // options: carousel_slider.CarouselOptions(
+            //   height: isPharmacy ? 187 : 135,
+            //   enlargeCenterPage: true,
+            //   disableCenter: true,
+            //   viewportFraction: 0.95,
+            // ),
+            itemBuilder: (BuildContext context, int itemIndex) {
+              return Container(
+                height: isPharmacy ? 187 : 135,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(Dimensions.radiusLarge),
+                ),
+              );
+            },
+          ),
         ),
       ]),
     );

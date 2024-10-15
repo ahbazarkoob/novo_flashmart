@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/arrow_icon_button.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/arrow_icon_button.dart';
 
 class WebJustForYouViewWidget extends StatefulWidget {
   const WebJustForYouViewWidget({super.key});

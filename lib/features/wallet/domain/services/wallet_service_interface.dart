@@ -1,5 +1,5 @@
-import 'package:novo_flashMart/common/models/transaction_model.dart';
-import 'package:novo_flashMart/features/wallet/domain/models/fund_bonus_model.dart';
+import 'package:novo_instamart/common/models/transaction_model.dart';
+import 'package:novo_instamart/features/wallet/domain/models/fund_bonus_model.dart';
 
 abstract class WalletServiceInterface {
   Future<TransactionModel?> getWalletTransactionList(

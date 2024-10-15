@@ -1,13 +1,13 @@
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/rating_bar.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/review/domain/models/review_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/store/widgets/review_dialog_widget.dart';
+import 'package:novo_instamart/features/store/widgets/review_dialog_widget.dart';
 
 class ReviewWidget extends StatelessWidget {
   final ReviewModel review;

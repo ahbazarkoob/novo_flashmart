@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/common/widgets/card_design/store_card_with_distance.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/title_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/arrow_icon_button.dart';
+import 'package:novo_instamart/common/widgets/card_design/store_card_with_distance.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/title_widget.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/arrow_icon_button.dart';
 
 class WebNewOnViewWidget extends StatefulWidget {
   final bool isFood;

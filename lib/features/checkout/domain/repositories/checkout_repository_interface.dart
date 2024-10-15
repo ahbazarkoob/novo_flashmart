@@ -1,8 +1,8 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class CheckoutRepositoryInterface extends RepositoryInterface {
   Future<int> getDmTipMostTapped();

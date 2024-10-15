@@ -1,15 +1,15 @@
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/auth/domain/models/signup_body_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/custom_text_field.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/auth/domain/models/signup_body_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/custom_text_field.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -426,8 +426,7 @@ class SignUpScreenState extends State<SignUpScreen> {
     String name = _nameController.text.trim();
     String gender = dropdownValue;
     String phone = Get.find<AuthController>().getUserNumber();
-    String countryDialCode =
-        authController.getUserCountryCode().toString();
+    String countryDialCode = authController.getUserCountryCode().toString();
     debugPrint(countryDialCode);
     String numberWithCountryCode = countryDialCode + phone;
     int otp = Get.find<AuthController>().getUserOtp();

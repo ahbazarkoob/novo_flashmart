@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/address_widget.dart';
-import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/parcel/controllers/parcel_controller.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/address_widget.dart';
+import 'package:novo_instamart/features/address/controllers/address_controller.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/parcel/controllers/parcel_controller.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
 
 class AddressDialogWidget extends StatelessWidget {
   final Function(AddressModel address) onTap;

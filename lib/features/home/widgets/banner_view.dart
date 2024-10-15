@@ -1,18 +1,18 @@
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/basic_campaign_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/store/screens/store_screen.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_campaign_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/store/screens/store_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -47,13 +47,13 @@ class BannerView extends StatelessWidget {
                       children: [
                         Expanded(
                             child: PageView.builder(
-                              controller: PageController(
-                                viewportFraction: 0.8,
-                                initialPage: bannerController.currentIndex
-                              ),
-                                itemCount: bannerList.isEmpty? 1: bannerList.length,
+                                controller: PageController(
+                                    viewportFraction: 0.8,
+                                    initialPage: bannerController.currentIndex),
+                                itemCount:
+                                    bannerList.isEmpty ? 1 : bannerList.length,
                                 onPageChanged: (index) {
-                                bannerController.setCurrentIndex(index, true);
+                                  bannerController.setCurrentIndex(index, true);
                                 },
                                 itemBuilder: (context, index) {
                                   return _buildBannerItem(
@@ -63,11 +63,7 @@ class BannerView extends StatelessWidget {
                                       bannerDataList,
                                       index,
                                       isFeatured);
-                                }
-                                )
-                        ),
-
-
+                                })),
                         const SizedBox(
                             height: Dimensions.paddingSizeExtraSmall),
                         Row(
@@ -121,6 +117,7 @@ class BannerView extends StatelessWidget {
             );
     });
   }
+
   Widget _buildBannerItem(
       BuildContext context,
       BannerController bannerController,
@@ -129,102 +126,76 @@ class BannerView extends StatelessWidget {
       int index,
       bool isFeatured) {
     String? baseUrl = bannerDataList![index] is BasicCampaignModel
-        ? Get.find<SplashController>()
-        .configModel!
-        .baseUrls!
-        .campaignImageUrl
+        ? Get.find<SplashController>().configModel!.baseUrls!.campaignImageUrl
         : Get.find<SplashController>().configModel!.baseUrls!.bannerImageUrl;
     return InkWell(
       onTap: () async {
         if (bannerDataList[index] is Item) {
           Item? item = bannerDataList[index];
-          Get.find<ItemController>()
-              .navigateToItemPage(item, context);
+          Get.find<ItemController>().navigateToItemPage(item, context);
         } else if (bannerDataList[index] is Store) {
           Store? store = bannerDataList[index];
           if (isFeatured &&
-              (AddressHelper.getUserAddressFromSharedPref()!
-                  .zoneData !=
-                  null &&
-                  AddressHelper
-                      .getUserAddressFromSharedPref()!
+              (AddressHelper.getUserAddressFromSharedPref()!.zoneData != null &&
+                  AddressHelper.getUserAddressFromSharedPref()!
                       .zoneData!
                       .isNotEmpty)) {
             for (ModuleModel module
-            in Get.find<SplashController>()
-                .moduleList!) {
+                in Get.find<SplashController>().moduleList!) {
               if (module.id == store!.moduleId) {
-                Get.find<SplashController>()
-                    .setModule(module);
+                Get.find<SplashController>().setModule(module);
                 break;
               }
             }
-            ZoneData zoneData = AddressHelper
-                .getUserAddressFromSharedPref()!
+            ZoneData zoneData = AddressHelper.getUserAddressFromSharedPref()!
                 .zoneData!
-                .firstWhere((data) =>
-            data.id == store!.zoneId);
+                .firstWhere((data) => data.id == store!.zoneId);
 
             Modules module = zoneData.modules!
-                .firstWhere((module) =>
-            module.id == store!.moduleId);
-            Get.find<SplashController>().setModule(
-                ModuleModel(
-                    id: module.id,
-                    moduleName: module.moduleName,
-                    moduleType: module.moduleType,
-                    themeId: module.themeId,
-                    storesCount: module.storesCount));
+                .firstWhere((module) => module.id == store!.moduleId);
+            Get.find<SplashController>().setModule(ModuleModel(
+                id: module.id,
+                moduleName: module.moduleName,
+                moduleType: module.moduleType,
+                themeId: module.themeId,
+                storesCount: module.storesCount));
           }
           Get.toNamed(
             RouteHelper.getStoreRoute(
-                id: store!.id,
-                page:
-                isFeatured ? 'module' : 'banner'),
-            arguments: StoreScreen(
-                store: store, fromModule: isFeatured),
+                id: store!.id, page: isFeatured ? 'module' : 'banner'),
+            arguments: StoreScreen(store: store, fromModule: isFeatured),
           );
-        } else if (bannerDataList[index]
-        is BasicCampaignModel) {
-          BasicCampaignModel campaign =
-          bannerDataList[index];
-          Get.toNamed(
-              RouteHelper.getBasicCampaignRoute(
-                  campaign));
+        } else if (bannerDataList[index] is BasicCampaignModel) {
+          BasicCampaignModel campaign = bannerDataList[index];
+          Get.toNamed(RouteHelper.getBasicCampaignRoute(campaign));
         } else {
           String url = bannerDataList[index];
           if (await canLaunchUrlString(url)) {
-            await launchUrlString(url,
-                mode: LaunchMode.externalApplication);
+            await launchUrlString(url, mode: LaunchMode.externalApplication);
           } else {
-            showCustomSnackBar(
-                'unable_to_found_url'.tr);
+            showCustomSnackBar('unable_to_found_url'.tr);
           }
         }
       },
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).cardColor,
-          borderRadius: BorderRadius.circular(
-              Dimensions.radiusDefault),
+          borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
           boxShadow: [
             BoxShadow(
-                color: Colors.grey[
-                Get.isDarkMode ? 800 : 200]!,
+                color: Colors.grey[Get.isDarkMode ? 800 : 200]!,
                 spreadRadius: 1,
                 blurRadius: 5)
           ],
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(
-              Dimensions.radiusDefault),
-          child: GetBuilder<SplashController>(
-              builder: (splashController) {
-                return CustomImage(
-                  image: '$baseUrl/${bannerList[index]}',
-                  fit: BoxFit.cover,
-                );
-              }),
+          borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
+          child: GetBuilder<SplashController>(builder: (splashController) {
+            return CustomImage(
+              image: '$baseUrl/${bannerList[index]}',
+              fit: BoxFit.cover,
+            );
+          }),
         ),
       ),
     );

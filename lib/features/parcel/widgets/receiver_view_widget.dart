@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/location/screens/pick_map_screen.dart';
-import 'package:novo_flashMart/features/location/widgets/serach_location_widget.dart';
-import 'package:novo_flashMart/features/parcel/controllers/parcel_controller.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/my_text_field.dart';
-import 'package:novo_flashMart/common/widgets/text_field_shadow.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/address/controllers/address_controller.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/location/screens/pick_map_screen.dart';
+import 'package:novo_instamart/features/location/widgets/serach_location_widget.dart';
+import 'package:novo_instamart/features/parcel/controllers/parcel_controller.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/my_text_field.dart';
+import 'package:novo_instamart/common/widgets/text_field_shadow.dart';
 
 class ReceiverViewWidget extends StatefulWidget {
   const ReceiverViewWidget({super.key});

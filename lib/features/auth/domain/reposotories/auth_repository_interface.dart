@@ -1,13 +1,13 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class AuthRepositoryInterface extends RepositoryInterface {
   bool isSharedPrefNotificationActive();
   // Future<ResponseModel> registration(SignUpBodyModel signUpBody);
   Future<Response> loginRegistration({String? phone, int? otp});
-  Future<Response> registeration({String? phone, int? otp,  String? name, String? gender});
-  Future<Response> generateOtp({String? phone,String fcm
-  });
+  Future<Response> registeration(
+      {String? phone, int? otp, String? name, String? gender});
+  Future<Response> generateOtp({String? phone, String fcm});
   Future<Response> verifyOtp({String? phone, String? otp});
   // Future<Response> login({String? phone, String? password});
   Future<bool> saveUserToken(String token);

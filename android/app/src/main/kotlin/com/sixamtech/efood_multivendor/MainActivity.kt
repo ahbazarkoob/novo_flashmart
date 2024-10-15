@@ -1,4 +1,4 @@
-package com.novo.flash_mart_user
+package com.novo.instamartuser
 
 import io.flutter.embedding.android.FlutterActivity
 

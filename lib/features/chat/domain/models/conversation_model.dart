@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/chat/domain/models/chat_model.dart';
+import 'package:novo_instamart/features/chat/domain/models/chat_model.dart';
 
 class ConversationsModel {
   int? totalSize;

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/common/models/config_model.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/common/models/config_model.dart';
 
 class ModuleHelper {
   static ModuleModel? getModule() {

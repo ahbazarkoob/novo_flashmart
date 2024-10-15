@@ -1,11 +1,11 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/features/location/domain/repositories/location_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/features/location/domain/repositories/location_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class LocationRepository implements LocationRepositoryInterface {
   final ApiClient apiClient;

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/home/domain/models/cashback_model.dart';
-import 'package:novo_flashMart/features/home/domain/services/home_service_interface.dart';
+import 'package:novo_instamart/features/home/domain/models/cashback_model.dart';
+import 'package:novo_instamart/features/home/domain/services/home_service_interface.dart';
 
 class HomeController extends GetxController implements GetxService {
   final HomeServiceInterface homeServiceInterface;

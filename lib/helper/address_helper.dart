@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class AddressHelper {
   static Future<bool> saveUserAddressInSharedPref(AddressModel address) async {

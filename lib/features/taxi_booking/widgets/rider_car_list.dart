@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
 import 'rider_car_card.dart';
 
 class RiderCarList extends StatelessWidget {

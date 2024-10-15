@@ -1,21 +1,21 @@
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/image_picker_widget.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/my_text_field.dart';
-import 'package:novo_flashMart/common/widgets/not_logged_in_screen.dart';
-import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
-import 'package:novo_flashMart/features/profile/widgets/profile_bg_widget.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/image_picker_widget.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/my_text_field.dart';
+import 'package:novo_instamart/common/widgets/not_logged_in_screen.dart';
+import 'package:novo_instamart/common/widgets/web_menu_bar.dart';
+import 'package:novo_instamart/features/profile/widgets/profile_bg_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,7 +37,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _gender = TextEditingController();
   List<String> gender = <String>["Male", "Female", "Other"];
-  String dropdownValue ="";
+  String dropdownValue = "";
 
   @override
   void initState() {

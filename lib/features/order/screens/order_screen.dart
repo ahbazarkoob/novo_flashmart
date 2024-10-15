@@ -1,12 +1,12 @@
-import 'package:novo_flashMart/features/order/controllers/order_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/features/order/widgets/guest_track_order_input_view_widget.dart';
-import 'package:novo_flashMart/features/order/widgets/order_view_widget.dart';
+import 'package:novo_instamart/features/order/controllers/order_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/order/widgets/guest_track_order_input_view_widget.dart';
+import 'package:novo_instamart/features/order/widgets/order_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

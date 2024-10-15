@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/splash/domain/models/landing_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/splash/domain/models/landing_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
 
 abstract class SplashServiceInterface {
   Future<Response> getConfigData();

@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/coupon/domain/models/coupon_model.dart';
+import 'package:novo_instamart/features/coupon/domain/models/coupon_model.dart';
 
 abstract class CouponServiceInterface {
   Future<List<CouponModel>?> getCouponList();

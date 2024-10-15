@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/common_condition_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/item/domain/repositories/item_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_medicine_model.dart';
+import 'package:novo_instamart/features/item/domain/models/common_condition_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/item/domain/repositories/item_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class ItemRepository implements ItemRepositoryInterface {
   final ApiClient apiClient;

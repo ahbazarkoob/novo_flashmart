@@ -3,26 +3,26 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/common/models/config_model.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_dropdown.dart';
-import 'package:novo_flashMart/features/cart/widgets/delivery_option_button_widget.dart';
-import 'package:novo_flashMart/features/checkout/widgets/coupon_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/delivery_instruction_view.dart';
-import 'package:novo_flashMart/features/checkout/widgets/delivery_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/deliveryman_tips_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/partial_pay_view.dart';
-import 'package:novo_flashMart/features/checkout/widgets/payment_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/time_slot_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/web_delivery_instruction_view.dart';
-import 'package:novo_flashMart/features/store/widgets/camera_button_sheet_widget.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/common/models/config_model.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_dropdown.dart';
+import 'package:novo_instamart/features/cart/widgets/delivery_option_button_widget.dart';
+import 'package:novo_instamart/features/checkout/widgets/coupon_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/delivery_instruction_view.dart';
+import 'package:novo_instamart/features/checkout/widgets/delivery_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/deliveryman_tips_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/partial_pay_view.dart';
+import 'package:novo_instamart/features/checkout/widgets/payment_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/time_slot_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/web_delivery_instruction_view.dart';
+import 'package:novo_instamart/features/store/widgets/camera_button_sheet_widget.dart';
 import 'dart:io';
 
 class TopSection extends StatelessWidget {
@@ -339,8 +339,8 @@ class TopSection extends StatelessWidget {
         const SizedBox(height: Dimensions.paddingSizeDefault),
 
         ///Delivery_fee
-        !takeAway 
-        // && !isGuestLoggedIn
+        !takeAway
+            // && !isGuestLoggedIn
             ? Center(
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -356,8 +356,8 @@ class TopSection extends StatelessWidget {
               ]))
             : const SizedBox(),
         SizedBox(
-            height: !takeAway 
-            // && !isGuestLoggedIn
+            height: !takeAway
+                // && !isGuestLoggedIn
                 ? Dimensions.paddingSizeLarge
                 : 0),
 
@@ -401,8 +401,8 @@ class TopSection extends StatelessWidget {
         ),
 
         /// Coupon..
-        !isDesktop 
-        // && !isGuestLoggedIn
+        !isDesktop
+            // && !isGuestLoggedIn
             ? CouponSection(
                 storeId: storeId,
                 checkoutController: checkoutController,
@@ -448,11 +448,12 @@ class TopSection extends StatelessWidget {
               checkoutController: checkoutController,
               isOfflinePaymentActive: isOfflinePaymentActive,
             ),
-            const SizedBox(height: 
-            // isGuestLoggedIn ? 0 : 
-            Dimensions.paddingSizeLarge),
-            !isDesktop 
-            // && !isGuestLoggedIn
+            const SizedBox(
+                height:
+                    // isGuestLoggedIn ? 0 :
+                    Dimensions.paddingSizeLarge),
+            !isDesktop
+                // && !isGuestLoggedIn
                 ? PartialPayView(
                     totalPrice: total, isPrescription: storeId != null)
                 : const SizedBox(),

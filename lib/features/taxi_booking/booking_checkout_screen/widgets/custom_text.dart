@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class CustomText extends StatelessWidget {
   final String text;

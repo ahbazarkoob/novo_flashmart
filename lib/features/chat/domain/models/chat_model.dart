@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
 
 class ChatModel {
   int? totalSize;

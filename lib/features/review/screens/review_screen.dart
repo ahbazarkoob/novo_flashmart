@@ -1,12 +1,12 @@
-import 'package:novo_flashMart/features/review/controllers/review_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/features/store/widgets/review_widget.dart';
+import 'package:novo_instamart/features/review/controllers/review_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/features/store/widgets/review_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

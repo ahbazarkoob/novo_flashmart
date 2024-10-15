@@ -1,18 +1,18 @@
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/common/widgets/not_logged_in_screen.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/not_logged_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/web_page_title_widget.dart';
-import 'package:novo_flashMart/features/coupon/widgets/coupon_card_widget.dart';
+import 'package:novo_instamart/common/widgets/web_page_title_widget.dart';
+import 'package:novo_instamart/features/coupon/widgets/coupon_card_widget.dart';
 
 class CouponScreen extends StatefulWidget {
   const CouponScreen({super.key});

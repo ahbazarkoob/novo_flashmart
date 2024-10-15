@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
 
 class TripModel {
   int? totalSize;

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/checkout/widgets/coupon_bottom_sheet.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/checkout/widgets/coupon_bottom_sheet.dart';
 
 class CouponSection extends StatelessWidget {
   final int? storeId;

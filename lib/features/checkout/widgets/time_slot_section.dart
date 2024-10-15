@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/common/models/config_model.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/features/checkout/widgets/time_slot_bottom_sheet.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/common/models/config_model.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/features/checkout/widgets/time_slot_bottom_sheet.dart';
 
 class TimeSlotSection extends StatelessWidget {
   final int? storeId;

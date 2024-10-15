@@ -1,7 +1,7 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_data_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/store_body_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_data_model.dart';
+import 'package:novo_instamart/features/auth/domain/models/store_body_model.dart';
 
 abstract class StoreRegistrationServiceInterface {
   Future<List<ZoneDataModel>?> getZoneList();

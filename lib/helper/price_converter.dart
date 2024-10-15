@@ -1,8 +1,8 @@
 import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class PriceConverter {
   static String convertPrice(double? price,

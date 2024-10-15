@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/web_constrained_box.dart';
-import 'package:novo_flashMart/features/cart/widgets/cart_item_widget.dart';
-import 'package:novo_flashMart/features/store/screens/store_screen.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/web_constrained_box.dart';
+import 'package:novo_instamart/features/cart/widgets/cart_item_widget.dart';
+import 'package:novo_instamart/features/store/screens/store_screen.dart';
 
 class WebCardItemsWidget extends StatelessWidget {
   final List<CartModel> cartList;

@@ -2,13 +2,13 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/features/home/widgets/views/promo_code_banner_view.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/features/home/widgets/views/promo_code_banner_view.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class WebCouponBannerViewWidget extends StatefulWidget {
   const WebCouponBannerViewWidget({super.key});
@@ -40,10 +40,10 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                       //   enlargeCenterPage: true,
                       //   disableCenter: true,
                       //   viewportFraction: 1,
-                        onPageChanged: (index) {
-                          couponController.setCurrentIndex(index, true);
-                        },
-                      itemBuilder: ( context, index) {
+                      onPageChanged: (index) {
+                        couponController.setCurrentIndex(index, true);
+                      },
+                      itemBuilder: (context, index) {
                         return Container(
                           height: 135,
                           width: double.infinity,
@@ -172,8 +172,7 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                                                 .paddingSizeExtraSmall),
                                         Text(
                                             couponController
-                                                    .couponList![index]
-                                                    .code ??
+                                                    .couponList![index].code ??
                                                 '',
                                             style: figTreeMedium.copyWith(
                                                 color: Theme.of(context)

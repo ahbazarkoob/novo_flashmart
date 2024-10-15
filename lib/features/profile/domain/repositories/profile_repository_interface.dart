@@ -1,6 +1,6 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class ProfileRepositoryInterface extends RepositoryInterface {
   Future<dynamic> updateProfile(

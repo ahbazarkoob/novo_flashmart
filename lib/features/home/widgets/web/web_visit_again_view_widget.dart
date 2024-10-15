@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/common/widgets/card_design/visit_again_card.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/home/widgets/components/custom_triangle_shape.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/arrow_icon_button.dart';
+import 'package:novo_instamart/common/widgets/card_design/visit_again_card.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/home/widgets/components/custom_triangle_shape.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/arrow_icon_button.dart';
 
 class WebVisitAgainView extends StatefulWidget {
   final bool fromFood;

@@ -1,11 +1,11 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_data_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/delivery_man_body.dart';
-import 'package:novo_flashMart/features/auth/domain/models/delivery_man_vehicles_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/deliveryman_registration_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_data_model.dart';
+import 'package:novo_instamart/features/auth/domain/models/delivery_man_body.dart';
+import 'package:novo_instamart/features/auth/domain/models/delivery_man_vehicles_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/deliveryman_registration_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class DeliverymanRegistrationRepository
     implements DeliverymanRegistrationRepositoryInterface {

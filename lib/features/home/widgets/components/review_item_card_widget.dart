@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_asset_image_widget.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/cart_count_view.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/discount_tag.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
-import 'package:novo_flashMart/common/widgets/organic_tag.dart';
+import 'package:novo_instamart/common/widgets/custom_asset_image_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/cart_count_view.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/discount_tag.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/common/widgets/organic_tag.dart';
 
 class ReviewItemCard extends StatelessWidget {
   final bool isFeatured;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
-import 'package:novo_flashMart/features/payment/domain/services/payment_service_interface.dart';
+import 'package:novo_instamart/features/payment/domain/models/offline_method_model.dart';
+import 'package:novo_instamart/features/payment/domain/services/payment_service_interface.dart';
 
 class PaymentController extends GetxController implements GetxService {
   final PaymentServiceInterface paymentServiceInterface;

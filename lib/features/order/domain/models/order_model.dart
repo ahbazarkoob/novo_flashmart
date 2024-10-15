@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/parcel_category_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
 
 class PaginatedOrderModel {
   int? totalSize;

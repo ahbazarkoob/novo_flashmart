@@ -1,15 +1,15 @@
 import 'dart:typed_data';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/helper/network_info.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/profile/domain/services/profile_service_interface.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/helper/network_info.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/profile/domain/services/profile_service_interface.dart';
 
 class ProfileController extends GetxController implements GetxService {
   final ProfileServiceInterface profileServiceInterface;

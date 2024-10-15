@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class AddFavouriteView extends StatelessWidget {
   final Item item;

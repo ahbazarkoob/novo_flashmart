@@ -1,39 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'dart:math';
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/brands/controllers/brands_controller.dart';
-import 'package:novo_flashMart/features/home/controllers/home_controller.dart';
-import 'package:novo_flashMart/features/home/widgets/cashback_logo_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/cashback_dialog_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/refer_bottom_sheet_widget.dart';
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/features/category/controllers/category_controller.dart';
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/notification/controllers/notification_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/features/home/screens/modules/grocery_home_screen.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
-import 'package:novo_flashMart/features/home/screens/web_new_home_screen.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/brands/controllers/brands_controller.dart';
+import 'package:novo_instamart/features/home/controllers/home_controller.dart';
+import 'package:novo_instamart/features/home/widgets/cashback_logo_widget.dart';
+import 'package:novo_instamart/features/home/widgets/cashback_dialog_widget.dart';
+import 'package:novo_instamart/features/home/widgets/refer_bottom_sheet_widget.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/features/category/controllers/category_controller.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/features/flash_sale/controllers/flash_sale_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/notification/controllers/notification_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/address/controllers/address_controller.dart';
+import 'package:novo_instamart/features/home/screens/modules/grocery_home_screen.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/web_menu_bar.dart';
+import 'package:novo_instamart/features/home/screens/web_new_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/home/widgets/module_view.dart';
-import 'package:novo_flashMart/features/parcel/screens/parcel_category_screen.dart';
+import 'package:novo_instamart/features/home/widgets/module_view.dart';
+import 'package:novo_instamart/features/parcel/screens/parcel_category_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -285,9 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 backgroundColor:
                                     ResponsiveHelper.isDesktop(context)
                                         ? Colors.transparent
-                                        : Theme.of(context)
-                                            .colorScheme
-                                            .surface,
+                                        : Theme.of(context).colorScheme.surface,
                                 title: Center(
                                     child: Container(
                                   width: Dimensions.webMaxWidth,
@@ -295,8 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       Get.find<LocalizationController>().isLtr
                                           ? 60
                                           : 70,
-                                  color:
-                                      Theme.of(context).colorScheme.surface,
+                                  color: Theme.of(context).colorScheme.surface,
                                   child: Row(children: [
                                     Container(
                                         height: 50,

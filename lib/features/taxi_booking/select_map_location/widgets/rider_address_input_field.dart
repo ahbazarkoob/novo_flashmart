@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/taxi_booking/controllers/rider_controller.dart';
-import 'package:novo_flashMart/features/location/domain/models/prediction_model.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/taxi_booking/controllers/rider_controller.dart';
+import 'package:novo_instamart/features/location/domain/models/prediction_model.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
 
 class RiderAddressInputField extends StatelessWidget {
   final bool isFormAddress;

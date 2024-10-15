@@ -1,8 +1,8 @@
-import 'package:novo_flashMart/features/taxi_booking/controllers/rider_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/common/widgets/paginated_list_view.dart';
+import 'package:novo_instamart/features/taxi_booking/controllers/rider_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/paginated_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../widgets/trip_history_item.dart';

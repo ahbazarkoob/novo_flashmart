@@ -1,22 +1,22 @@
 // import 'dart:async';
 
-// import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-// import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-// import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-// import 'package:novo_flashMart/features/verification/controllers/verification_controller.dart';
-// import 'package:novo_flashMart/helper/route_helper.dart';
-// import 'package:novo_flashMart/util/dimensions.dart';
-// import 'package:novo_flashMart/util/images.dart';
-// import 'package:novo_flashMart/util/styles.dart';
-// import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-// import 'package:novo_flashMart/common/widgets/custom_button.dart';
-// import 'package:novo_flashMart/common/widgets/custom_dialog.dart';
-// import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+// import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+// import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+// import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+// import 'package:novo_instamart/features/verification/controllers/verification_controller.dart';
+// import 'package:novo_instamart/helper/route_helper.dart';
+// import 'package:novo_instamart/util/dimensions.dart';
+// import 'package:novo_instamart/util/images.dart';
+// import 'package:novo_instamart/util/styles.dart';
+// import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+// import 'package:novo_instamart/common/widgets/custom_button.dart';
+// import 'package:novo_instamart/common/widgets/custom_dialog.dart';
+// import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 // import 'package:pin_code_fields/pin_code_fields.dart';
-// import 'package:novo_flashMart/common/widgets/footer_view.dart';
-// import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
+// import 'package:novo_instamart/common/widgets/footer_view.dart';
+// import 'package:novo_instamart/common/widgets/menu_drawer.dart';
 
 // class VerificationScreen extends StatefulWidget {
 //   final String? number;

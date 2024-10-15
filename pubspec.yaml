@@ -1,7 +1,7 @@
-name: novo_flashMart
+name: novo_instamart
 description: A Multi-vendor Food. Grocery, eCommerce, Pharmacy & Parcel service.
 publish_to: "none" #
-version: 1.0.0+8
+version: 1.0.0+10
 
 environment:
   sdk: ">=3.5.0 <4.0.0"

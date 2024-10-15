@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/address/domain/repositories/address_repository_interface.dart';
-import 'package:novo_flashMart/features/address/domain/services/address_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/address/domain/repositories/address_repository_interface.dart';
+import 'package:novo_instamart/features/address/domain/services/address_service_interface.dart';
 
 class AddressService implements AddressServiceInterface {
   final AddressRepositoryInterface addressRepoInterface;

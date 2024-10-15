@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
 
 class ApiChecker {

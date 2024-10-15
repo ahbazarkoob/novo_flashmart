@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animarker/widgets/animarker.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:novo_flashMart/features/taxi_booking/controllers/rider_controller.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/widgets/pick_and_destination_address_info.dart';
+import 'package:novo_instamart/features/taxi_booking/controllers/rider_controller.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/widgets/pick_and_destination_address_info.dart';
 
 class SeeDetailsWidget extends StatefulWidget {
   const SeeDetailsWidget({super.key});

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/paginated_list_view.dart';
-import 'package:novo_flashMart/features/flash_sale/widgets/flash_product_card_widget.dart';
-import 'package:novo_flashMart/features/flash_sale/widgets/flash_sale_timer_view_widget.dart';
+import 'package:novo_instamart/features/flash_sale/controllers/flash_sale_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/paginated_list_view.dart';
+import 'package:novo_instamart/features/flash_sale/widgets/flash_product_card_widget.dart';
+import 'package:novo_instamart/features/flash_sale/widgets/flash_sale_timer_view_widget.dart';
 
 class FlashSaleDetailsScreen extends StatefulWidget {
   final int id;

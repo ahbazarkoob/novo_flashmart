@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:novo_flashMart/features/auth/domain/services/auth_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/auth_repository_interface.dart';
+import 'package:novo_instamart/features/auth/domain/services/auth_service_interface.dart';
 
 class AuthService implements AuthServiceInterface {
   final AuthRepositoryInterface authRepositoryInterface;

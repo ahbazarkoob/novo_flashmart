@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

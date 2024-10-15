@@ -1,8 +1,8 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
-import 'package:novo_flashMart/features/profile/domain/repositories/profile_repository_interface.dart';
-import 'package:novo_flashMart/features/profile/domain/services/profile_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/features/profile/domain/repositories/profile_repository_interface.dart';
+import 'package:novo_instamart/features/profile/domain/services/profile_service_interface.dart';
 
 class ProfileService implements ProfileServiceInterface {
   final ProfileRepositoryInterface profileRepositoryInterface;

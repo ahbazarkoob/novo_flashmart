@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_asset_image_widget.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_asset_image_widget.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class CashBackLogoWidget extends StatelessWidget {
   const CashBackLogoWidget({super.key});

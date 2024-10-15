@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/features/language/domain/models/language_model.dart';
+import 'package:novo_instamart/features/language/domain/models/language_model.dart';
 
 abstract class LanguageServiceInterface {
   bool setLTR(Locale locale);

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/item_view.dart';
-import 'package:novo_flashMart/common/widgets/paginated_list_view.dart';
-import 'package:novo_flashMart/common/widgets/veg_filter_widget.dart';
-import 'package:novo_flashMart/features/store/widgets/bottom_cart_widget.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/item_view.dart';
+import 'package:novo_instamart/common/widgets/paginated_list_view.dart';
+import 'package:novo_instamart/common/widgets/veg_filter_widget.dart';
+import 'package:novo_instamart/features/store/widgets/bottom_cart_widget.dart';
 
 class StoreItemSearchScreen extends StatefulWidget {
   final String? storeID;

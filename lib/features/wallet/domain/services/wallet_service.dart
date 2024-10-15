@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/transaction_model.dart';
-import 'package:novo_flashMart/features/wallet/domain/models/fund_bonus_model.dart';
-import 'package:novo_flashMart/features/wallet/domain/repositories/wallet_repository_interface.dart';
-import 'package:novo_flashMart/features/wallet/domain/services/wallet_service_interface.dart';
+import 'package:novo_instamart/common/models/transaction_model.dart';
+import 'package:novo_instamart/features/wallet/domain/models/fund_bonus_model.dart';
+import 'package:novo_instamart/features/wallet/domain/repositories/wallet_repository_interface.dart';
+import 'package:novo_instamart/features/wallet/domain/services/wallet_service_interface.dart';
 
 class WalletService implements WalletServiceInterface {
   final WalletRepositoryInterface walletRepositoryInterface;

@@ -1,22 +1,22 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/parcel/controllers/parcel_controller.dart';
-import 'package:novo_flashMart/features/payment/controllers/payment_controller.dart';
-import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/custom_text_field.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/parcel/controllers/parcel_controller.dart';
+import 'package:novo_instamart/features/payment/controllers/payment_controller.dart';
+import 'package:novo_instamart/features/payment/domain/models/offline_method_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/custom_text_field.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
 
 class OfflinePaymentScreen extends StatefulWidget {
   final PlaceOrderBodyModel placeOrderBody;

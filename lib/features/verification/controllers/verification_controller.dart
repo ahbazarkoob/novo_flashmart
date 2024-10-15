@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/verification/domein/services/verification_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/verification/domein/services/verification_service_interface.dart';
 
 class VerificationController extends GetxController implements GetxService {
   final VerificationServiceInterface verificationServiceInterface;

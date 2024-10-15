@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 ThemeData dark({Color color = const Color(0xFF6048E4)}) => ThemeData(
       fontFamily: AppConstants.fontFamily,

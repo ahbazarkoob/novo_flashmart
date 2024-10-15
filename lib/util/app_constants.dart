@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/choose_us_model.dart';
-import 'package:novo_flashMart/features/language/domain/models/language_model.dart';
-import 'package:novo_flashMart/util/images.dart';
+import 'package:novo_instamart/common/models/choose_us_model.dart';
+import 'package:novo_instamart/features/language/domain/models/language_model.dart';
+import 'package:novo_instamart/util/images.dart';
 
 class AppConstants {
   static const String appName = 'Novo Instamart';

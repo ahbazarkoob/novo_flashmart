@@ -1,9 +1,9 @@
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/util/html_type.dart';
-import 'package:novo_flashMart/features/html/domain/repositories/html_repository_interface.dart';
+import 'package:novo_instamart/util/html_type.dart';
+import 'package:novo_instamart/features/html/domain/repositories/html_repository_interface.dart';
 
 class HtmlRepository implements HtmlRepositoryInterface {
   final ApiClient apiClient;

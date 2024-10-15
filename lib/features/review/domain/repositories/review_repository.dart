@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_body_model.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_model.dart';
-import 'package:novo_flashMart/features/review/domain/repositories/review_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/review/domain/models/review_body_model.dart';
+import 'package:novo_instamart/features/review/domain/models/review_model.dart';
+import 'package:novo_instamart/features/review/domain/repositories/review_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class ReviewRepository implements ReviewRepositoryInterface {
   final ApiClient apiClient;

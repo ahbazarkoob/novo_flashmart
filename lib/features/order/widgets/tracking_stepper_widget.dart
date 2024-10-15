@@ -1,5 +1,5 @@
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/features/order/widgets/custom_stepper_widget.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/features/order/widgets/custom_stepper_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

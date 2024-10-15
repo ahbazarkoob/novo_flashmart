@@ -1,9 +1,9 @@
-import 'package:novo_flashMart/features/banner/domain/models/banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/others_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/promotional_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/others_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/promotional_banner_model.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/features/banner/domain/services/banner_service_interface.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/features/banner/domain/services/banner_service_interface.dart';
 
 class BannerController extends GetxController implements GetxService {
   final BannerServiceInterface bannerServiceInterface;

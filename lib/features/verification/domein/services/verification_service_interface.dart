@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
 
 abstract class VerificationServiceInterface {
   Future<ResponseModel> forgetPassword(String? phone);

@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:get/get_connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/online_cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/repositories/cart_repository_interface.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/helper/module_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/online_cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/repositories/cart_repository_interface.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/helper/module_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class CartRepository implements CartRepositoryInterface<OnlineCart> {
   final ApiClient apiClient;
@@ -48,9 +48,8 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
 
   Future<List<OnlineCartModel>?> _addToCartOnline(OnlineCart cart) async {
     List<OnlineCartModel>? onlineCartList;
-    Response response = await apiClient.postData(
-        AppConstants.addCartUri,
-        cart.toJson());
+    Response response =
+        await apiClient.postData(AppConstants.addCartUri, cart.toJson());
     if (response.statusCode == 200) {
       onlineCartList = [];
       response.body.forEach(
@@ -69,14 +68,14 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
   }
 
   Future<bool> _removeCartItemOnline(int cartId) async {
-    Response response = await apiClient.deleteData(
-        '${AppConstants.removeItemCartUri}?cart_id=$cartId');
+    Response response = await apiClient
+        .deleteData('${AppConstants.removeItemCartUri}?cart_id=$cartId');
     return (response.statusCode == 200);
   }
 
   Future<bool> _clearCartOnline() async {
-    Response response = await apiClient.deleteData(
-        AppConstants.removeAllCartUri);
+    Response response =
+        await apiClient.deleteData(AppConstants.removeAllCartUri);
     return (response.statusCode == 200);
   }
 
@@ -125,9 +124,8 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
   Future<List<OnlineCartModel>?> _updateCartOnline(
       Map<String, dynamic> body) async {
     List<OnlineCartModel>? onlineCartList;
-    Response response = await apiClient.postData(
-        AppConstants.updateCartUri,
-        body);
+    Response response =
+        await apiClient.postData(AppConstants.updateCartUri, body);
     if (response.statusCode == 200) {
       onlineCartList = [];
       response.body.forEach(
@@ -143,9 +141,8 @@ class CartRepository implements CartRepositoryInterface<OnlineCart> {
       "price": price,
       "quantity": quantity,
     };
-    Response response = await apiClient.postData(
-        AppConstants.updateCartUri,
-        data);
+    Response response =
+        await apiClient.postData(AppConstants.updateCartUri, data);
     return (response.statusCode == 200);
   }
 }

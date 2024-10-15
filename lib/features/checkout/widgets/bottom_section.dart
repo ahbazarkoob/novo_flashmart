@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/checkout/widgets/prescription_image_picker_widget.dart';
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/common/models/config_model.dart';
-import 'package:novo_flashMart/features/checkout/controllers/checkout_controller.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/features/checkout/widgets/condition_check_box.dart';
-import 'package:novo_flashMart/features/checkout/widgets/coupon_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/note_prescription_section.dart';
-import 'package:novo_flashMart/features/checkout/widgets/partial_pay_view.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/checkout/widgets/prescription_image_picker_widget.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/common/models/config_model.dart';
+import 'package:novo_instamart/features/checkout/controllers/checkout_controller.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/features/checkout/widgets/condition_check_box.dart';
+import 'package:novo_instamart/features/checkout/widgets/coupon_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/note_prescription_section.dart';
+import 'package:novo_instamart/features/checkout/widgets/partial_pay_view.dart';
 
 class BottomSection extends StatelessWidget {
   final CheckoutController checkoutController;

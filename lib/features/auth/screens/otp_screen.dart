@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/auth/screens/sign_up_screen.dart';
-import 'package:novo_flashMart/features/auth/widgets/condition_check_box_widget.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/auth/screens/sign_up_screen.dart';
+import 'package:novo_instamart/features/auth/widgets/condition_check_box_widget.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import '../../../common/widgets/custom_snackbar.dart';
@@ -222,8 +222,7 @@ class _OTPVerifyState extends State<OTPVerify> {
   void _verifyOtp(AuthController authController) async {
     String otp = _otpController.text.trim();
     String phone = authController.getUserNumber().toString();
-    String countryDialCode =
-        authController.getUserCountryCode().toString();
+    String countryDialCode = authController.getUserCountryCode().toString();
     debugPrint(countryDialCode);
     String numberWithCountryCode = countryDialCode + phone;
     debugPrint(numberWithCountryCode);
@@ -250,8 +249,7 @@ class _OTPVerifyState extends State<OTPVerify> {
           if (status.success == true) {
             if (loginSuccess == true) {
               Get.find<CartController>().getCartDataOnline();
-              debugPrint(
-                  '${AuthHelper.isLoggedIn()}');
+              debugPrint('${AuthHelper.isLoggedIn()}');
               Get.toNamed(RouteHelper.getInitialRoute(fromSplash: false));
               ScaffoldMessenger.of(context)
                   .showSnackBar(const SnackBar(content: Text('OTP Verified')));

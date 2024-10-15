@@ -1,13 +1,13 @@
-import 'package:novo_flashMart/common/widgets/card_design/store_card_with_distance.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/store_card_widget.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/common/widgets/item_shimmer.dart';
-import 'package:novo_flashMart/common/widgets/item_widget.dart';
+import 'package:novo_instamart/common/widgets/card_design/store_card_with_distance.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/store_card_widget.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/item_shimmer.dart';
+import 'package:novo_instamart/common/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

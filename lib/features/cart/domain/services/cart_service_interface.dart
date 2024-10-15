@@ -1,8 +1,8 @@
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/online_cart_model.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/online_cart_model.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
 
 abstract class CartServiceInterface {
   int availableSelectedIndex(int selectedIndex, int index);

@@ -1,16 +1,16 @@
 import 'package:flutter/foundation.dart';
-import 'package:novo_flashMart/features/category/controllers/category_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-// import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/cart_widget.dart';
-import 'package:novo_flashMart/common/widgets/item_view.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/veg_filter_widget.dart';
-import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
+import 'package:novo_instamart/features/category/controllers/category_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+// import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/cart_widget.dart';
+import 'package:novo_instamart/common/widgets/item_view.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/veg_filter_widget.dart';
+import 'package:novo_instamart/common/widgets/web_menu_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,7 +35,7 @@ class CategoryItemScreenState extends State<CategoryItemScreen>
   void initState() {
     super.initState();
 
-    _tabController = TabController(length: 1,initialIndex: 0 ,vsync: this);
+    _tabController = TabController(length: 1, initialIndex: 0, vsync: this);
 
     // _tabController = TabController(length: 2, initialIndex: 0, vsync: this);
     Get.find<CategoryController>().getSubCategoryList(widget.categoryID);
@@ -92,7 +92,6 @@ class CategoryItemScreenState extends State<CategoryItemScreen>
     //     }
     //   }
     // });
-  
   }
 
   @override
@@ -224,18 +223,18 @@ class CategoryItemScreenState extends State<CategoryItemScreen>
                             //     true,
                             //   );
                             // } else {
-                              catController.getCategoryItemList(
-                                catController.subCategoryIndex == 0
-                                    ? widget.categoryID
-                                    : catController
-                                        .subCategoryList![
-                                            catController.subCategoryIndex]
-                                        .id
-                                        .toString(),
-                                1,
-                                type,
-                                true,
-                              );
+                            catController.getCategoryItemList(
+                              catController.subCategoryIndex == 0
+                                  ? widget.categoryID
+                                  : catController
+                                      .subCategoryList![
+                                          catController.subCategoryIndex]
+                                      .id
+                                      .toString(),
+                              1,
+                              type,
+                              true,
+                            );
                             // }
                           }
                         }),
@@ -415,7 +414,6 @@ class CategoryItemScreenState extends State<CategoryItemScreen>
                     //         : 'no_category_store_found'.tr,
                     //   ),
                     // ),
-                 
                   ],
                 ),
               )),

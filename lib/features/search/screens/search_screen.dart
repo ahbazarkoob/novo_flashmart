@@ -1,25 +1,25 @@
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/search/controllers/search_controller.dart'
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/search/controllers/search_controller.dart'
     as search;
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
-import 'package:novo_flashMart/features/search/widgets/filter_widget.dart';
-import 'package:novo_flashMart/features/search/widgets/search_field_widget.dart';
-import 'package:novo_flashMart/features/search/widgets/search_result_widget.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/web_menu_bar.dart';
+import 'package:novo_instamart/features/search/widgets/filter_widget.dart';
+import 'package:novo_instamart/features/search/widgets/search_field_widget.dart';
+import 'package:novo_instamart/features/search/widgets/search_result_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/store/widgets/bottom_cart_widget.dart';
+import 'package:novo_instamart/features/store/widgets/bottom_cart_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   final String? queryText;
@@ -112,9 +112,8 @@ class SearchScreenState extends State<SearchScreen>
                                           : Icons.search,
                                       iconColor:
                                           Theme.of(context).disabledColor,
-                                      filledColor: Theme.of(context)
-                                          .colorScheme
-                                          .surface,
+                                      filledColor:
+                                          Theme.of(context).colorScheme.surface,
                                       iconPressed: () {
                                         if (searchController
                                             .searchHomeText!.isNotEmpty) {

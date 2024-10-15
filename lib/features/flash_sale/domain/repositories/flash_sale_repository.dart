@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/flash_sale/domain/models/flash_sale_model.dart';
-import 'package:novo_flashMart/features/flash_sale/domain/models/product_flash_sale.dart';
-import 'package:novo_flashMart/features/flash_sale/domain/repositories/flash_sale_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/flash_sale/domain/models/flash_sale_model.dart';
+import 'package:novo_instamart/features/flash_sale/domain/models/product_flash_sale.dart';
+import 'package:novo_instamart/features/flash_sale/domain/repositories/flash_sale_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class FlashSaleRepository implements FlashSaleRepositoryInterface {
   final ApiClient apiClient;

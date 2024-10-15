@@ -1,12 +1,12 @@
-import 'package:novo_flashMart/features/search/controllers/search_controller.dart'
+import 'package:novo_instamart/features/search/controllers/search_controller.dart'
     as search;
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/item_view.dart';
-import 'package:novo_flashMart/common/widgets/web_item_view.dart';
+import 'package:novo_instamart/common/widgets/item_view.dart';
+import 'package:novo_instamart/common/widgets/web_item_view.dart';
 
 class ItemViewWidget extends StatelessWidget {
   final bool isItem;

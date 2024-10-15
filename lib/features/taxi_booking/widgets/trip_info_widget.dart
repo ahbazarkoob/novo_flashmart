@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/controllers/theme_controller.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
-import 'package:novo_flashMart/features/taxi_booking/widgets/see_details_widget.dart';
+import 'package:novo_instamart/common/controllers/theme_controller.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
+import 'package:novo_instamart/features/taxi_booking/widgets/see_details_widget.dart';
 
 class TripInfoWidget extends StatelessWidget {
   final UserInformationBody filterBody;

@@ -1,29 +1,29 @@
 import 'dart:async';
 import 'package:photo_view/photo_view.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/order/controllers/order_controller.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_details_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/confirmation_dialog.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_dialog.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/features/checkout/widgets/offline_success_dialog.dart';
-import 'package:novo_flashMart/features/order/widgets/cancellation_dialogue_widget.dart';
-import 'package:novo_flashMart/features/order/widgets/order_calcuation_widget.dart';
-import 'package:novo_flashMart/features/order/widgets/order_info_widget.dart';
-import 'package:novo_flashMart/features/review/screens/rate_review_screen.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/order/controllers/order_controller.dart';
+import 'package:novo_instamart/features/order/domain/models/order_details_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/confirmation_dialog.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_dialog.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/checkout/widgets/offline_success_dialog.dart';
+import 'package:novo_instamart/features/order/widgets/cancellation_dialogue_widget.dart';
+import 'package:novo_instamart/features/order/widgets/order_calcuation_widget.dart';
+import 'package:novo_instamart/features/order/widgets/order_info_widget.dart';
+import 'package:novo_instamart/features/review/screens/rate_review_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -482,12 +482,11 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
               ),
             ),
       // !AuthHelper.isGuestLoggedIn() &&
-              (order.orderStatus == 'delivered' &&
-                  (parcel
-                      ? order.deliveryMan != null
-                      : (orderController.orderDetails!.isNotEmpty &&
-                          orderController.orderDetails![0].itemCampaignId ==
-                              null)))
+      (order.orderStatus == 'delivered' &&
+              (parcel
+                  ? order.deliveryMan != null
+                  : (orderController.orderDetails!.isNotEmpty &&
+                      orderController.orderDetails![0].itemCampaignId == null)))
           ? Center(
               child: Container(
                 width: Dimensions.webMaxWidth,

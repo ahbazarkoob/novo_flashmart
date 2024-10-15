@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/onboard/domain/repository/onboard_repository_interface.dart';
-import 'package:novo_flashMart/features/onboard/domain/service/onboard_service_interface.dart';
+import 'package:novo_instamart/features/onboard/domain/repository/onboard_repository_interface.dart';
+import 'package:novo_instamart/features/onboard/domain/service/onboard_service_interface.dart';
 
 class OnboardService implements OnboardServiceInterface {
   final OnboardRepositoryInterface onboardRepositoryInterface;

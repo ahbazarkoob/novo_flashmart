@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
 
 class UserInformationBody {
   AddressModel? from;

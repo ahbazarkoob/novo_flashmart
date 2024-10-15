@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/brands/domain/models/brands_model.dart';
-import 'package:novo_flashMart/features/brands/domain/repositories/brands_repository_interface.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/brands/domain/models/brands_model.dart';
+import 'package:novo_instamart/features/brands/domain/repositories/brands_repository_interface.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class BrandsRepository implements BrandsRepositoryInterface {
   final ApiClient apiClient;

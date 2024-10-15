@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
-import 'package:novo_flashMart/features/payment/controllers/payment_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/custom_text_field.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/payment/controllers/payment_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/custom_text_field.dart';
 
 class OfflineInfoEditDialogWidget extends StatefulWidget {
   final OfflinePayment offlinePayment;

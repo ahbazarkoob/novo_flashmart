@@ -1,7 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class CarSelectionRepo {
   final ApiClient apiClient;

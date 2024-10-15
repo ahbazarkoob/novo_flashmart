@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/flash_sale/controllers/flash_sale_controller.dart';
-import 'package:novo_flashMart/features/flash_sale/widgets/flash_sale_view_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/bad_weather_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/views/banner_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/best_reviewed_item_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/category_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/just_for_you_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/most_popular_item_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/middle_section_banner_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/special_offer_view.dart';
-import 'package:novo_flashMart/features/home/widgets/views/promotional_banner_view.dart';
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/flash_sale/controllers/flash_sale_controller.dart';
+import 'package:novo_instamart/features/flash_sale/widgets/flash_sale_view_widget.dart';
+import 'package:novo_instamart/features/home/widgets/bad_weather_widget.dart';
+import 'package:novo_instamart/features/home/widgets/views/banner_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/best_reviewed_item_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/category_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/just_for_you_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/most_popular_item_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/middle_section_banner_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/special_offer_view.dart';
+import 'package:novo_instamart/features/home/widgets/views/promotional_banner_view.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../category/controllers/category_controller.dart';
 
@@ -33,12 +33,12 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
     super.initState();
     // _checkFirstTimeScreenLoad();
     Get.find<CategoryController>;
-   bool? isFirstTime = Get.find<CategoryController>().showFirstTime();
+    bool? isFirstTime = Get.find<CategoryController>().showFirstTime();
     // bool isFirstTime =
     //     sharedPreferences.getBool(AppConstants.firstTime) ?? true;
     debugPrint('________________________________________________');
     debugPrint("$isFirstTime");
-    if (isFirstTime==true || isFirstTime==null) {
+    if (isFirstTime == true || isFirstTime == null) {
       Get.find<FlashSaleController>().getFlashSale(true, true);
       Get.find<BannerController>().getPromotionalBannerList(true);
       Get.find<ItemController>().getDiscountedItemList(true, false, 'all');
@@ -51,8 +51,8 @@ class _GroceryHomeScreenState extends State<GroceryHomeScreen> {
       Get.find<ItemController>().getReviewedItemList(true, 'all', false);
       Get.find<StoreController>().getStoreList(1, true);
     }
-   
-     Get.find<CategoryController>().disableFirstTime();
+
+    Get.find<CategoryController>().disableFirstTime();
   }
 
   // _checkFirstTimeScreenLoad() {

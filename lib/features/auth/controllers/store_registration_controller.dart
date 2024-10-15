@@ -1,14 +1,14 @@
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/location/domain/services/location_service_interface.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_data_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/store_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/services/store_registration_service_interface.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/location/domain/services/location_service_interface.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_data_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/features/auth/domain/models/store_body_model.dart';
+import 'package:novo_instamart/features/auth/domain/services/store_registration_service_interface.dart';
 
 class StoreRegistrationController extends GetxController
     implements GetxService {

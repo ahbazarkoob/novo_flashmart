@@ -1,13 +1,13 @@
 import 'package:get/get_connect/connect.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_cancellation_body.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_details_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/refund_model.dart';
-import 'package:novo_flashMart/features/order/domain/repositories/order_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/order/domain/models/order_cancellation_body.dart';
+import 'package:novo_instamart/features/order/domain/models/order_details_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/order/domain/models/refund_model.dart';
+import 'package:novo_instamart/features/order/domain/repositories/order_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class OrderRepository implements OrderRepositoryInterface {
   final ApiClient apiClient;
@@ -21,8 +21,7 @@ class OrderRepository implements OrderRepositoryInterface {
   }
 
   @override
-  Future<Response> trackOrder(String? orderID,
-      {String? contactNumber}) async {
+  Future<Response> trackOrder(String? orderID, {String? contactNumber}) async {
     return await apiClient.getData(
       '${AppConstants.trackUri}$orderID'
       '${contactNumber != null ? '&contact_number=$contactNumber' : ''}',
@@ -73,11 +72,10 @@ class OrderRepository implements OrderRepositoryInterface {
     return await _getOrderDetails(id!);
   }
 
-  Future<List<OrderDetailsModel>?> _getOrderDetails(
-      String orderID) async {
+  Future<List<OrderDetailsModel>?> _getOrderDetails(String orderID) async {
     List<OrderDetailsModel>? orderDetails;
-    Response response = await apiClient.getData(
-        '${AppConstants.orderDetailsUri}$orderID');
+    Response response =
+        await apiClient.getData('${AppConstants.orderDetailsUri}$orderID');
     if (response.statusCode == 200) {
       orderDetails = [];
       response.body.forEach((orderDetail) =>

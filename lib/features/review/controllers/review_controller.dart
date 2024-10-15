@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_body_model.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_details_model.dart';
-import 'package:novo_flashMart/features/review/domain/services/review_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/review/domain/models/review_body_model.dart';
+import 'package:novo_instamart/features/review/domain/models/review_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_details_model.dart';
+import 'package:novo_instamart/features/review/domain/services/review_service_interface.dart';
 
 class ReviewController extends GetxController implements GetxService {
   final ReviewServiceInterface reviewServiceInterface;

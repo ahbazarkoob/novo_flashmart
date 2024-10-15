@@ -1,5 +1,5 @@
-import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_medicine_model.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class ItemRepositoryInterface implements RepositoryInterface {
   // Future<dynamic> getPopularItemList(String type);

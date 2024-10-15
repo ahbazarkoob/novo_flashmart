@@ -1,11 +1,11 @@
 import 'package:get/get_connect/connect.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/parcel_instruction_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/video_content_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/why_choose_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/repositories/parcel_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/parcel/domain/models/parcel_category_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/parcel_instruction_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/video_content_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/why_choose_model.dart';
+import 'package:novo_instamart/features/parcel/domain/repositories/parcel_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class ParcelRepository implements ParcelRepositoryInterface {
   final ApiClient apiClient;

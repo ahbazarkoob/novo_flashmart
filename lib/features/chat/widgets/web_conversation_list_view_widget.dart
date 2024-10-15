@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/chat/controllers/chat_controller.dart';
-import 'package:novo_flashMart/features/chat/enums/user_type_enum.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/common/widgets/paginated_list_view.dart';
+import 'package:novo_instamart/features/chat/controllers/chat_controller.dart';
+import 'package:novo_instamart/features/chat/enums/user_type_enum.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/common/widgets/paginated_list_view.dart';
 
 class WebConversationListViewWidget extends StatefulWidget {
   final ScrollController scrollController;

@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/search/domain/repositories/search_repository_interface.dart';
-import 'package:novo_flashMart/features/search/domain/services/search_service_interface.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/search/domain/repositories/search_repository_interface.dart';
+import 'package:novo_instamart/features/search/domain/services/search_service_interface.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
 
 class SearchService implements SearchServiceInterface {
   final SearchRepositoryInterface searchRepositoryInterface;

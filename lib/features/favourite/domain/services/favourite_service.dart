@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/favourite/domain/repositories/favourite_repository_interface.dart';
-import 'package:novo_flashMart/features/favourite/domain/services/favourite_service_interface.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/favourite/domain/repositories/favourite_repository_interface.dart';
+import 'package:novo_instamart/features/favourite/domain/services/favourite_service_interface.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
 
 class FavouriteService implements FavouriteServiceInterface {
   final FavouriteRepositoryInterface favouriteRepositoryInterface;

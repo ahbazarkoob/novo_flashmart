@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/transaction_model.dart';
-import 'package:novo_flashMart/features/wallet/domain/models/wallet_filter_body_model.dart';
-import 'package:novo_flashMart/features/wallet/domain/models/fund_bonus_model.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/common/models/transaction_model.dart';
+import 'package:novo_instamart/features/wallet/domain/models/wallet_filter_body_model.dart';
+import 'package:novo_instamart/features/wallet/domain/models/fund_bonus_model.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:novo_flashMart/features/wallet/domain/services/wallet_service_interface.dart';
+import 'package:novo_instamart/features/wallet/domain/services/wallet_service_interface.dart';
 
 class WalletController extends GetxController implements GetxService {
   final WalletServiceInterface walletServiceInterface;
@@ -125,8 +125,15 @@ class WalletController extends GetxController implements GetxService {
       if (GetPlatform.isWeb) {
         html.window.open(redirectUrl, "_self");
       } else {
-        Get.toNamed(RouteHelper.getPaymentRoute('0', 0, '', 0, false, '',
-            addFundUrl: redirectUrl, ));
+        Get.toNamed(RouteHelper.getPaymentRoute(
+          '0',
+          0,
+          '',
+          0,
+          false,
+          '',
+          addFundUrl: redirectUrl,
+        ));
       }
     }
     _isLoading = false;

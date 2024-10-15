@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
 
 abstract class AuthServiceInterface {
   bool isSharedPrefNotificationActive();
@@ -18,7 +18,7 @@ abstract class AuthServiceInterface {
   //     required bool isCustomerVerificationOn});
   // Future<ResponseModel> guestLogin();
   // Future<bool> loginWithSocialMedia(SocialLogInBody socialLogInBody,
-      // int timeout, bool isCustomerVerificationOn);
+  // int timeout, bool isCustomerVerificationOn);
   // Future<bool> registerWithSocialMedia(
   //     SocialLogInBody socialLogInBody, bool isCustomerVerificationOn);
   Future<void> updateToken();

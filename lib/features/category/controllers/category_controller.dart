@@ -1,8 +1,8 @@
-import 'package:novo_flashMart/features/category/domain/models/category_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/category/domain/models/category_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/category/domain/services/category_service_interface.dart';
+import 'package:novo_instamart/features/category/domain/services/category_service_interface.dart';
 
 class CategoryController extends GetxController implements GetxService {
   final CategoryServiceInterface categoryServiceInterface;
@@ -58,11 +58,11 @@ class CategoryController extends GetxController implements GetxService {
 
   int _offset = 1;
   int get offset => _offset;
- bool? showFirstTime() {
+  bool? showFirstTime() {
     return categoryServiceInterface.showFirstTime();
   }
 
- void disableFirstTime() {
+  void disableFirstTime() {
     categoryServiceInterface.disableFirstTime();
   }
 

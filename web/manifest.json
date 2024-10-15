@@ -1,6 +1,6 @@
 {
-    "name": "Novo FlashMart",
-    "short_name": "Novo FlashMart",
+    "name": "Novo InstaMart",
+    "short_name": "Novo InstaMart",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#2A9849",

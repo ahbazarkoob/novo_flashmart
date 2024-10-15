@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/splash/domain/models/landing_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/splash/domain/repositories/splash_repository_interface.dart';
-import 'package:novo_flashMart/features/splash/domain/services/splash_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/splash/domain/models/landing_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/splash/domain/repositories/splash_repository_interface.dart';
+import 'package:novo_instamart/features/splash/domain/services/splash_service_interface.dart';
 
 class SplashService implements SplashServiceInterface {
   final SplashRepositoryInterface splashRepositoryInterface;

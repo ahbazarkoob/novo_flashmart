@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/common_condition_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_medicine_model.dart';
+import 'package:novo_instamart/features/item/domain/models/common_condition_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
 
 abstract class ItemServiceInterface {
   Future<List<Item>?> getPopularItemList(String type);

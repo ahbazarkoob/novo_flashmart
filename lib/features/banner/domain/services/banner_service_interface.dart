@@ -1,6 +1,6 @@
-import 'package:novo_flashMart/features/banner/domain/models/banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/others_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/promotional_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/others_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/promotional_banner_model.dart';
 
 abstract class BannerServiceInterface {
   Future<BannerModel?> getBannerList();

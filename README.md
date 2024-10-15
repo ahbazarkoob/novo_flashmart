@@ -1,4 +1,4 @@
-# novo_flashMart
+# novo_instamart
 
 A new Flutter application.
 

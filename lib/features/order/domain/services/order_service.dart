@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_cancellation_body.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_details_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
-import 'package:novo_flashMart/features/order/domain/repositories/order_repository_interface.dart';
-import 'package:novo_flashMart/features/order/domain/services/order_service_interface.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/order/domain/models/order_cancellation_body.dart';
+import 'package:novo_instamart/features/order/domain/models/order_details_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/order/domain/repositories/order_repository_interface.dart';
+import 'package:novo_instamart/features/order/domain/services/order_service_interface.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class OrderService implements OrderServiceInterface {
   final OrderRepositoryInterface orderRepositoryInterface;
@@ -27,8 +27,7 @@ class OrderService implements OrderServiceInterface {
   }
 
   @override
-  Future<List<OrderDetailsModel>?> getOrderDetails(
-      String orderID) async {
+  Future<List<OrderDetailsModel>?> getOrderDetails(String orderID) async {
     return await orderRepositoryInterface.get(orderID);
   }
 
@@ -68,9 +67,8 @@ class OrderService implements OrderServiceInterface {
   }
 
   @override
-  Future<Response> trackOrder(String? orderID,
-      {String? contactNumber}) async {
-    return await orderRepositoryInterface.trackOrder(orderID, 
+  Future<Response> trackOrder(String? orderID, {String? contactNumber}) async {
+    return await orderRepositoryInterface.trackOrder(orderID,
         contactNumber: contactNumber);
   }
 

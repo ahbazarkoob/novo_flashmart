@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/features/flash_sale/widgets/timer_widget.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/features/flash_sale/widgets/timer_widget.dart';
 
 class FlashSaleTimerView extends StatelessWidget {
   final Duration? eventDuration;

@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class CampaignRepositoryInterface implements RepositoryInterface {
   @override

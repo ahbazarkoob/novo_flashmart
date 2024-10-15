@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

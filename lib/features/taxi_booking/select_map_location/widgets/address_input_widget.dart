@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class AddressInputWidget extends StatelessWidget {
   final String? logo;
@@ -45,8 +45,7 @@ class AddressInputWidget extends StatelessWidget {
                   vertical: Dimensions.paddingSizeSmall,
                   horizontal: Dimensions.paddingSizeSmall),
               decoration: BoxDecoration(
-                color:
-                    Theme.of(context).colorScheme.surface.withOpacity(0.5),
+                color: Theme.of(context).colorScheme.surface.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                 // boxShadow: [BoxShadow(color: Col ors.grey[Get.isDarkMode ? 800 : 200], spreadRadius: 1, blurRadius: 5)],
               ),

@@ -1,14 +1,14 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/store/domain/models/cart_suggested_item_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/recommended_product_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_banner_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/features/store/domain/repositories/store_repository_interface.dart';
-import 'package:novo_flashMart/features/store/domain/services/store_service_interface.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
+import 'package:novo_instamart/features/store/domain/models/cart_suggested_item_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/store/domain/models/recommended_product_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_banner_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/features/store/domain/repositories/store_repository_interface.dart';
+import 'package:novo_instamart/features/store/domain/services/store_service_interface.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
 
 class StoreService implements StoreServiceInterface {
   final StoreRepositoryInterface storeRepositoryInterface;

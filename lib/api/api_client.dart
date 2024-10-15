@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
-import 'package:novo_flashMart/api/api_checker.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/common/models/error_response.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_checker.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/common/models/error_response.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,11 +43,9 @@ class ApiClient extends GetxService {
     updateHeader(
         token,
         addressModel?.zoneIds,
-        // [1],
         addressModel?.areaIds,
         sharedPreferences.getString(AppConstants.languageCode),
         moduleID,
-        // 1,
         addressModel?.latitude,
         addressModel?.longitude);
   }
@@ -147,7 +145,7 @@ class ApiClient extends GetxService {
           http.MultipartRequest('POST', Uri.parse(appBaseUrl + uri));
       request.headers.addAll({
         'Content-Type': 'application/json; charset=UTF-8',
-        AppConstants.zoneId: '2',
+        AppConstants.zoneId: '1',
         AppConstants.moduleId:
             '${ModuleModel.fromJson(jsonDecode(sharedPreferences.getString(AppConstants.cacheModuleId)!)).id}',
         AppConstants.localizationKey: AppConstants.languages[0].languageCode!,

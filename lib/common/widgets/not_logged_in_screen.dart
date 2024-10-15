@@ -1,13 +1,13 @@
-import 'package:novo_flashMart/features/auth/screens/sign_in_screen.dart';
-import 'package:novo_flashMart/features/order/controllers/order_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/features/auth/screens/sign_in_screen.dart';
+import 'package:novo_instamart/features/order/controllers/order_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
 
 class NotLoggedInScreen extends StatelessWidget {
   final Function(bool success) callBack;

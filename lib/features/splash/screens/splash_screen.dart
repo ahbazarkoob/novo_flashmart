@@ -1,19 +1,19 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/common/widgets/no_internet_screen.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/common/widgets/no_internet_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -62,8 +62,8 @@ class SplashScreenState extends State<SplashScreen> {
 
     Get.find<SplashController>().initSharedData();
     if ((
-      // AuthHelper.getGuestId().isNotEmpty ||
-       AuthHelper.isLoggedIn()) &&
+            // AuthHelper.getGuestId().isNotEmpty ||
+            AuthHelper.isLoggedIn()) &&
         Get.find<SplashController>().cacheModule != null) {
       Get.find<CartController>().getCartDataOnline();
     }
@@ -139,9 +139,8 @@ class SplashScreenState extends State<SplashScreen> {
                   //         .navigateToLocationScreen('splash', offNamed: true);
                   //   }
                   // } else {
-                    Get.offNamed(
-                        RouteHelper.getSignInRoute(RouteHelper.splash));
-                 // }
+                  Get.offNamed(RouteHelper.getSignInRoute(RouteHelper.splash));
+                  // }
                 }
               }
             }

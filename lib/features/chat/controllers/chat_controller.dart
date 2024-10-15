@@ -1,17 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/features/chat/enums/user_type_enum.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/features/chat/domain/models/chat_model.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/chat/domain/services/chat_service_interface.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/features/chat/enums/user_type_enum.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/features/chat/domain/models/chat_model.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/chat/domain/services/chat_service_interface.dart';
 
 class ChatController extends GetxController implements GetxService {
   final ChatServiceInterface chatServiceInterface;

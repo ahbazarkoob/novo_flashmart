@@ -1,6 +1,6 @@
-import 'package:novo_flashMart/features/home/domain/models/cashback_model.dart';
-import 'package:novo_flashMart/features/home/domain/repositories/home_repository_interface.dart';
-import 'package:novo_flashMart/features/home/domain/services/home_service_interface.dart';
+import 'package:novo_instamart/features/home/domain/models/cashback_model.dart';
+import 'package:novo_instamart/features/home/domain/repositories/home_repository_interface.dart';
+import 'package:novo_instamart/features/home/domain/services/home_service_interface.dart';
 
 class HomeService implements HomeServiceInterface {
   final HomeRepositoryInterface homeRepositoryInterface;

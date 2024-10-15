@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:novo_flashMart/features/verification/domein/reposotories/verification_repository_interface.dart';
-import 'package:novo_flashMart/features/verification/domein/services/verification_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/auth_repository_interface.dart';
+import 'package:novo_instamart/features/verification/domein/reposotories/verification_repository_interface.dart';
+import 'package:novo_instamart/features/verification/domein/services/verification_service_interface.dart';
 
 class VerificationService implements VerificationServiceInterface {
   final VerificationRepositoryInterface verificationRepoInterface;

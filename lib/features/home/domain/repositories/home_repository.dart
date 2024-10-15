@@ -1,7 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/home/domain/models/cashback_model.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/home/domain/models/cashback_model.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'home_repository_interface.dart';
 
 class HomeRepository implements HomeRepositoryInterface {

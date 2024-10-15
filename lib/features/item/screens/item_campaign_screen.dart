@@ -1,11 +1,11 @@
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/item_view.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/item_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
 
 class ItemCampaignScreen extends StatefulWidget {
   final bool isJustForYou;

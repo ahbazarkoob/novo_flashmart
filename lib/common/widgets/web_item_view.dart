@@ -1,14 +1,14 @@
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/home/widgets/web/web_store_shimmer_widget.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/common/widgets/item_shimmer.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/home/widgets/web/web_store_shimmer_widget.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/item_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/web_item_widget.dart';
+import 'package:novo_instamart/common/widgets/web_item_widget.dart';
 
 class WebItemsView extends StatefulWidget {
   final List<Item?>? items;

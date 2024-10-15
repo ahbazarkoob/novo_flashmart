@@ -1,8 +1,8 @@
 import 'package:get/get_connect.dart';
-import 'package:novo_flashMart/common/models/transaction_model.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/loyalty/domain/repositories/loyalty_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/common/models/transaction_model.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/loyalty/domain/repositories/loyalty_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class LoyaltyRepository implements LoyaltyRepositoryInterface {
   final ApiClient apiClient;

@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
 
 class AuthHelper {
   // static bool isGuestLoggedIn() {

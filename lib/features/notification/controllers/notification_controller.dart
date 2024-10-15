@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/features/notification/domain/models/notification_model.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_model.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/notification/domain/service/notification_service_interface.dart';
+import 'package:novo_instamart/features/notification/domain/service/notification_service_interface.dart';
 
 class NotificationController extends GetxController implements GetxService {
   final NotificationServiceInterface notificationServiceInterface;

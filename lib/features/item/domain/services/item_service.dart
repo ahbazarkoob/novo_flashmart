@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/common_condition_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/item/domain/repositories/item_repository_interface.dart';
-import 'package:novo_flashMart/features/item/domain/services/item_service_interface.dart';
-import 'package:novo_flashMart/helper/module_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_medicine_model.dart';
+import 'package:novo_instamart/features/item/domain/models/common_condition_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/item/domain/repositories/item_repository_interface.dart';
+import 'package:novo_instamart/features/item/domain/services/item_service_interface.dart';
+import 'package:novo_instamart/helper/module_helper.dart';
 
 class ItemService implements ItemServiceInterface {
   final ItemRepositoryInterface itemRepositoryInterface;

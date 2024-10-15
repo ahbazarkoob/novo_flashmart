@@ -1,14 +1,14 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_data_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/store_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/deliveryman_registration_repository_interface.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/store_registration_repository_interface.dart';
-import 'package:novo_flashMart/features/auth/domain/services/store_registration_service_interface.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_data_model.dart';
+import 'package:novo_instamart/features/auth/domain/models/store_body_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/deliveryman_registration_repository_interface.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/store_registration_repository_interface.dart';
+import 'package:novo_instamart/features/auth/domain/services/store_registration_service_interface.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 
 class StoreRegistrationService implements StoreRegistrationServiceInterface {
   final StoreRegistrationRepositoryInterface storeRegistrationRepoInterface;

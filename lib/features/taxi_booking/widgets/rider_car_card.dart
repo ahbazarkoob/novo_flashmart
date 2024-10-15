@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/controllers/theme_controller.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/ripple_button.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/controllers/theme_controller.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/ripple_button.dart';
 
 class RiderCarCard extends StatelessWidget {
   final Vehicles vehicle;

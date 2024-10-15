@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/loyalty/domain/services/loyalty_service_interface.dart';
-import 'package:novo_flashMart/common/models/transaction_model.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/loyalty/domain/services/loyalty_service_interface.dart';
+import 'package:novo_instamart/common/models/transaction_model.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
 
 class LoyaltyController extends GetxController implements GetxService {
   final LoyaltyServiceInterface loyaltyServiceInterface;

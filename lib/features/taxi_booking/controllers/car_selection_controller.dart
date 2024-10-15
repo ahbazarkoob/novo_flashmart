@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_checker.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/brand_model.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/features/taxi_booking/repo/car_selection_repo.dart';
+import 'package:novo_instamart/api/api_checker.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/taxi_booking/models/brand_model.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/features/taxi_booking/repo/car_selection_repo.dart';
 
 /*receive car list based on hourly and km , also filter car and select car function will be placed here*/
 class CarSelectionController extends GetxController implements GetxService {

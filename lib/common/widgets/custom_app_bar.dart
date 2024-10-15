@@ -1,10 +1,10 @@
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/cart_widget.dart';
-import 'package:novo_flashMart/common/widgets/veg_filter_widget.dart';
-import 'package:novo_flashMart/common/widgets/web_menu_bar.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/cart_widget.dart';
+import 'package:novo_instamart/common/widgets/veg_filter_widget.dart';
+import 'package:novo_instamart/common/widgets/web_menu_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:get/get_connect/connect.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
-import 'package:novo_flashMart/features/payment/domain/repositories/payment_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/payment/domain/models/offline_method_model.dart';
+import 'package:novo_instamart/features/payment/domain/repositories/payment_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class PaymentRepository implements PaymentRepositoryInterface {
   final ApiClient apiClient;

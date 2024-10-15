@@ -1,5 +1,5 @@
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/interfaces/repository_interface.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/interfaces/repository_interface.dart';
 
 abstract class CartRepositoryInterface<OnlineCart>
     extends RepositoryInterface<OnlineCart> {

@@ -1,19 +1,19 @@
-import 'package:novo_flashMart/features/location/controllers/location_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/features/location/controllers/location_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:novo_flashMart/features/location/widgets/serach_location_widget.dart';
+import 'package:novo_instamart/features/location/widgets/serach_location_widget.dart';
 
 class PickMapScreen extends StatefulWidget {
   final bool fromSignUp;
@@ -248,7 +248,7 @@ class _PickMapScreenState extends State<PickMapScreen> {
 
                                         if (widget.fromLandingPage) {
                                           if (
-                                            // !AuthHelper.isGuestLoggedIn() &&
+                                              // !AuthHelper.isGuestLoggedIn() &&
                                               !AuthHelper.isLoggedIn()) {
                                             // Get.find<AuthController>()
                                             //     .guestLogin()
@@ -268,7 +268,6 @@ class _PickMapScreenState extends State<PickMapScreen> {
                                             //     );
                                             //   }
                                             // });
-                                          
                                           } else {
                                             // if(Get.isDialogOpen!) {
                                             //   Get.back();

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/taxi_booking/controllers/booking_checkout_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/controllers/theme_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/widgets/pick_and_destination_address_info.dart';
+import 'package:novo_instamart/features/taxi_booking/controllers/booking_checkout_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/controllers/theme_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/widgets/dotted_line.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/widgets/pick_and_destination_address_info.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class BookingCompleteInfo extends StatelessWidget {

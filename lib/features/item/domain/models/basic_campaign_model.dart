@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
 
 class BasicCampaignModel {
   int? id;

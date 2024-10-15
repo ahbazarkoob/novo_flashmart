@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/coupon/domain/models/coupon_model.dart';
-import 'package:novo_flashMart/features/coupon/domain/repositories/coupon_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/coupon/domain/models/coupon_model.dart';
+import 'package:novo_instamart/features/coupon/domain/repositories/coupon_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class CouponRepository implements CouponRepositoryInterface {
   final ApiClient apiClient;

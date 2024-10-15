@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
 
 class PlaceOrderBodyModel {
   List<OnlineCart>? _cart;

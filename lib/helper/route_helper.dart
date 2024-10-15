@@ -1,89 +1,89 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:meta_seo/meta_seo.dart';
-import 'package:novo_flashMart/features/brands/screens/brands_product_screen.dart';
-import 'package:novo_flashMart/features/brands/screens/brands_screen.dart';
-import 'package:novo_flashMart/features/loyalty/screens/loyalty_screen.dart';
-import 'package:novo_flashMart/features/refer_and_earn/screens/refer_and_earn_screen.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/auth/domain/models/social_log_in_body.dart';
-import 'package:novo_flashMart/features/profile/domain/models/user_information_body.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/basic_campaign_model.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/features/order/domain/models/order_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/features/taxi_booking/models/vehicle_model.dart';
-import 'package:novo_flashMart/features/address/screens/add_address_screen.dart';
-import 'package:novo_flashMart/features/address/screens/address_screen.dart';
-import 'package:novo_flashMart/features/auth/screens/delivery_man_registration_screen.dart';
-import 'package:novo_flashMart/features/auth/screens/sign_in_screen.dart';
-import 'package:novo_flashMart/features/auth/screens/sign_up_screen.dart';
-import 'package:novo_flashMart/features/auth/screens/store_registration_screen.dart';
-import 'package:novo_flashMart/features/category/screens/category_screen.dart';
-import 'package:novo_flashMart/features/location/screens/map_screen.dart';
-import 'package:novo_flashMart/features/store/screens/campaign_screen.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/html_type.dart';
-import 'package:novo_flashMart/common/widgets/image_viewer_screen.dart';
-import 'package:novo_flashMart/common/widgets/not_found.dart';
-import 'package:novo_flashMart/features/cart/screens/cart_screen.dart';
-import 'package:novo_flashMart/features/category/screens/category_item_screen.dart';
-import 'package:novo_flashMart/features/chat/screens/chat_screen.dart';
-import 'package:novo_flashMart/features/chat/screens/conversation_screen.dart';
-import 'package:novo_flashMart/features/checkout/screens/checkout_screen.dart';
-import 'package:novo_flashMart/features/payment/screens/offline_payment_screen.dart';
-import 'package:novo_flashMart/features/payment/screens/payment_screen.dart';
-import 'package:novo_flashMart/features/payment/screens/payment_webview_screen.dart';
-import 'package:novo_flashMart/features/coupon/screens/coupon_screen.dart';
-import 'package:novo_flashMart/features/dashboard/screens/dashboard_screen.dart';
-import 'package:novo_flashMart/features/favourite/screens/favourite_screen.dart';
-import 'package:novo_flashMart/features/flash_sale/screens/flash_sale_details_screen.dart';
-import 'package:novo_flashMart/features/item/screens/item_campaign_screen.dart';
-import 'package:novo_flashMart/features/item/screens/item_details_screen.dart';
-import 'package:novo_flashMart/features/item/screens/popular_item_screen.dart';
-import 'package:novo_flashMart/features/verification/screens/new_pass_screen.dart';
-import 'package:novo_flashMart/features/html/screens/html_viewer_screen.dart';
-import 'package:novo_flashMart/features/interest/screens/interest_screen.dart';
-import 'package:novo_flashMart/features/language/screens/language_screen.dart';
-import 'package:novo_flashMart/features/location/screens/access_location_screen.dart';
-import 'package:novo_flashMart/features/location/screens/pick_map_screen.dart';
-import 'package:novo_flashMart/features/notification/screens/notification_screen.dart';
-import 'package:novo_flashMart/features/onboard/screens/onboarding_screen.dart';
-import 'package:novo_flashMart/features/order/screens/guest_track_order_screen.dart';
-import 'package:novo_flashMart/features/order/screens/order_details_screen.dart';
-import 'package:novo_flashMart/features/order/screens/order_screen.dart';
-import 'package:novo_flashMart/features/order/screens/order_tracking_screen.dart';
-import 'package:novo_flashMart/features/order/screens/refund_request_screen.dart';
-import 'package:novo_flashMart/features/parcel/screens/parcel_category_screen.dart';
-import 'package:novo_flashMart/features/parcel/screens/parcel_location_screen.dart';
-import 'package:novo_flashMart/features/parcel/screens/parcel_request_screen.dart';
-import 'package:novo_flashMart/features/profile/screens/profile_screen.dart';
-import 'package:novo_flashMart/features/profile/screens/update_profile_screen.dart';
-import 'package:novo_flashMart/features/store/screens/all_store_screen.dart';
-import 'package:novo_flashMart/features/store/screens/store_item_search_screen.dart';
-import 'package:novo_flashMart/features/store/screens/store_screen.dart';
-import 'package:novo_flashMart/features/review/screens/review_screen.dart';
-import 'package:novo_flashMart/features/search/screens/search_screen.dart';
-import 'package:novo_flashMart/features/splash/screens/splash_screen.dart';
-import 'package:novo_flashMart/features/support/screens/support_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/booking_checkout_screen/booking_checkout_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/car_details_screen/car_details_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/order_status_screen/order_status_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_car_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/select_map_location/select_map_location.dart';
-import 'package:novo_flashMart/features/taxi_booking/taxi_coupon_screen/taxi_coupon_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/trip_completed_confermation/trip_completed_confirmation_screen.dart';
-import 'package:novo_flashMart/features/taxi_booking/trip_history/trip_history_screen.dart';
-import 'package:novo_flashMart/features/update/screens/update_screen.dart';
+import 'package:novo_instamart/features/brands/screens/brands_product_screen.dart';
+import 'package:novo_instamart/features/brands/screens/brands_screen.dart';
+import 'package:novo_instamart/features/loyalty/screens/loyalty_screen.dart';
+import 'package:novo_instamart/features/refer_and_earn/screens/refer_and_earn_screen.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/auth/domain/models/social_log_in_body.dart';
+import 'package:novo_instamart/features/profile/domain/models/user_information_body.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_campaign_model.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/features/order/domain/models/order_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/parcel_category_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/taxi_booking/models/vehicle_model.dart';
+import 'package:novo_instamart/features/address/screens/add_address_screen.dart';
+import 'package:novo_instamart/features/address/screens/address_screen.dart';
+import 'package:novo_instamart/features/auth/screens/delivery_man_registration_screen.dart';
+import 'package:novo_instamart/features/auth/screens/sign_in_screen.dart';
+import 'package:novo_instamart/features/auth/screens/sign_up_screen.dart';
+import 'package:novo_instamart/features/auth/screens/store_registration_screen.dart';
+import 'package:novo_instamart/features/category/screens/category_screen.dart';
+import 'package:novo_instamart/features/location/screens/map_screen.dart';
+import 'package:novo_instamart/features/store/screens/campaign_screen.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/html_type.dart';
+import 'package:novo_instamart/common/widgets/image_viewer_screen.dart';
+import 'package:novo_instamart/common/widgets/not_found.dart';
+import 'package:novo_instamart/features/cart/screens/cart_screen.dart';
+import 'package:novo_instamart/features/category/screens/category_item_screen.dart';
+import 'package:novo_instamart/features/chat/screens/chat_screen.dart';
+import 'package:novo_instamart/features/chat/screens/conversation_screen.dart';
+import 'package:novo_instamart/features/checkout/screens/checkout_screen.dart';
+import 'package:novo_instamart/features/payment/screens/offline_payment_screen.dart';
+import 'package:novo_instamart/features/payment/screens/payment_screen.dart';
+import 'package:novo_instamart/features/payment/screens/payment_webview_screen.dart';
+import 'package:novo_instamart/features/coupon/screens/coupon_screen.dart';
+import 'package:novo_instamart/features/dashboard/screens/dashboard_screen.dart';
+import 'package:novo_instamart/features/favourite/screens/favourite_screen.dart';
+import 'package:novo_instamart/features/flash_sale/screens/flash_sale_details_screen.dart';
+import 'package:novo_instamart/features/item/screens/item_campaign_screen.dart';
+import 'package:novo_instamart/features/item/screens/item_details_screen.dart';
+import 'package:novo_instamart/features/item/screens/popular_item_screen.dart';
+import 'package:novo_instamart/features/verification/screens/new_pass_screen.dart';
+import 'package:novo_instamart/features/html/screens/html_viewer_screen.dart';
+import 'package:novo_instamart/features/interest/screens/interest_screen.dart';
+import 'package:novo_instamart/features/language/screens/language_screen.dart';
+import 'package:novo_instamart/features/location/screens/access_location_screen.dart';
+import 'package:novo_instamart/features/location/screens/pick_map_screen.dart';
+import 'package:novo_instamart/features/notification/screens/notification_screen.dart';
+import 'package:novo_instamart/features/onboard/screens/onboarding_screen.dart';
+import 'package:novo_instamart/features/order/screens/guest_track_order_screen.dart';
+import 'package:novo_instamart/features/order/screens/order_details_screen.dart';
+import 'package:novo_instamart/features/order/screens/order_screen.dart';
+import 'package:novo_instamart/features/order/screens/order_tracking_screen.dart';
+import 'package:novo_instamart/features/order/screens/refund_request_screen.dart';
+import 'package:novo_instamart/features/parcel/screens/parcel_category_screen.dart';
+import 'package:novo_instamart/features/parcel/screens/parcel_location_screen.dart';
+import 'package:novo_instamart/features/parcel/screens/parcel_request_screen.dart';
+import 'package:novo_instamart/features/profile/screens/profile_screen.dart';
+import 'package:novo_instamart/features/profile/screens/update_profile_screen.dart';
+import 'package:novo_instamart/features/store/screens/all_store_screen.dart';
+import 'package:novo_instamart/features/store/screens/store_item_search_screen.dart';
+import 'package:novo_instamart/features/store/screens/store_screen.dart';
+import 'package:novo_instamart/features/review/screens/review_screen.dart';
+import 'package:novo_instamart/features/search/screens/search_screen.dart';
+import 'package:novo_instamart/features/splash/screens/splash_screen.dart';
+import 'package:novo_instamart/features/support/screens/support_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/booking_checkout_screen/booking_checkout_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/car_details_screen/car_details_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/order_status_screen/order_status_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/select_car_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/select_map_location/select_map_location.dart';
+import 'package:novo_instamart/features/taxi_booking/taxi_coupon_screen/taxi_coupon_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/trip_completed_confermation/trip_completed_confirmation_screen.dart';
+import 'package:novo_instamart/features/taxi_booking/trip_history/trip_history_screen.dart';
+import 'package:novo_instamart/features/update/screens/update_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/wallet/screens/wallet_screen.dart';
+import 'package:novo_instamart/features/wallet/screens/wallet_screen.dart';
 
 import '../features/auth/screens/otp_screen.dart';
 
@@ -180,6 +180,7 @@ class RouteHelper {
       String? number, String? token, String page, String pass) {
     return '$verification?page=$page&number=$number&token=$token&pass=$pass';
   }
+
   static String getOtpVerifyRoute() => otp;
 
   static String getAccessLocationRoute(String page) =>
@@ -241,7 +242,7 @@ class RouteHelper {
   static String getPaymentRoute(String id, int? user, String? type,
           double amount, bool? codDelivery, String? paymentMethod,
           {
-            // required String guestId,
+          // required String guestId,
           String? contactNumber,
           String? addFundUrl}) =>
       '$payment?id=$id&user=$user&type=$type&amount=$amount&cod-delivery=$codDelivery&add-fund-url=$addFundUrl&payment-method=$paymentMethod&number=$contactNumber';
@@ -442,9 +443,7 @@ class RouteHelper {
               backFromThis: Get.parameters['page'] != splash &&
                   Get.parameters['page'] != onBoarding,
             )),
-    GetPage(name: otp, page:()=>  const OTPVerify(
-
-    )),
+    GetPage(name: otp, page: () => const OTPVerify()),
     GetPage(name: signUp, page: () => const SignUpScreen()),
     // GetPage(
     //     name: verification,
@@ -586,7 +585,7 @@ class RouteHelper {
     //                     ? Get.find<AuthController>().getGuestNumber()
     //                     : null,
     //           ),
-            // )),
+    // )),
     GetPage(
         name: payment,
         page: () {

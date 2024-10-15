@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
 
 class WebStoreWiseBannerViewWidget extends StatelessWidget {
   const WebStoreWiseBannerViewWidget({super.key});

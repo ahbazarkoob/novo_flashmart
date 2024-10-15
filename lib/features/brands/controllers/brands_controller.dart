@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/brands/domain/models/brands_model.dart';
-import 'package:novo_flashMart/features/brands/domain/services/brands_service_interface.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/brands/domain/models/brands_model.dart';
+import 'package:novo_instamart/features/brands/domain/services/brands_service_interface.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
 
 class BrandsController extends GetxController implements GetxService {
   final BrandsServiceInterface brandsServiceInterface;

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/custom_asset_image_widget.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/cart_count_view.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/discount_tag.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
-import 'package:novo_flashMart/common/widgets/not_available_widget.dart';
-import 'package:novo_flashMart/common/widgets/organic_tag.dart';
+import 'package:novo_instamart/common/widgets/custom_asset_image_widget.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/cart_count_view.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/discount_tag.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/common/widgets/not_available_widget.dart';
+import 'package:novo_instamart/common/widgets/organic_tag.dart';
 
 class ItemCard extends StatelessWidget {
   final Item item;
@@ -254,38 +254,42 @@ class ItemCard extends StatelessWidget {
                               Column(
                                 children: [
                                   item.discount != null && item.discount! > 0
-                                  ? Text(
-                                      PriceConverter.convertPrice(
-                                          Get.find<ItemController>()
-                                              .getStartingPrice(item)),
-                                      style: figTreeMedium.copyWith(
-                                        fontSize: Dimensions.fontSizeExtraSmall,
-                                        color: Theme.of(context).disabledColor,
-                                        decoration: TextDecoration.lineThrough,
-                                      ),
-                                      textDirection: TextDirection.ltr,
-                                    )
-                                  : const SizedBox(),
-                              // SizedBox(height: item.discount != null && item.discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
-                              
-                              Text(
-                                PriceConverter.convertPrice(
-                                  Get.find<ItemController>().getStartingPrice(item),
-                                  discount: item.discount,
-                                  discountType: item.discountType,
-                                ),
-                                textDirection: TextDirection.ltr,
-                                style: figTreeBold,
-                              ),
+                                      ? Text(
+                                          PriceConverter.convertPrice(
+                                              Get.find<ItemController>()
+                                                  .getStartingPrice(item)),
+                                          style: figTreeMedium.copyWith(
+                                            fontSize:
+                                                Dimensions.fontSizeExtraSmall,
+                                            color:
+                                                Theme.of(context).disabledColor,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                          ),
+                                          textDirection: TextDirection.ltr,
+                                        )
+                                      : const SizedBox(),
+                                  // SizedBox(height: item.discount != null && item.discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
+
+                                  Text(
+                                    PriceConverter.convertPrice(
+                                      Get.find<ItemController>()
+                                          .getStartingPrice(item),
+                                      discount: item.discount,
+                                      discountType: item.discountType,
+                                    ),
+                                    textDirection: TextDirection.ltr,
+                                    style: figTreeBold,
+                                  ),
                                 ],
                               ),
                               const Expanded(child: SizedBox()),
                               isShop
-                      ? const SizedBox()
-                      : CartCountView(
-                            item: item,
-                          )
-                         ],
+                                  ? const SizedBox()
+                                  : CartCountView(
+                                      item: item,
+                                    )
+                            ],
                           ),
 
                           const SizedBox(
@@ -293,27 +297,27 @@ class ItemCard extends StatelessWidget {
                         ]),
                     isShop
                         ? CartCountView(
-                              item: item,
-                              child: Container(
-                                height: 35,
-                                width: 38,
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context).primaryColor,
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft:
-                                        Radius.circular(Dimensions.radiusLarge),
-                                    bottomRight:
-                                        Radius.circular(Dimensions.radiusLarge),
-                                  ),
+                            item: item,
+                            child: Container(
+                              height: 35,
+                              width: 38,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: const BorderRadius.only(
+                                  topLeft:
+                                      Radius.circular(Dimensions.radiusLarge),
+                                  bottomRight:
+                                      Radius.circular(Dimensions.radiusLarge),
                                 ),
-                                child: Icon(
-                                    isPopularItemCart
-                                        ? Icons.add_shopping_cart
-                                        : Icons.add,
-                                    color: Theme.of(context).cardColor,
-                                    size: 20),
                               ),
-                            )
+                              child: Icon(
+                                  isPopularItemCart
+                                      ? Icons.add_shopping_cart
+                                      : Icons.add,
+                                  color: Theme.of(context).cardColor,
+                                  size: 20),
+                            ),
+                          )
                         : const SizedBox(),
                   ]),
                 ),

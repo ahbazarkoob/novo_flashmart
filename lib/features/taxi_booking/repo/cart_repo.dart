@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CartRepo {
@@ -54,15 +54,11 @@ class CartRepo {
   }
 
   Future<Response> addToCartOnline(OnlineCart cart) async {
-    return apiClient.postData(
-        AppConstants.addCartUri,
-        cart.toJson());
+    return apiClient.postData(AppConstants.addCartUri, cart.toJson());
   }
 
   Future<Response> updateCartOnline(OnlineCart cart) async {
-    return apiClient.postData(
-        AppConstants.updateCartUri,
-        cart.toJson());
+    return apiClient.postData(AppConstants.updateCartUri, cart.toJson());
   }
 
   Future<Response> updateCartQuantityOnline(
@@ -72,9 +68,7 @@ class CartRepo {
       "price": price,
       "quantity": quantity,
     };
-    return apiClient.postData(
-        AppConstants.updateCartUri,
-        data);
+    return apiClient.postData(AppConstants.updateCartUri, data);
   }
 
   Future<Response> getCartDataOnline() async {
@@ -93,12 +87,11 @@ class CartRepo {
   }
 
   Future<Response> removeCartItemOnline(int cartId) async {
-    return apiClient.deleteData(
-        '${AppConstants.removeItemCartUri}?cart_id=$cartId');
+    return apiClient
+        .deleteData('${AppConstants.removeItemCartUri}?cart_id=$cartId');
   }
 
   Future<Response> clearCartOnline() async {
-    return apiClient.deleteData(
-        AppConstants.removeAllCartUri);
+    return apiClient.deleteData(AppConstants.removeAllCartUri);
   }
 }

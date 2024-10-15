@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:image_compression_flutter/image_compression_flutter.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
 
 abstract class ChatServiceInterface {
   Future<ConversationsModel?> getConversationList(int offset, String type);

@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/chat/domain/models/conversation_model.dart';
-import 'package:novo_flashMart/features/chat/domain/repositories/chat_repository_interface.dart';
-import 'package:novo_flashMart/features/chat/enums/user_type_enum.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/chat/domain/models/conversation_model.dart';
+import 'package:novo_instamart/features/chat/domain/repositories/chat_repository_interface.dart';
+import 'package:novo_instamart/features/chat/enums/user_type_enum.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class ChatRepository implements ChatRepositoryInterface {
   final ApiClient apiClient;

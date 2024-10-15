@@ -1,8 +1,8 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_body_model.dart';
-import 'package:novo_flashMart/features/review/domain/models/review_model.dart';
-import 'package:novo_flashMart/features/review/domain/repositories/review_repository_interface.dart';
-import 'package:novo_flashMart/features/review/domain/services/review_service_interface.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/review/domain/models/review_body_model.dart';
+import 'package:novo_instamart/features/review/domain/models/review_model.dart';
+import 'package:novo_instamart/features/review/domain/repositories/review_repository_interface.dart';
+import 'package:novo_instamart/features/review/domain/services/review_service_interface.dart';
 
 class ReviewService implements ReviewServiceInterface {
   final ReviewRepositoryInterface reviewRepositoryInterface;

@@ -1,12 +1,12 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/checkout/domain/repositories/checkout_repository_interface.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/parcel_category_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/video_content_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/models/why_choose_model.dart';
-import 'package:novo_flashMart/features/parcel/domain/repositories/parcel_repository_interface.dart';
-import 'package:novo_flashMart/features/parcel/domain/services/parcel_service_interface.dart';
-import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/checkout/domain/repositories/checkout_repository_interface.dart';
+import 'package:novo_instamart/features/parcel/domain/models/parcel_category_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/video_content_model.dart';
+import 'package:novo_instamart/features/parcel/domain/models/why_choose_model.dart';
+import 'package:novo_instamart/features/parcel/domain/repositories/parcel_repository_interface.dart';
+import 'package:novo_instamart/features/parcel/domain/services/parcel_service_interface.dart';
+import 'package:novo_instamart/features/payment/domain/models/offline_method_model.dart';
 
 import '../models/parcel_instruction_model.dart';
 

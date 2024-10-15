@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' hide Banner;
 import 'package:get/get.dart';
-import 'package:novo_flashMart/common/widgets/corner_banner/banner.dart';
-import 'package:novo_flashMart/common/widgets/corner_banner/positioned_banner.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/corner_banner/banner.dart';
+import 'package:novo_instamart/common/widgets/corner_banner/positioned_banner.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 /// A [CornerBanner] that displays "Built with" and the Flutter logo, to
 /// let the world know that your product is built with Flutter.

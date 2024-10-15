@@ -1,7 +1,7 @@
-import 'package:novo_flashMart/features/item/domain/models/basic_campaign_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/item/domain/repositories/campaign_repository_interface.dart';
-import 'package:novo_flashMart/features/item/domain/services/campaign_service_interface.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_campaign_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/item/domain/repositories/campaign_repository_interface.dart';
+import 'package:novo_instamart/features/item/domain/services/campaign_service_interface.dart';
 
 class CampaignService implements CampaignServiceInterface {
   final CampaignRepositoryInterface campaignRepositoryInterface;

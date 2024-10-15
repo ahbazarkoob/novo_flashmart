@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/home/widgets/components/item_that_you_love_card_widget.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/add_favourite_view.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/discount_tag.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/arrow_icon_button.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/home/widgets/components/item_that_you_love_card_widget.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/add_favourite_view.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/discount_tag.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/arrow_icon_button.dart';
 
 class WebItemThatYouLoveViewWidget extends StatefulWidget {
   const WebItemThatYouLoveViewWidget({super.key});
@@ -26,7 +26,7 @@ class WebItemThatYouLoveViewWidget extends StatefulWidget {
 class _WebItemThatYouLoveViewWidgetState
     extends State<WebItemThatYouLoveViewWidget> {
   final PageController _pageController =
-  PageController(viewportFraction: 0.25, initialPage: 0);
+      PageController(viewportFraction: 0.25, initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -48,31 +48,30 @@ class _WebItemThatYouLoveViewWidgetState
                               fontSize: Dimensions.fontSizeLarge)),
                     ),
                     !isShop
-                        ?
-                    SizedBox(
-                      height: 400,
-                      child: PageView.builder(
-                        itemCount: recommendItems.length,
-                        controller: _pageController,
-                        // carouselController: carouselController,
-                        // options: carousel_slider.CarouselOptions(
-                        //   height: 400,
-                        //   enlargeCenterPage: true,
-                        //   disableCenter: true,
-                        //   viewportFraction: .25,
-                        //   enlargeFactor: 0.2,
-                        //   onPageChanged: (index, reason) {},
-                        // ),
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(
-                                bottom: Dimensions.paddingSizeDefault),
-                            child: ItemThatYouLoveCard(
-                                item: recommendItems[index]),
-                          );
-                        },
-                      ),
-                    )
+                        ? SizedBox(
+                            height: 400,
+                            child: PageView.builder(
+                              itemCount: recommendItems.length,
+                              controller: _pageController,
+                              // carouselController: carouselController,
+                              // options: carousel_slider.CarouselOptions(
+                              //   height: 400,
+                              //   enlargeCenterPage: true,
+                              //   disableCenter: true,
+                              //   viewportFraction: .25,
+                              //   enlargeFactor: 0.2,
+                              //   onPageChanged: (index, reason) {},
+                              // ),
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: Dimensions.paddingSizeDefault),
+                                  child: ItemThatYouLoveCard(
+                                      item: recommendItems[index]),
+                                );
+                              },
+                            ),
+                          )
                         : SizedBox(
                             height: 285,
                             child: ListView.builder(
@@ -309,8 +308,7 @@ class _WebItemThatYouLoveViewWidgetState
                     right: 0,
                     child: ArrowIconButton(
                       onTap: () {
-                        if (_pageController.page! <
-                            recommendItems.length - 1) {
+                        if (_pageController.page! < recommendItems.length - 1) {
                           _pageController.nextPage(
                             duration: const Duration(milliseconds: 500),
                             curve: Curves.ease,
@@ -829,7 +827,7 @@ class WebItemThatYouLoveShimmerView extends StatelessWidget {
           //   viewportFraction: .25,
           //   enlargeFactor: 0.2,
           // ),
-          itemBuilder: ( context,  index) {
+          itemBuilder: (context, index) {
             return Padding(
               padding:
                   const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_model.dart';
-import 'package:novo_flashMart/features/notification/domain/repository/notification_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_model.dart';
+import 'package:novo_instamart/features/notification/domain/repository/notification_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 import '../../../location/controllers/location_controller.dart';
 
@@ -19,8 +19,8 @@ class NotificationRepository implements NotificationRepositoryInterface {
     List<NotificationModel>? notificationList;
     debugPrint(
         "before sending notification  Zone ID ${Get.find<LocationController>().zoneID}    ");
-    Response response =
-        await apiClient.getData("${AppConstants.notificationUri}?'zoneID':${Get.find<LocationController>().zoneID}");
+    Response response = await apiClient.getData(
+        "${AppConstants.notificationUri}?'zoneID':${Get.find<LocationController>().zoneID}");
     if (response.statusCode == 200) {
       notificationList = [];
       response.body.forEach((notification) =>

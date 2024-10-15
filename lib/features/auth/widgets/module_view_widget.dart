@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/auth/controllers/store_registration_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/common/widgets/custom_dropdown.dart';
+import 'package:novo_instamart/features/auth/controllers/store_registration_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/common/widgets/custom_dropdown.dart';
 
 class ModuleViewWidget extends StatelessWidget {
   const ModuleViewWidget({super.key});

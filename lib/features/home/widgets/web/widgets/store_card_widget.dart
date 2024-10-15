@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/common/widgets/custom_ink_well.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
-import 'package:novo_flashMart/common/widgets/discount_tag.dart';
-import 'package:novo_flashMart/common/widgets/hover/on_hover.dart';
-import 'package:novo_flashMart/common/widgets/not_available_widget.dart';
-import 'package:novo_flashMart/common/widgets/rating_bar.dart';
-import 'package:novo_flashMart/features/store/screens/store_screen.dart';
+import 'package:novo_instamart/common/widgets/custom_ink_well.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/discount_tag.dart';
+import 'package:novo_instamart/common/widgets/hover/on_hover.dart';
+import 'package:novo_instamart/common/widgets/not_available_widget.dart';
+import 'package:novo_instamart/common/widgets/rating_bar.dart';
+import 'package:novo_instamart/features/store/screens/store_screen.dart';
 
 class StoreCardWidget extends StatelessWidget {
   final Store? store;
@@ -123,7 +123,7 @@ class StoreCardWidget extends StatelessWidget {
                       //     );
                       //   }),
                       // ),
-                      
+
                       Positioned(
                         bottom: -15,
                         left: Get.find<LocalizationController>().isLtr

@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:novo_flashMart/util/images.dart';
+import 'package:novo_instamart/util/images.dart';
 import 'package:flutter/cupertino.dart';
 
 class CustomImage extends StatelessWidget {

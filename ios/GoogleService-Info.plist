@@ -2,18 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>751256638769-10meost1ngcfdcc5vbrdng47ojfv2j2e.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC36hBzoQ1Av6rI1fm6qIqvLdEih5dbvrw</string>
+	<string>AIzaSyCJR7-tZrsn3elHbrwp2-IOcyMvNKAWMsE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>155652134190</string>
+	<string>751256638769</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.novo.novoFlashMart</string>
+	<string>com.novo.instamartuser</string>
 	<key>PROJECT_ID</key>
-	<string>novo-flashmart</string>
+	<string>brella-88d35</string>
 	<key>STORAGE_BUCKET</key>
-	<string>novo-flashmart.appspot.com</string>
+	<string>brella-88d35.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +27,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:155652134190:ios:7b93a47faac5b0d16b96bf</string>
+	<string>1:751256638769:ios:9bcfc542c9d7f054f80c10</string>
+	<key>DATABASE_URL</key>
+	<string>https://brella-88d35.firebaseio.com</string>
 </dict>
 </plist>

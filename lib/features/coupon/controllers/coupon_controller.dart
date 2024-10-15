@@ -1,8 +1,8 @@
-import 'package:novo_flashMart/features/coupon/domain/models/coupon_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/coupon/domain/models/coupon_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/coupon/domain/services/coupon_service_interface.dart';
+import 'package:novo_instamart/features/coupon/domain/services/coupon_service_interface.dart';
 
 class CouponController extends GetxController implements GetxService {
   final CouponServiceInterface couponServiceInterface;

@@ -1,22 +1,22 @@
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/banner/controllers/banner_controller.dart';
-import 'package:novo_flashMart/features/home/controllers/home_controller.dart';
-import 'package:novo_flashMart/features/item/controllers/campaign_controller.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/splash/domain/models/landing_model.dart';
-import 'package:novo_flashMart/common/models/config_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/banner/controllers/banner_controller.dart';
+import 'package:novo_instamart/features/home/controllers/home_controller.dart';
+import 'package:novo_instamart/features/item/controllers/campaign_controller.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/splash/domain/models/landing_model.dart';
+import 'package:novo_instamart/common/models/config_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/address/controllers/address_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/features/home/screens/home_screen.dart';
-import 'package:novo_flashMart/features/splash/domain/services/splash_service_interface.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
+import 'package:novo_instamart/features/address/controllers/address_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/features/home/screens/home_screen.dart';
+import 'package:novo_instamart/features/splash/domain/services/splash_service_interface.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
 
 class SplashController extends GetxController implements GetxService {
   final SplashServiceInterface splashServiceInterface;
@@ -149,11 +149,11 @@ class SplashController extends GetxController implements GetxService {
       }
       await splashServiceInterface.setCacheModule(module);
       if (
-        // (
-          AuthHelper.isLoggedIn() 
-      // || AuthHelper.isGuestLoggedIn()) 
-      &&
-          Get.find<SplashController>().cacheModule != null) {
+          // (
+          AuthHelper.isLoggedIn()
+              // || AuthHelper.isGuestLoggedIn())
+              &&
+              Get.find<SplashController>().cacheModule != null) {
         Get.find<CartController>().getCartDataOnline();
       }
     }

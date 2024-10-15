@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/favourite/domain/services/favourite_service_interface.dart';
+import 'package:novo_instamart/features/favourite/domain/services/favourite_service_interface.dart';
 
 class FavouriteController extends GetxController implements GetxService {
   final FavouriteServiceInterface favouriteServiceInterface;

@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/common/widgets/custom_image.dart';
+import 'package:novo_instamart/common/widgets/custom_image.dart';
 
 class ImagePickerWidget extends StatelessWidget {
   final Uint8List? rawFile;

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/item/domain/models/basic_medicine_model.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/item/domain/models/basic_medicine_model.dart';
 
 class ItemModel {
   int? totalSize;

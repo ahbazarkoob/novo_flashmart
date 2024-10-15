@@ -1,10 +1,10 @@
-import 'package:novo_flashMart/features/banner/domain/models/banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/others_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/promotional_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/repositories/banner_repository_interface.dart';
-import 'package:novo_flashMart/features/banner/domain/services/banner_service_interface.dart';
-import 'package:novo_flashMart/features/location/domain/models/zone_response_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
+import 'package:novo_instamart/features/banner/domain/models/banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/others_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/promotional_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/repositories/banner_repository_interface.dart';
+import 'package:novo_instamart/features/banner/domain/services/banner_service_interface.dart';
+import 'package:novo_instamart/features/location/domain/models/zone_response_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
 
 class BannerService implements BannerServiceInterface {
   final BannerRepositoryInterface bannerRepositoryInterface;

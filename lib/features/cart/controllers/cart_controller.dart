@@ -1,17 +1,17 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/common/models/module_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/models/online_cart_model.dart';
-import 'package:novo_flashMart/features/cart/domain/services/cart_service_interface.dart';
-import 'package:novo_flashMart/features/checkout/domain/models/place_order_body_model.dart';
-import 'package:novo_flashMart/features/home/screens/home_screen.dart';
-import 'package:novo_flashMart/features/item/controllers/item_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/date_converter.dart';
-import 'package:novo_flashMart/helper/module_helper.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/common/models/module_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/models/online_cart_model.dart';
+import 'package:novo_instamart/features/cart/domain/services/cart_service_interface.dart';
+import 'package:novo_instamart/features/checkout/domain/models/place_order_body_model.dart';
+import 'package:novo_instamart/features/home/screens/home_screen.dart';
+import 'package:novo_instamart/features/item/controllers/item_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/date_converter.dart';
+import 'package:novo_instamart/helper/module_helper.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
 
 class CartController extends GetxController implements GetxService {
   final CartServiceInterface cartServiceInterface;
@@ -221,9 +221,9 @@ class CartController extends GetxController implements GetxService {
 
   void clearCartList() {
     _cartList = [];
-    if ((AuthHelper.isLoggedIn() 
-    // || AuthHelper.isGuestLoggedIn()
-    ) &&
+    if ((AuthHelper.isLoggedIn()
+        // || AuthHelper.isGuestLoggedIn()
+        ) &&
         (ModuleHelper.getModule() != null ||
             ModuleHelper.getCacheModule() != null)) {
       clearCartOnline();

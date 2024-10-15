@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/onboard/domain/repository/onboard_repository_interface.dart';
-import 'package:novo_flashMart/features/onboard/domain/models/onboarding_model.dart';
-import 'package:novo_flashMart/util/images.dart';
+import 'package:novo_instamart/features/onboard/domain/repository/onboard_repository_interface.dart';
+import 'package:novo_instamart/features/onboard/domain/models/onboarding_model.dart';
+import 'package:novo_instamart/util/images.dart';
 
 class OnboardRepository implements OnboardRepositoryInterface {
   @override

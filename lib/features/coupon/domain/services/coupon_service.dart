@@ -1,6 +1,6 @@
-import 'package:novo_flashMart/features/coupon/domain/models/coupon_model.dart';
-import 'package:novo_flashMart/features/coupon/domain/repositories/coupon_repository_interface.dart';
-import 'package:novo_flashMart/features/coupon/domain/services/coupon_service_interface.dart';
+import 'package:novo_instamart/features/coupon/domain/models/coupon_model.dart';
+import 'package:novo_instamart/features/coupon/domain/repositories/coupon_repository_interface.dart';
+import 'package:novo_instamart/features/coupon/domain/services/coupon_service_interface.dart';
 
 class CouponService implements CouponServiceInterface {
   final CouponRepositoryInterface couponRepositoryInterface;

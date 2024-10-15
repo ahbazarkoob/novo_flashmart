@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/home/widgets/components/review_item_card_widget.dart';
-import 'package:novo_flashMart/features/home/widgets/web/widgets/sorting_text_button.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
+import 'package:novo_instamart/features/home/widgets/components/review_item_card_widget.dart';
+import 'package:novo_instamart/features/home/widgets/web/widgets/sorting_text_button.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
 
 class BestReviewedProductView extends StatelessWidget {
   const BestReviewedProductView({super.key});

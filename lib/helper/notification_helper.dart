@@ -2,30 +2,32 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:novo_flashMart/common/widgets/demo_reset_dialog_widget.dart';
-import 'package:novo_flashMart/features/chat/controllers/chat_controller.dart';
-import 'package:novo_flashMart/features/chat/enums/user_type_enum.dart';
-import 'package:novo_flashMart/features/notification/controllers/notification_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/features/order/controllers/order_controller.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
+import 'package:novo_instamart/common/widgets/demo_reset_dialog_widget.dart';
+import 'package:novo_instamart/features/chat/controllers/chat_controller.dart';
+import 'package:novo_instamart/features/chat/enums/user_type_enum.dart';
+import 'package:novo_instamart/features/notification/controllers/notification_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/features/order/controllers/order_controller.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
-import 'package:novo_flashMart/features/notification/widgets/notifiation_popup_dialog_widget.dart';
+import 'package:novo_instamart/features/notification/widgets/notifiation_popup_dialog_widget.dart';
 
 class NotificationHelper {
   static Future<void> initialize(
       FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin) async {
-      const AndroidInitializationSettings androidInitialize =  AndroidInitializationSettings('notification_icon');
+    const AndroidInitializationSettings androidInitialize =
+        AndroidInitializationSettings('notification_icon');
     // var androidInitialize =
     //     const AndroidInitializationSettings('notification_icon');
-    final DarwinInitializationSettings iOSInitialize =  DarwinInitializationSettings(
-      onDidReceiveLocalNotification: (id, title, body, payload) {} ,
+    final DarwinInitializationSettings iOSInitialize =
+        DarwinInitializationSettings(
+      onDidReceiveLocalNotification: (id, title, body, payload) {},
     );
     final InitializationSettings initializationsSettings =
         InitializationSettings(android: androidInitialize, iOS: iOSInitialize);
@@ -44,10 +46,10 @@ class NotificationHelper {
             //   Get.to(
             //       () => const DashboardScreen(pageIndex: 3, fromSplash: false));
             // } else {
-              Get.offAllNamed(RouteHelper.getOrderDetailsRoute(
-                  int.parse(payload.orderId.toString()),
-                  fromNotification: true));
-           // }
+            Get.offAllNamed(RouteHelper.getOrderDetailsRoute(
+                int.parse(payload.orderId.toString()),
+                fromNotification: true));
+            // }
           } else if (payload.notificationType == NotificationType.general) {
             Get.offAllNamed(
                 RouteHelper.getNotificationRoute(fromNotification: true));
@@ -63,9 +65,9 @@ class NotificationHelper {
     });
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-        debugPrint(
-            "onMessage: ${message.notification?.title}/${message.notification?.body}/${message.notification?.titleLocKey}");
-        debugPrint("onMessage type: ${message.data['type']}/${message.data}");
+      debugPrint(
+          "onMessage: ${message.notification?.title}/${message.notification?.body}/${message.notification?.titleLocKey}");
+      debugPrint("onMessage type: ${message.data['type']}/${message.data}");
       if (message.data['type'] == 'demo_reset') {
         Get.dialog(const DemoResetDialogWidget(), barrierDismissible: false);
       }
@@ -141,8 +143,8 @@ class NotificationHelper {
     });
 
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-        debugPrint(
-            "onOpenApp: ${message.notification!.title}/${message.notification!.body}/${message.notification!.titleLocKey}");
+      debugPrint(
+          "onOpenApp: ${message.notification!.title}/${message.notification!.body}/${message.notification!.titleLocKey}");
       try {
         if (/*message.data != null ||*/ message.data.isNotEmpty) {
           NotificationBodyModel notificationBody =
@@ -229,8 +231,8 @@ class NotificationHelper {
       FlutterLocalNotificationsPlugin fln) async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-      'Novo FlashMart',
-      'Novo FlashMart',
+      'Novo InstaMart',
+      'Novo InstaMart',
       playSound: true,
       importance: Importance.max,
       priority: Priority.max,
@@ -258,8 +260,8 @@ class NotificationHelper {
     );
     AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-      'Novo FlashMart',
-      'Novo FlashMart',
+      'Novo InstaMart',
+      'Novo InstaMart',
       importance: Importance.max,
       styleInformation: bigTextStyleInformation,
       priority: Priority.max,
@@ -295,8 +297,8 @@ class NotificationHelper {
     );
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-      'Novo FlashMart',
-      'Novo FlashMart',
+      'Novo InstaMart',
+      'Novo InstaMart',
       largeIcon: FilePathAndroidBitmap(largeIconPath),
       priority: Priority.max,
       playSound: true,
@@ -344,8 +346,8 @@ class NotificationHelper {
 @pragma('vm:entry-point')
 Future<dynamic> myBackgroundMessageHandler(RemoteMessage message) async {
   // await Firebase.initializeApp();
-    debugPrint(
-        "onBackground: ${message.notification!.title}/${message.notification!.body}/${message.notification!.titleLocKey}");
+  debugPrint(
+      "onBackground: ${message.notification!.title}/${message.notification!.body}/${message.notification!.titleLocKey}");
 }
 
 class PayloadModel {

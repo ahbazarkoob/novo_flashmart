@@ -1,4 +1,4 @@
-import 'package:novo_flashMart/features/payment/domain/models/offline_method_model.dart';
+import 'package:novo_instamart/features/payment/domain/models/offline_method_model.dart';
 
 abstract class PaymentServiceInterface {
   Future<List<OfflineMethodModel>?> getOfflineMethodList();

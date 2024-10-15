@@ -1,37 +1,37 @@
 import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/cart/widgets/extra_packaging_widget.dart';
-import 'package:novo_flashMart/features/cart/widgets/not_available_bottom_sheet_widget.dart';
-import 'package:novo_flashMart/features/coupon/controllers/coupon_controller.dart';
-import 'package:novo_flashMart/features/profile/controllers/profile_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/features/store/controllers/store_controller.dart';
-import 'package:novo_flashMart/features/cart/domain/models/cart_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
-import 'package:novo_flashMart/helper/price_converter.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/custom_app_bar.dart';
-import 'package:novo_flashMart/common/widgets/custom_button.dart';
-import 'package:novo_flashMart/common/widgets/custom_snackbar.dart';
-import 'package:novo_flashMart/common/widgets/footer_view.dart';
-import 'package:novo_flashMart/common/widgets/item_widget.dart';
-import 'package:novo_flashMart/common/widgets/menu_drawer.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
-import 'package:novo_flashMart/common/widgets/web_constrained_box.dart';
-import 'package:novo_flashMart/common/widgets/web_page_title_widget.dart';
-import 'package:novo_flashMart/features/cart/widgets/cart_item_widget.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/cart/widgets/extra_packaging_widget.dart';
+import 'package:novo_instamart/features/cart/widgets/not_available_bottom_sheet_widget.dart';
+import 'package:novo_instamart/features/coupon/controllers/coupon_controller.dart';
+import 'package:novo_instamart/features/profile/controllers/profile_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/features/store/controllers/store_controller.dart';
+import 'package:novo_instamart/features/cart/domain/models/cart_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/helper/price_converter.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/custom_app_bar.dart';
+import 'package:novo_instamart/common/widgets/custom_button.dart';
+import 'package:novo_instamart/common/widgets/custom_snackbar.dart';
+import 'package:novo_instamart/common/widgets/footer_view.dart';
+import 'package:novo_instamart/common/widgets/item_widget.dart';
+import 'package:novo_instamart/common/widgets/menu_drawer.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/common/widgets/web_constrained_box.dart';
+import 'package:novo_instamart/common/widgets/web_page_title_widget.dart';
+import 'package:novo_instamart/features/cart/widgets/cart_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/cart/widgets/web_cart_items_widget.dart';
-import 'package:novo_flashMart/features/cart/widgets/web_suggested_item_view_widget.dart';
-import 'package:novo_flashMart/features/home/screens/home_screen.dart';
+import 'package:novo_instamart/features/cart/widgets/web_cart_items_widget.dart';
+import 'package:novo_instamart/features/cart/widgets/web_suggested_item_view_widget.dart';
+import 'package:novo_instamart/features/home/screens/home_screen.dart';
 
 class CartScreen extends StatefulWidget {
   final bool fromNav;
@@ -166,88 +166,101 @@ class _CartScreenState extends State<CartScreen> {
                                                                 thickness: 0.5,
                                                                 height: 5),
                                                             Padding(
-                                                              padding: const EdgeInsets
-                                                                  .all(Dimensions
-                                                                      .paddingSizeExtraSmall),
-                                                              child: Row(
-                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                children: [
-                                                                Image.asset(Images.edit, height: 18,),
-                                                                const SizedBox(
-                                                                  width: Dimensions.paddingSizeDefault,
+                                                                padding: const EdgeInsets
+                                                                    .all(
+                                                                    Dimensions
+                                                                        .paddingSizeExtraSmall),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .center,
+                                                                  children: [
+                                                                    Image.asset(
+                                                                      Images
+                                                                          .edit,
+                                                                      height:
+                                                                          18,
+                                                                    ),
+                                                                    const SizedBox(
+                                                                      width: Dimensions
+                                                                          .paddingSizeDefault,
+                                                                    ),
+                                                                    const Text(
+                                                                        'Missed Something? '),
+                                                                    InkWell(
+                                                                        onTap: () =>
+                                                                            Get.toNamed(RouteHelper
+                                                                                .getSearchRoute()),
+                                                                        child: Text(
+                                                                            'Search',
+                                                                            style:
+                                                                                figTreeMedium.copyWith(
+                                                                              decoration: TextDecoration.underline,
+                                                                              decorationColor: Theme.of(context).primaryColor,
+                                                                              color: Theme.of(context).primaryColor,
+                                                                            ))),
+                                                                    const Text(
+                                                                        '  or  '),
+                                                                    InkWell(
+                                                                        onTap: () =>
+                                                                            Get.toNamed(RouteHelper
+                                                                                .getCategoryRoute()),
+                                                                        child: Text(
+                                                                            'Browse Categories',
+                                                                            style:
+                                                                                figTreeMedium.copyWith(
+                                                                              decoration: TextDecoration.underline,
+                                                                              decorationColor: Theme.of(context).primaryColor,
+                                                                              color: Theme.of(context).primaryColor,
+                                                                            ))),
+                                                                  ],
+                                                                )
+                                                                // TextButton
+                                                                //     .icon(
+                                                                //   onPressed: () {
+                                                                //     cartController.forcefullySetModule(
+                                                                //         cartController
+                                                                //             .cartList[
+                                                                //                 0]
+                                                                //             .item!
+                                                                //             .moduleId!);
+                                                                //     Get.toNamed(
+                                                                //       RouteHelper.getStoreRoute(
+                                                                //           id: cartController
+                                                                //               .cartList[
+                                                                //                   0]
+                                                                //               .item!
+                                                                //               .storeId,
+                                                                //           page:
+                                                                //               'item'),
+                                                                //       arguments: StoreScreen(
+                                                                //           store: Store(
+                                                                //               id: cartController
+                                                                //                   .cartList[
+                                                                //                       0]
+                                                                //                   .item!
+                                                                //                   .storeId),
+                                                                //           fromModule:
+                                                                //               false),
+                                                                //     );
+                                                                //   },
+                                                                //   icon: Icon(
+                                                                //       Icons
+                                                                //           .add_circle_outline_sharp,
+                                                                //       color: Theme.of(
+                                                                //               context)
+                                                                //           .primaryColor),
+                                                                //   label: Text(
+                                                                //       'add_more_items'
+                                                                //           .tr,
+                                                                //       style: figTreeMedium.copyWith(
+                                                                //           color: Theme.of(context)
+                                                                //               .primaryColor,
+                                                                //           fontSize:
+                                                                //               Dimensions.fontSizeDefault)),
+                                                                // ),
+
                                                                 ),
-                                                                const Text('Missed Something? '),
-                                                                InkWell(
-                                                                  onTap: () => Get.toNamed(
-                                                                    RouteHelper.getSearchRoute()),
-                                                                    child:  Text('Search', 
-                                                                    style: figTreeMedium.copyWith(
-                                                                      decoration: TextDecoration.underline,
-                                                                      decorationColor: Theme.of(context)
-                                                                            .primaryColor,
-                                                                      color: Theme.of(context)
-                                                                            .primaryColor,
-                                                                    ))
-                                                                            ),
-                                                                  const Text('  or  '),
-                                                                  InkWell(
-                                                                  onTap: () => Get.toNamed(RouteHelper
-                                                        .getCategoryRoute()),
-                                                                    child:  Text('Browse Categories', style: figTreeMedium.copyWith(
-                                                                      decoration: TextDecoration.underline,
-                                                                      decorationColor: Theme.of(context)
-                                                                            .primaryColor,
-                                                                      color: Theme.of(context)
-                                                                            .primaryColor,
-                                                                    ))
-                                                                            ),
-                                                              ],)
-                                                              // TextButton
-                                                              //     .icon(
-                                                              //   onPressed: () {
-                                                              //     cartController.forcefullySetModule(
-                                                              //         cartController
-                                                              //             .cartList[
-                                                              //                 0]
-                                                              //             .item!
-                                                              //             .moduleId!);
-                                                              //     Get.toNamed(
-                                                              //       RouteHelper.getStoreRoute(
-                                                              //           id: cartController
-                                                              //               .cartList[
-                                                              //                   0]
-                                                              //               .item!
-                                                              //               .storeId,
-                                                              //           page:
-                                                              //               'item'),
-                                                              //       arguments: StoreScreen(
-                                                              //           store: Store(
-                                                              //               id: cartController
-                                                              //                   .cartList[
-                                                              //                       0]
-                                                              //                   .item!
-                                                              //                   .storeId),
-                                                              //           fromModule:
-                                                              //               false),
-                                                              //     );
-                                                              //   },
-                                                              //   icon: Icon(
-                                                              //       Icons
-                                                              //           .add_circle_outline_sharp,
-                                                              //       color: Theme.of(
-                                                              //               context)
-                                                              //           .primaryColor),
-                                                              //   label: Text(
-                                                              //       'add_more_items'
-                                                              //           .tr,
-                                                              //       style: figTreeMedium.copyWith(
-                                                              //           color: Theme.of(context)
-                                                              //               .primaryColor,
-                                                              //           fontSize:
-                                                              //               Dimensions.fontSizeDefault)),
-                                                              // ),
-                                                            
-                                                            ),
                                                             ExtraPackagingWidget(
                                                                 cartController:
                                                                     cartController),

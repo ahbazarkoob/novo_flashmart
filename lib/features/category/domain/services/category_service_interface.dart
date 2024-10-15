@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/category/domain/models/category_model.dart';
-import 'package:novo_flashMart/features/item/domain/models/item_model.dart';
-import 'package:novo_flashMart/features/store/domain/models/store_model.dart';
+import 'package:novo_instamart/features/category/domain/models/category_model.dart';
+import 'package:novo_instamart/features/item/domain/models/item_model.dart';
+import 'package:novo_instamart/features/store/domain/models/store_model.dart';
 
 abstract class CategoryServiceInterface {
-   bool? showFirstTime();
+  bool? showFirstTime();
   void disableFirstTime();
   Future<List<CategoryModel>?> getCategoryList(bool allCategory);
   Future<List<CategoryModel>?> getSubCategoryList(String? parentID);

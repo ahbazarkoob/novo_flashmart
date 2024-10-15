@@ -2,29 +2,29 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:meta_seo/meta_seo.dart';
-import 'package:novo_flashMart/features/auth/controllers/auth_controller.dart';
-import 'package:novo_flashMart/features/cart/controllers/cart_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/features/splash/controllers/splash_controller.dart';
-import 'package:novo_flashMart/common/controllers/theme_controller.dart';
-import 'package:novo_flashMart/features/favourite/controllers/favourite_controller.dart';
-import 'package:novo_flashMart/features/notification/domain/models/notification_body_model.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/auth_helper.dart';
-import 'package:novo_flashMart/helper/notification_helper.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/helper/route_helper.dart';
-import 'package:novo_flashMart/theme/dark_theme.dart';
-import 'package:novo_flashMart/theme/light_theme.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
-import 'package:novo_flashMart/util/messages.dart';
+import 'package:novo_instamart/features/auth/controllers/auth_controller.dart';
+import 'package:novo_instamart/features/cart/controllers/cart_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/features/splash/controllers/splash_controller.dart';
+import 'package:novo_instamart/common/controllers/theme_controller.dart';
+import 'package:novo_instamart/features/favourite/controllers/favourite_controller.dart';
+import 'package:novo_instamart/features/notification/domain/models/notification_body_model.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/auth_helper.dart';
+import 'package:novo_instamart/helper/notification_helper.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/helper/route_helper.dart';
+import 'package:novo_instamart/theme/dark_theme.dart';
+import 'package:novo_instamart/theme/light_theme.dart';
+import 'package:novo_instamart/util/app_constants.dart';
+import 'package:novo_instamart/util/messages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/home/widgets/cookies_view.dart';
+import 'package:novo_instamart/features/home/widgets/cookies_view.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'helper/get_di.dart' as di;
 
@@ -52,23 +52,23 @@ Future<void> main() async {
   if (GetPlatform.isWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-            apiKey: "AIzaSyC1EVwE4R9LLmSV5n3JCNRpSNMjDnzT5gw",
-            authDomain: "novo-flashmart.firebaseapp.com",
-            projectId: "novo-flashmart",
-            storageBucket: "novo-flashmart.appspot.com",
-            messagingSenderId: "155652134190",
-            appId: "1:155652134190:web:66931d96299d09ae6b96bf",
-            measurementId: "G-R767W7WVQP"
+            apiKey: 'AIzaSyDxLliLKbo_Bxv-mshuEqU90Y9PesmWDAw',
+            authDomain: 'brella-88d35.firebaseapp.com',
+            projectId: 'brella-88d35',
+            storageBucket: 'brella-88d35.appspot.com',
+            messagingSenderId: '751256638769',
+            appId: '1:751256638769:web:ceb567f89449a68ff80c10',
+            measurementId: 'G-G9L15HRCQ7'
             // databaseURL: "https://ammart-8885e-default-rtdb.firebaseio.com",
             ));
     MetaSEO().config();
   } else if (GetPlatform.isAndroid) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-        apiKey: "AIzaSyC1EVwE4R9LLmSV5n3JCNRpSNMjDnzT5gw",
-        appId: "1:155652134190:android:2ef7b2f3978290986b96bf",
-        messagingSenderId: "155652134190",
-        projectId: "novo-flashmart",
+        apiKey: 'AIzaSyC0WNc3mpitb25cDTiqVA4aMwr1eEJk2Xc',
+        appId: '1:751256638769:android:82581c5054877b75f80c10',
+        messagingSenderId: '751256638769',
+        projectId: 'brella-88d35',
       ),
     );
   } else {

@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/banner/domain/models/banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/others_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/models/promotional_banner_model.dart';
-import 'package:novo_flashMart/features/banner/domain/repositories/banner_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/banner/domain/models/banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/others_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/models/promotional_banner_model.dart';
+import 'package:novo_instamart/features/banner/domain/repositories/banner_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class BannerRepository implements BannerRepositoryInterface {
   final ApiClient apiClient;

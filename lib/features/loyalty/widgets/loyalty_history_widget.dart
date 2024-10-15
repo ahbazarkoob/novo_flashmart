@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
-import 'package:novo_flashMart/features/loyalty/controllers/loyalty_controller.dart';
-import 'package:novo_flashMart/common/widgets/history_item_widget.dart';
-import 'package:novo_flashMart/helper/responsive_helper.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/styles.dart';
-import 'package:novo_flashMart/common/widgets/no_data_screen.dart';
+import 'package:novo_instamart/features/loyalty/controllers/loyalty_controller.dart';
+import 'package:novo_instamart/common/widgets/history_item_widget.dart';
+import 'package:novo_instamart/helper/responsive_helper.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/styles.dart';
+import 'package:novo_instamart/common/widgets/no_data_screen.dart';
 
 class LoyaltyHistoryWidget extends StatelessWidget {
   const LoyaltyHistoryWidget({super.key});

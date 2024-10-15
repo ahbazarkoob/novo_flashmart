@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:novo_flashMart/features/taxi_booking/controllers/booking_checkout_controller.dart';
-import 'package:novo_flashMart/features/language/controllers/language_controller.dart';
-import 'package:novo_flashMart/util/dimensions.dart';
-import 'package:novo_flashMart/util/images.dart';
-import 'package:novo_flashMart/features/taxi_booking/booking_checkout_screen/widgets/custom_header_icon.dart';
-import 'package:novo_flashMart/features/taxi_booking/booking_checkout_screen/widgets/custom_header_line.dart';
-import 'package:novo_flashMart/features/taxi_booking/booking_checkout_screen/widgets/custom_text.dart';
+import 'package:novo_instamart/features/taxi_booking/controllers/booking_checkout_controller.dart';
+import 'package:novo_instamart/features/language/controllers/language_controller.dart';
+import 'package:novo_instamart/util/dimensions.dart';
+import 'package:novo_instamart/util/images.dart';
+import 'package:novo_instamart/features/taxi_booking/booking_checkout_screen/widgets/custom_header_icon.dart';
+import 'package:novo_instamart/features/taxi_booking/booking_checkout_screen/widgets/custom_header_line.dart';
+import 'package:novo_instamart/features/taxi_booking/booking_checkout_screen/widgets/custom_text.dart';
 
 class BookingCheckoutStepper extends StatelessWidget {
   final String pageState;

@@ -4,13 +4,13 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get_connect/connect.dart';
 import 'package:get/get_utils/src/platform/platform.dart';
-import 'package:novo_flashMart/api/api_client.dart';
+import 'package:novo_instamart/api/api_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:novo_flashMart/features/address/domain/models/address_model.dart';
-import 'package:novo_flashMart/features/auth/domain/reposotories/auth_repository_interface.dart';
-import 'package:novo_flashMart/helper/address_helper.dart';
-import 'package:novo_flashMart/helper/module_helper.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/features/address/domain/models/address_model.dart';
+import 'package:novo_instamart/features/auth/domain/reposotories/auth_repository_interface.dart';
+import 'package:novo_instamart/helper/address_helper.dart';
+import 'package:novo_instamart/helper/module_helper.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class AuthRepository implements AuthRepositoryInterface {
   final ApiClient apiClient;

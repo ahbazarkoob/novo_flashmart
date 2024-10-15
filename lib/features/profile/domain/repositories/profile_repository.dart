@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:novo_flashMart/common/models/response_model.dart';
-import 'package:novo_flashMart/api/api_client.dart';
-import 'package:novo_flashMart/features/profile/domain/models/userinfo_model.dart';
-import 'package:novo_flashMart/features/profile/domain/repositories/profile_repository_interface.dart';
-import 'package:novo_flashMart/util/app_constants.dart';
+import 'package:novo_instamart/common/models/response_model.dart';
+import 'package:novo_instamart/api/api_client.dart';
+import 'package:novo_instamart/features/profile/domain/models/userinfo_model.dart';
+import 'package:novo_instamart/features/profile/domain/repositories/profile_repository_interface.dart';
+import 'package:novo_instamart/util/app_constants.dart';
 
 class ProfileRepository implements ProfileRepositoryInterface {
   final ApiClient apiClient;
