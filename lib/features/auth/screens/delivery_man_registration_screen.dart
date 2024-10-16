@@ -154,7 +154,9 @@ class _DeliveryManRegistrationScreenState
                   )));
             }
           }
-          if (deliverymanRegistrationController.vehicles != null) {
+          // if (deliverymanRegistrationController.vehicles != null) {
+          if (deliverymanRegistrationController.vehicles != null &&
+              deliverymanRegistrationController.vehicles!.isNotEmpty) {
             for (int index = 0;
                 index < deliverymanRegistrationController.vehicles!.length;
                 index++) {
@@ -168,6 +170,10 @@ class _DeliveryManRegistrationScreenState
                     ),
                   )));
             }
+          } else {
+            // Handle empty vehicle list
+            vehicleList.add(const DropdownItem<int>(
+                value: null, child: Text('No vehicles available')));
           }
 
           return SafeArea(
@@ -707,8 +713,18 @@ class _DeliveryManRegistrationScreenState
                                                                   .paddingSizeExtraSmall),
                                                         ),
                                                         items: vehicleList,
+                                                        // child: Text(
+                                                        //     '${deliverymanRegistrationController.vehicles?[0].type}'),
                                                         child: Text(
-                                                            '${deliverymanRegistrationController.vehicles![0].type}'),
+                                                          deliverymanRegistrationController
+                                                                          .vehicles !=
+                                                                      null &&
+                                                                  deliverymanRegistrationController
+                                                                      .vehicles!
+                                                                      .isNotEmpty
+                                                              ? '${deliverymanRegistrationController.vehicles![0].type}'
+                                                              : 'No vehicles available',
+                                                        ),
                                                       ),
                                                     )
                                                   : const CircularProgressIndicator(),
